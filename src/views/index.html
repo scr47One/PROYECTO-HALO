@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Esta pagina describe un poco acerca de la franquicia Halo de la compania Microsoft">
+    <meta name="keywords" content="Juegos, FPS, Covenant, Halo CE">
+    <meta name="author" content="Humberto Gonzalez">
+    <link rel="canonical" content="https://portfolio.com">
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/multimedia/image/icon-halo.ico">
+    <title>Halo</title>
+</head>
+
+<body>
+    <header class="main-header" id="start">
+        <nav>
+            <span>
+                <img src="assets/multimedia/image/Halo-Logo.png">
+            </span>
+            <input type="checkbox" id="control">
+            <label for="control" class="material-icons btn-show"></label>
+            <ul id="header-menu" onclick="closeMenu()">
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="#videojuegos">Videojuegos</a></li>
+                <li><a href="#novelas">Novelas</a></li>
+                <li><a href="#personajes">Personajes</a></li>
+                <li><a href="#links">Acerca de</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="intro" class="main-intro">
+            <video 
+                onclick="this.paused ? this.play() : this.pause();" 
+                preload="auto" 
+                muted
+                poster="assets/multimedia/image/halo-intro.webp" 
+                loop id="intro-video">
+                <source src="assets/multimedia/video/intro.mp4">
+            </video>
+            <div class="main-title-intro">
+                <h1>LA SAGA HALO</h1>
+                <p>Esta es una saga de videojuegos, junto con novelas, largometrajes, cortometrajes y una serie,
+                    que principalmente sigue el viaje del Jefe Maestro el spartan Jhon 117.
+                    Solo se expondran los juegos realizados por la empresa de desarrollo Bungie</p>
+                <cite>Pulsa sobre el fondo para reproducir o pausar</cite>
+            </div>
+        </section>
+        <section id="videojuegos" class="">
+            <section id="halo-ce" class="main-section main-section-ce">
+                <h2>Halo: Combat Evolved</h2>
+                <div class="section-content">
+                    <div class="section-text">
+                        <h3>Trama</h3>
+                        <p>
+                            El Pillar of Autumn descubre un anillo desconocido y es atacado por el Covenant.
+                            El capitán Keyes confía a Cortana al Jefe Maestro para proteger la Tierra.
+                            La nave aterriza en el anillo, donde Master Chief organiza la defensa contra el Covenant.
+                            Keyes es capturado, pero se revela que el anillo es un arma, y buscan detener al Covenant.
+                            Master Chief descubre el parásito Flood y se asocia con la IA 343 Guilty Spark.
+                            Tras aprender que el anillo destruye toda la vida sensible, deciden destruirlo.
+                            Recuperan el implante neuronal de Keyes para desactivar la autodestrucción del anillo.
+                            Master Chief y Cortana desestabilizan los reactores del Pillar of Autumn y escapan.
+                            La amenaza no ha terminado, ya que 343 Guilty Spark sobrevive tras la destrucción del
+                            anillo.
+                        </p>
+                    </div>
+                    <div class="section-multimedia">
+                        <div class="section-img">
+                            <h3>Portada</h3>
+                            <img src="assets/multimedia/image/halo-ce.jpg" alt="Halo: ce">
+                        </div>
+                        <div class="section-video">
+                            <h3>Trailer</h3>
+                            <video loop preload="auto" class="auto-play" controls>
+                                <source src="assets/multimedia/video/halo-ce-trailer.mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="halo-2" class="main-section main-section-halo2">
+                <h2>Halo 2</h2>
+                <div class="section-content">
+                    <div class="section-text">
+                        <h3>Trama</h3>
+                        <p>
+                            Halo 2 comienza con el juicio de un Élite despojado de su rango en High Charity.
+                            Le ofrecen convertirse en Árbitro para sofocar rebeliones y recuperar a 343 Guilty Spark.
+                            En la Tierra, el almirante Hood y el Jefe Maestro defienden contra una invasión Covenant.
+                            El Profeta del Pesar huye a Halo, y el Jefe Maestro lo persigue para evitar la activación.
+                            Tras la muerte de Regret, el Covenant bombardea la zona y surge discordia entre sus razas.
+                            El Inquisidor, como nuevo líder, es enviado con el Jefe Maestro para detener Halo.
+                            Gravemind revela la verdad detrás del Gran Viaje y usa a los héroes como distracción.
+                            La ciudad se llena de Flood y el Profeta de la Misericordia es consumido por ellos.
+                            Tártaro activa el anillo, pero es derrotado por el Inquisidor y Johnson antes de desactivar
+                            Halo.
+                            Cortana destruye High Charity y Halo, mientras el Jefe Maestro sigue a Truth hacia la
+                            Tierra.
+                            En una escena post créditos, Gravemind toma el control de High Charity y manipula a Cortana.
+                        </p>
+                    </div>
+                    <div class="section-multimedia">
+                        <div class="section-img">
+                            <h3>Portada</h3>
+                            <img src="assets/multimedia/image/halo-2.png" alt="Halo 2">
+                        </div>
+                        <div class="section-video">
+                            <h3>Trailer</h3>
+                            <video loop preload="auto" class="auto-play" controls
+                                src="assets/multimedia/video/halo-2-trailer.mp4"></video>
+                        </div>
+                    </div>
+            </section>
+            <section id="halo-3" class="main-section main-section-halo3">
+                <h2>Halo 3</h2>
+                <div class="section-content">
+                    <div class="section-text">
+                        <h3>Trama</h3>
+                        <p>
+                            Tras los eventos de *Halo: Uprising*, el Jefe Maestro llega a la Tierra.
+                            Junto a Johnson e Inquisidor, planean detener al Profeta de la Verdad.
+                            Verdad activa un portal y se escapa con sus seguidores, y el Flood invade la Tierra.
+                            El Jefe, el Inquisidor, y las Élites siguen a Verdad a través del portal.
+                            Llegan al Arca, donde Verdad puede activar todos los Halos.
+                            El Flood infesta el Arca y captura a Johnson, quien debe activar los anillos.
+                            Gravemind forma una tregua con el Jefe y el Inquisidor para detener a Verdad.
+                            Tras matar a Verdad, Gravemind se vuelve contra ellos.
+                            Descubren que el Arca está creando un nuevo Halo para reemplazar el destruido.
+                            El Jefe decide activar el nuevo Halo para salvar la galaxia de la infestación Flood.
+                            Rescatan a Cortana, quien tiene el Índice, y destruyen High Charity.
+                            Johnson muere tras intentar activar el anillo y Guilty Spark se sacrifica para detenerlo.
+                            El Jefe activa el anillo y escapa en el *Forward Unto Dawn*, mientras la nave se destruye.
+                            En la Tierra, se celebra un servicio por los héroes caídos en la guerra contra el Covenant.
+                            La mitad trasera del *Forward Unto Dawn* va a la deriva en el espacio, y Cortana deja una
+                            baliza.
+                            El Jefe entra en sueño criónico y Cortana le dice que lo extrañará, pero él la consuela.
+                            Si se completa en dificultad Legendaria, el *Forward Unto Dawn* se dirige a un planeta
+                            desconocido.
+                        </p>
+                    </div>
+                    <div class="section-multimedia">
+                        <div class="section-img">
+                            <h3>Portada</h3>
+                            <img src="assets/multimedia/image/halo-3.jpg" alt="Halo 3">
+                        </div>
+                        <div class="section-video">
+                            <h3>Trailer</h3>
+                            <video loop preload="auto" class="auto-play" controls
+                                src="assets/multimedia/video/halo-3-trailer.mp4"></video>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="halo-odst" class="main-section main-section-halo-odst">
+                <h2>Halo 3: ODST</h2>
+                <div class="section-content">
+                    <div class="section-text">
+                        <h3>Trama</h3>
+                        <p>
+                            Después de la caída de Reach, un escuadrón de ODST (Orbital Drop Shock Troopers) es enviado
+                            a la
+                            ciudad de Nueva Mombasa.
+                            El escuadrón se dispersa al aterrizar, y el jugador controla a un soldado ODST llamado el
+                            "Rookie".
+                            Mientras busca a sus compañeros, descubre que el Covenant ha planeado destruir la ciudad
+                            usando
+                            una
+                            nave alienígena.
+                            En su búsqueda, el "Rookie" revive recuerdos de los demás miembros del escuadrón, quienes
+                            luchan
+                            por
+                            detener el ataque del Covenant.
+                            Finalmente, el escuadrón se reúne y detiene el plan del Covenant, destruyendo la nave con la
+                            ayuda
+                            del Jefe Maestro.
+                        </p>
+                    </div>
+                    <div class="section-multimedia">
+                        <div class="section-img">
+                            <h3>Portada</h3>
+                            <img src="assets/multimedia/image/halo-odst.jpg" alt="Halo odst" />
+                        </div>
+                        <div class="section-video">
+                            <h3>Trailer</h3>
+                            <video loop preload="auto" class="auto-play"
+                                src="assets/multimedia/video/halo-odst-trailer.mp4"
+                                controls></video>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="halo-reach" class="main-section main-section-halo-reach">
+                <h2>Halo reach</h2>
+                <div class="section-content">
+                    <div class="section-text">
+                        <h3>Trama</h3>
+                        <p>
+                            El juego sigue a un escuadrón de Spartans de la UNSC en el planeta Reach, un mundo clave en
+                            la
+                            lucha
+                            contra el Covenant.
+                            El jugador controla a Noble 6, un nuevo miembro del escuadrón Noble, durante la caída del
+                            planeta.
+                            El escuadrón Noble lucha para proteger Reach de los ataques Covenant, pero los enemigos
+                            abruman
+                            la
+                            defensa.
+                            Mientras luchan por evitar la destrucción del planeta, descubren que el Covenant busca
+                            destruir
+                            la
+                            inteligencia artificial Cortana, clave para la victoria humana.
+                            El sacrificio final de Noble 6 permite que la IA sea evacuada, pero Reach es destruido y la
+                            guerra
+                            continúa.
+                        </p>
+                    </div>
+                    <div class="section-multimedia">
+                        <div class="section-img">
+                            <h3>Portada</h3>
+                            <img src="assets/multimedia/image/halo-reach.webp" alt="Halo Reach">
+                        </div>
+                        <div class="section-video">
+                            <h3>Trailer</h3>
+                            <video loop preload="auto" class="auto-play"
+                                src="assets/multimedia/video/halo-reach-trailer.mp4"
+                                controls></video>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main-section section-table" id="novelas">
+                <h2>Novelas</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Autor</th>
+                            <th>Trama</th>
+                            <th>Portada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Halo: The Fall of Reach</td>
+                            <td>Eric Nylund</td>
+                            <td>
+                                <span>
+                                    Narra el origen del programa Spartan-II y la creación del Jefe Maestro. Después de
+                                    ser secuestrado de niño, el Jefe Maestro es entrenado en combate para luchar contra
+                                    los alienígenas Covenant en una guerra por el control del universo
+                                </span>
+                            </td>
+                            <td><img src="assets/multimedia/image/halo-for.jpg" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td>Halo: The Flood</td>
+                            <td>William C. Dietz</td>
+                            <td><span>Es una novela que cuenta los eventos del primer videojuego de la serie Halo desde
+                                    la perspectiva de varios personajes, incluyendo al Jefe Maestro. La historia sigue
+                                    la lucha de la humanidad contra los Covenant y la amenaza de los Flood, una raza
+                                    parasitaria que puede convertir a cualquier ser vivo en un monstruo.</span></td>
+                            <td><img src="assets/multimedia/image/halo-tf.jpg" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td>Halo: First Strike</td>
+                            <td>Eric Nylund</td>
+                            <td><span> El Jefe Maestro lidera un grupo de Spartans en una misión para destruir una base
+                                    Covenant y descubren información sobre un arma secreta llamada «Halo». La carrera
+                                    para detener a los Covenant y los Flood continúa en una nueva batalla por la
+                                    supervivencia de la humanidad.</span></td>
+                            <td><img src="assets/multimedia/image/halo-fs.jpg" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td>Halo: Ghosts of Onyx</td>
+                            <td>Eric Nylund</td>
+                            <td><span>Sigue la historia de un grupo de Spartans y un equipo de científicos que viajan a
+                                    un mundo artificial llamado Onyx. Allí descubren un secreto peligroso y deben luchar
+                                    contra una amenaza sorprendente que podría cambiar el curso de la guerra contra los
+                                    Covenant.</span></td>
+                            <td><img src="assets/multimedia/image/halo-go.jpg" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td>Halo: Contact Harvest</td>
+                            <td>Joseph Staten</td>
+                            <td><span>Cuenta cómo la humanidad conoció a los alienígenas Covenant. La novela sigue a un
+                                    grupo de soldados y civiles que luchan por mantener el control de la colonia Harvest
+                                    mientras los Covenant invaden y una inteligencia artificial rebelde amenaza con
+                                    destruir todo lo que queda.</span></td>
+                            <td><img src="assets/multimedia/image/halo-ch.jpg" alt=""></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="main-section" id="personajes">
+                <h2>Personajes</h2>
+                <div class="section-content">
+                    <div class="section-card-container">
+                        <div class="card-content card-primary">
+                            <div class="card-image">
+                                <img src="assets/multimedia/image/master-chief.jpg" alt="Master Chief">
+                            </div>
+                            <div class="card-title">
+                                <h4>Master Chief</h4>
+                            </div>
+                            <div class="card-text">
+                                <p>Master Chief (en español: Jefe Maestro), conocido también como JOHN-117, es un
+                                    personaje y el protagonista principal de la serie de videojuegos Halo. SPARTAN-117
+                                    es uno de los últimos soldados Spartan del proyecto SPARTAN-II, nombre clave del
+                                    proyecto creado por la UNSC para crear supersoldados capaces de repeler las fuerzas
+                                    de combate del Covenant o Forerunner</p>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-image">
+                                <img src="assets/multimedia/image/inquisidor.jpg" alt="Master Chief">
+                            </div>
+                            <div class="card-title">
+                                <h4>Inquisidor</h4>
+                            </div>
+                            <div class="card-text">
+                                <p>El Inquisidor (nombre real según "The Cole Protocol": Thel 'Vadaam)es un personaje
+                                    Elite en las series de Halo 2 y Halo 3. En un principio, Comandante Supremo de la
+                                    flota Particle Justice, y luego de su fracaso resguardando el primer anillo, "La
+                                    Voluntad de Los Profetas".</p>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-image">
+                                <img src="assets/multimedia/image/avery-j.avif" alt="Master Chief">
+                            </div>
+                            <div class="card-title">
+                                <h4>Avery Johnson</h4>
+                            </div>
+                            <div class="card-text">
+                                <p>Es un marino que encabeza las fuerzas humanas contra los Flood y el Covenant, Johnson
+                                    en uno de los pocos marines que logran sobrevivir a la destrucción de la Instalación
+                                    04 y es rescatado por Cortana y el Jefe Maestro durante la novela Halo: First
+                                    Strike.</p>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-image">
+                                <img src="assets/multimedia/image/cortana.webp" alt="Master Chief">
+                            </div>
+                            <div class="card-title">
+                                <h4>Cortana</h4>
+                            </div>
+                            <div class="card-text">
+                                <p>Es una inteligencia artificial de la UNSC, y compañera del Jefe Maestro. Fue
+                                    construida clonando el cerebro de Catherine Elizabeth Halsey, la creadora del
+                                    proyecto Spartan. </p>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-image">
+                                <img src="assets/multimedia/image/katerine-h.webp" alt="Master Chief">
+                            </div>
+                            <div class="card-title">
+                                <h4>Catherine Halsey</h4>
+                            </div>
+                            <div class="card-text">
+                                <p>La Doctora Catherine Elizabeth Halsey es una científica civil de la UNSC. Ella
+                                    aparece en las novelas Halo: The Fall of Reach, Halo: First Strike, y Halo: Ghosts
+                                    of Onyx, como también en Halo Legends «Homecoming» y en la misión «El Paquete» en
+                                    Halo: Reach.</p>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-image">
+                                <img src="assets/multimedia/image/miranda-k.jpg" alt="Master Chief">
+                            </div>
+                            <div class="card-title">
+                                <h4>Miranda Keyes</h4>
+                            </div>
+                            <div class="card-text">
+                                <p>La comandante Miranda Keyes es la hija de Jacob Keyes y Catherine Halsey, quien
+                                    todavía vivía cuando era ella más joven. Debido a la rivalidad entre Halsey y
+                                    Miranda ella cambió su apellido (en ese entonces Halsey) por el de su padre (Keyes).
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <h3>Tema oficial de Halo </h3>
+            <audio controls class="auto-play">
+                <source src="assets/multimedia/audio/Halo Theme Song Original.mp3" type="audio/mp3">
+            </audio>
+        </section>
+    </main>
+    <footer class="footer">
+        <div id="contact" class="footer-form main-section">
+            <section>
+                <p>Contacto</p>
+                <cite>Envíanos un mensaje!</cite><br><br>
+                <form action="response.html" method="post">
+                    <fieldset>
+                        <legend>Datos generales</legend>
+                        <label for="name">Nombre</label><br>
+                        <input type="text" id="contact-name" maxlength="25" required placeholder="Tu nombre" /><br><br>
+
+                        <label for="email">E-mail</label><br>
+                        <input list="emails" name="email" id="contact-email" required
+                            placeholder="tuemail@email.com" /><br><br>
+
+                        <label for="area">Área</label><br>
+                        <select name="area" id="">
+                            <option value="1">Redacción 1</option>
+                            <option value="1">Redacción 2</option>
+                            <option value="1">Redacción 3</option>
+                        </select><br>
+
+                        <datalist id="emails">
+                            <option value="correo@correo.com"></option>
+                            <option value="correo1@correo.com"></option>
+                            <option value="correo2@correo.com"></option>
+                            <option value="correo3@correo.com"></option>
+                        </datalist>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>Motivo de contacto</legend>
+                        <label for="message">Mensaje</label><br>
+                        <textarea type="text" name="message" id="contact-message" required cols="36" rows="5"
+                            placeholder="Escribe tu mensaje aquí"></textarea>
+                        <div>
+                            <input class="btn-secondary" type="reset" value="Reset">
+                            <input class="btn-primary" type="submit" value="Send">
+                        </div>
+                    </fieldset><br><br>
+
+                </form><br>
+            </section>
+        </div>
+        <div id="links" class="main-section footer-data">
+            <h2>Links</h2>
+            <div class="links">
+                <a href="http://www.halowaypoint.com/es-es">Halo, Halo Studios</a><br>
+                <a href="https://halotracker.com/">Halo Tracker</a><br>
+                <a href="https://halotracker.com/halo-infinite/profile/xbl/SCR47/overview">Manco</a><br>
+            </div>
+            <h2>Plataformas disponibles</h2>
+            <div class="platforms">
+                <div class="svg-xbox"><svg width="200" height="62" viewBox="0 0 200 62" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <title>Available On Xbox</title>
+                        <path
+                            d="M195.21 50.081L183.563 33.9577L171.928 50.081H167.135L181.138 30.6007L168.35 12.8934H173.143L183.563 27.335L193.983 12.8934H198.773L185.995 30.5975L200 50.081H195.21ZM104.451 50.0745L90.433 30.5975L103.221 12.8934H98.4279L88.0045 27.3383L77.5907 12.8934H72.8104L85.592 30.5975L71.5769 50.0745H76.3764L88.0109 33.9577L99.6549 50.0745H104.451Z"
+                            fill="white"></path>
+                        <path
+                            d="M131.101 32.0055C130.379 31.3776 129.574 30.8555 128.711 30.4541C130.036 29.7359 131.144 28.6632 131.916 27.3512C132.689 26.0391 133.096 24.5372 133.095 23.0068C133.095 20.6275 132.235 12.8902 121.243 12.8902H106.439V28.9222H101.508C100.869 29.7729 99.4152 31.8164 98.8624 32.654H106.439V50.0745L121.246 50.0778C129.267 50.0778 134.248 45.9255 134.248 39.2213C134.248 36.2946 133.165 33.8078 131.101 32.0055ZM110.532 16.7719H121.246C124.144 16.7719 129.001 17.5085 129.001 22.6809C129.001 26.5919 126.174 28.9222 121.246 28.9222H110.532V16.7719ZM121.243 46.1993H110.529V32.6638H121.243C125.304 32.6638 130.165 33.8078 130.165 39.1399C130.165 45.2802 124.576 46.1993 121.243 46.1993ZM153.507 12.0363C143.266 12.0363 136.108 20.0246 136.108 31.4644C136.108 42.9206 143.266 50.9024 153.507 50.9024C163.739 50.9024 170.877 42.9206 170.877 31.4644C170.877 20.0246 163.739 12.0363 153.507 12.0363ZM153.507 46.9685C145.704 46.9685 140.236 40.5902 140.236 31.4644C140.236 22.3386 145.704 15.9636 153.507 15.9636C161.297 15.9636 166.733 22.3386 166.733 31.4644C166.733 40.5902 161.297 46.9685 153.507 46.9685ZM9.03981 8.94002V8.94327C6.17235 11.8228 3.89611 15.2562 2.34402 19.043C0.791921 22.8298 -0.00491876 26.894 2.82073e-05 30.9984C-0.00905155 37.7834 2.17414 44.3825 6.21188 49.7747C6.25342 49.8268 6.31733 49.8562 6.37485 49.8268C6.42917 49.7942 6.43236 49.7258 6.41 49.6671C4.09333 42.36 15.9355 24.6494 22.0547 17.2249C22.0738 17.1989 22.0994 17.1695 22.0994 17.1337C22.0994 17.0913 22.0706 17.0587 22.0419 17.0326C11.7495 6.58361 9.00146 8.97261 9.03981 8.94002ZM51.7143 8.91394L51.7431 8.94002V8.94327C54.6103 11.8229 56.8861 15.2564 58.4377 19.0432C59.9892 22.83 60.7854 26.8942 60.7797 30.9984C60.7888 37.7834 58.6056 44.3825 54.5678 49.7747C54.5295 49.8268 54.4624 49.8562 54.4049 49.8268C54.3537 49.7942 54.3506 49.7258 54.3697 49.6671C56.6864 42.36 44.8538 24.6364 38.7378 17.2086C38.7155 17.1826 38.6931 17.1532 38.6931 17.1206C38.6931 17.075 38.7187 17.0424 38.7506 17.0163C49.0462 6.56731 51.7751 8.97261 51.7399 8.94002L51.7143 8.91394ZM30.3915 0C36.5234 0 41.569 1.71434 46.2215 4.53682C46.279 4.56615 46.295 4.63134 46.2726 4.69C46.2502 4.74541 46.1863 4.75845 46.1256 4.74215C40.2429 3.44499 31.299 8.63039 30.4554 9.14861C30.4362 9.16164 30.417 9.17468 30.3915 9.17468C30.3627 9.17468 30.3435 9.16164 30.3244 9.14861C28.0812 7.83514 19.8147 3.41565 14.6094 4.77474C14.5519 4.78778 14.488 4.778 14.4624 4.71934C14.4515 4.69179 14.4507 4.66117 14.46 4.63305C14.4694 4.60493 14.4884 4.58119 14.5135 4.56615C19.166 1.71435 24.2755 0 30.3915 0ZM30.3915 24.8613C30.4266 24.8613 30.465 24.8906 30.4873 24.9102C39.5814 31.9631 55.1462 49.3999 50.3946 54.3311L50.401 54.3245L50.3978 54.3311H50.3915C44.8599 59.2833 37.7484 62.0097 30.3883 62C23.0272 62.009 15.9151 59.2827 10.3819 54.3311C5.63991 49.3999 21.2015 31.9631 30.286 24.9102C30.3116 24.8906 30.3531 24.8613 30.3915 24.8613Z"
+                            fill="white"></path>
+                    </svg></div>
+                <div class="svg-windows"><svg width="231" height="48" version="1.1" viewBox="0 0 231 48"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <title>Available On Windows</title>
+                        <g transform="translate(271.22 -22.579)" fill="#fff">
+                            <path
+                                d="m-175.67 61.464h-6.0157l-5.8658-22.328-5.9304 22.328h-6.1486l-8.0653-29.022h5.4563l5.8161 23.085 6.3496-23.085h5.5112l5.9683 23.222 5.5238-23.222h5.2685z">
+                            </path>
+                            <path
+                                d="m-160.09 34.565c0 .7846-.28906 1.4384-.86717 1.9615-.56435.52306-1.2526.78459-2.0647.78459-.81212 0-1.5004-.26156-2.0647-.78459-.56435-.52307-.84652-1.1769-.84652-1.9615 0-.79834.28217-1.4659.84652-2.0028.57812-.53682 1.2664-.80524 2.0647-.80524.83965 0 1.5348.27534 2.0854.82588.56434.55062.84652 1.2113.84652 1.9821zm-5.442 26.898v-20.915h4.876v20.915z">
+                            </path>
+                            <path
+                                d="m-141.89 61.464v-11.645c0-3.0511-.94643-5.6831-4.0201-5.6831-3.0577 0-4.9966 2.7533-4.9966 5.5386v11.789h-4.7695v-20.915h4.7695v2.9584h.0826c1.5829-2.4506 3.8679-3.3111 6.8548-3.3111 2.2436 0 3.978.55225 5.203 1.9838 1.2388 1.4315 1.7827 3.6063 1.7827 6.5245v12.759z">
+                            </path>
+                            <path
+                                d="m-117.94 61.464v-2.6924h-.0826c-1.5141 2.5465-4.6048 3.1336-6.7596 3.1336-6.4042 0-8.7543-4.9749-8.7543-10.269 0-3.51.87406-6.318 2.6222-8.424 1.7619-2.1198 4.1156-3.0373 7.0613-3.0373 4.5855 0 5.8305 2.5513 5.8305 2.5513h.0826v-12.104h4.9473v30.842zm.0413-11.918c0-2.5265-1.6236-5.397-5.0504-5.397-3.92 0-5.4434 3.4113-5.4434 7.343 0 3.4326 1.4375 6.548 5.1705 6.5997 3.6604 0 5.2936-3.4887 5.3233-6.3726z">
+                            </path>
+                            <path
+                                d="m-88.034 50.914c0 7.2446-4.3298 11.169-10.832 11.169-7.0707 0-10.695-4.2328-10.695-10.715 0-7.4157 4.3429-11.273 11.211-11.273 6.2932 0 10.316 4.0228 10.316 10.819zm-5.0794.1651c0-3.2231-1.1425-6.8059-5.5051-6.8059-4.1842 0-5.8097 3.1138-5.8097 6.9298 0 4.1456 1.9524 6.7824 5.7799 6.7824 4.1005 0 5.5051-3.1471 5.535-6.9063z">
+                            </path>
+                            <path
+                                d="m-61.864 61.464h-5.3811l-4.1133-15.137-4.4127 15.137h-5.223l-6.0846-20.851h5.1062l3.9735 16.199 4.6441-16.199h4.7894l4.1408 16.157 3.8735-16.157h4.6797z">
+                            </path>
+                            <path
+                                d="m-40.555 55.642c0 4.6565-4.2225 6.4714-8.4554 6.4714-2.7569 0-5.5019-1.0619-5.5019-1.0619v-4.9529s2.3861 2.0793 5.7192 2.1052c2.2849 0 3.3142-.72057 3.3142-2.0924.05644-1.1006-.61364-1.7075-1.4147-2.1625-.55059-.33035-1.4109-.73641-2.5809-1.2182-1.3765-.59187-2.4019-1.1631-3.0764-1.7137-.6607-.55058-1.1562-1.1975-1.4866-1.9408-.31658-.74329-.55035-1.5601-.55035-2.5512 0-3.76 3.1359-6.4167 8.1485-6.4167 3.313 0 4.7488.81239 4.7488.81239v4.7052s-2.3545-1.6272-4.8008-1.642c-1.7529 0-3.0784.6382-3.1016 2.0825-.01235 1.8616 2.2673 2.769 3.6284 3.3197 1.9821.79835 3.4326 1.6506 4.2447 2.6279.81212.9773 1.1648 1.9614 1.1648 3.6282z">
+                            </path>
+                            <rect x="-271.22" y="22.579" width="23.105" height="23.105"></rect>
+                            <rect x="-245.58" y="22.579" width="23.105" height="23.105"></rect>
+                            <rect x="-271.22" y="48.221" width="23.105" height="23.105"></rect>
+                            <rect x="-245.58" y="48.221" width="23.105" height="23.105"></rect>
+                        </g>
+                    </svg></div>
+                <div class="svg-steam"><svg width="205" height="63" viewBox="0 0 205 63" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <title>Available On Steam</title>
+                        <path
+                            d="M31.3869 0C14.842 0 1.28797 12.7593 0 28.974L16.8802 35.9538C18.3097 34.9763 20.0386 34.4039 21.8979 34.4039C22.0643 34.4039 22.2295 34.4088 22.3947 34.4175L29.9027 23.5354C29.9027 23.4837 29.9014 23.4333 29.9014 23.3816C29.9014 16.8314 35.2297 11.5012 41.7788 11.5012C48.3279 11.5012 53.6561 16.8314 53.6561 23.3816C53.6561 29.9317 48.3279 35.2619 41.7788 35.2619C41.6881 35.2619 41.5987 35.2595 41.5093 35.257L30.8031 42.8978C30.8081 43.0381 30.8131 43.1785 30.8131 43.32C30.8131 48.2379 26.8138 52.2374 21.8991 52.2374C17.5844 52.2374 13.9764 49.1562 13.1579 45.0767L1.08552 40.085C4.82397 53.3071 16.9696 63 31.3881 63C48.7825 63 62.883 48.8965 62.883 31.5012C62.8806 14.1035 48.7812 0 31.3869 0Z"
+                            fill="white"></path>
+                        <path
+                            d="M19.7368 47.7973L15.8679 46.1995C16.5535 47.6262 17.7396 48.8215 19.3157 49.4788C22.7201 50.897 26.6449 49.2819 28.0645 45.8745C28.7513 44.2249 28.755 42.4055 28.0744 40.7548C27.395 39.1028 26.1108 37.8139 24.4614 37.1258C22.8244 36.445 21.0719 36.4697 19.5306 37.0507L23.5274 38.7039C26.0387 39.7515 27.2261 42.6345 26.1803 45.1457C25.1333 47.657 22.2469 48.8437 19.7368 47.7973Z"
+                            fill="white"></path>
+                        <path
+                            d="M35.8454 23.3681C35.8454 20.0838 38.5083 17.4224 41.7909 17.4224C45.076 17.4224 47.7364 20.0838 47.7364 23.3681C47.7364 26.6524 45.0748 29.3138 41.7909 29.3138C38.5083 29.3138 35.8454 26.6511 35.8454 23.3681ZM49.6926 23.3816C49.6926 19.0165 46.1417 15.4651 41.7785 15.4651C37.4141 15.4651 33.8644 19.0165 33.8644 23.3816C33.8644 27.7455 37.4141 31.2957 41.7785 31.2957C46.1417 31.2957 49.6926 27.7455 49.6926 23.3816Z"
+                            fill="white"></path>
+                        <path
+                            d="M95.9581 21.8438L93.9112 25.4433C92.3351 24.3403 90.1989 23.678 88.3321 23.678C86.2008 23.678 84.8818 24.5606 84.8818 26.1412C84.8818 28.0628 87.2255 28.5097 90.7081 29.7604C94.4515 31.0837 96.6039 32.6422 96.6039 36.0693C96.6039 40.7618 92.9139 43.3961 87.613 43.3961C85.0283 43.3961 81.9109 42.7289 79.5138 41.2714L81.0079 37.2806C82.9542 38.3097 85.2842 38.919 87.3596 38.919C90.1579 38.919 91.4881 37.8862 91.4881 36.3598C91.4881 34.613 89.4598 34.0873 86.1859 33.0041C82.4549 31.7583 79.869 30.1223 79.869 26.3271C79.869 22.0482 83.297 19.5886 88.2278 19.5886C91.6619 19.5899 94.4254 20.6793 95.9581 21.8438Z"
+                            fill="white"></path>
+                        <path d="M111.959 24.1187V43.0022H107.14V24.1187H100.142V19.9838H118.934V24.1187H111.959Z"
+                            fill="white"></path>
+                        <path
+                            d="M129.094 24.1052V29.2926H138.318V33.4263H129.094V38.8304H139.796V43.0022H124.276V19.9838H139.796V24.1052H129.094Z"
+                            fill="white"></path>
+                        <path
+                            d="M155.005 25.4753L151.862 34.6918H158.214L155.005 25.4753ZM150.553 38.5337L149.029 43.0022H143.977L152.606 19.9838H157.458L166.332 43.0022H161.108L159.552 38.5337H150.553Z"
+                            fill="white"></path>
+                        <path
+                            d="M191.066 28.8815L184.769 42.3313H182.049L175.853 29.0009V43.0022H171.238V19.9838H175.842L183.578 36.5998L191.037 19.9838H195.682V43.0022H191.068L191.066 28.8815Z"
+                            fill="white"></path>
+                        <path
+                            d="M201.268 22.7241H201.83C202.194 22.7241 202.409 22.4964 202.409 22.2083C202.409 21.9191 202.255 21.7319 201.829 21.7319H201.268V22.7241ZM201.861 21.2519C202.686 21.2519 202.963 21.6889 202.963 22.1603C202.963 22.5924 202.707 22.8829 202.395 23.0306L203.135 24.4168H202.528L201.905 23.1882H201.262V24.4168H200.757V21.2519H201.861ZM199.159 22.8879C199.159 24.5423 200.351 25.5813 201.817 25.5813C203.277 25.5813 204.463 24.5423 204.463 22.8879C204.463 21.2285 203.277 20.2043 201.817 20.2043C200.354 20.2043 199.159 21.2408 199.159 22.8879ZM205 22.8879C205 24.8661 203.517 26.0983 201.817 26.0983C200.11 26.0983 198.624 24.8661 198.624 22.8879C198.624 20.9096 200.11 19.6848 201.817 19.6848C203.517 19.6848 205 20.9096 205 22.8879Z"
+                            fill="white"></path>
+                    </svg></div>
+            </div>
+            <h2>Síguenos</h2>
+            <div class="social-media">
+                <a target="_blank" rel="noreferrer" class="svg-twitter" aria-label="Follow us on Twitter"
+                    href="https://twitter.com/Halo">
+                    <svg width="47" height="38" viewBox="0 0 47 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.682 38c17.629 0 27.287-14.624 27.287-27.287 0-.413 0-.826-.023-1.239a19.36 19.36 0 0 0 4.783-4.978 19.261 19.261 0 0 1-5.517 1.514A9.598 9.598 0 0 0 45.432.7a18.65 18.65 0 0 1-6.09 2.328A9.566 9.566 0 0 0 32.345 0c-5.287 0-9.589 4.301-9.589 9.589 0 .745.092 1.48.241 2.19-7.96-.39-15.025-4.22-19.762-10.024A9.582 9.582 0 0 0 1.95 6.584a9.6 9.6 0 0 0 4.267 7.983 9.672 9.672 0 0 1-4.336-1.193v.126c0 4.634 3.315 8.522 7.685 9.405-.803.23-1.64.333-2.523.333-.62 0-1.216-.057-1.801-.172A9.574 9.574 0 0 0 14.2 29.72a19.223 19.223 0 0 1-11.917 4.129c-.769 0-1.537-.035-2.283-.126A27.348 27.348 0 0 0 14.682 38z"
+                            fill="#fff"></path>
+                    </svg></a>
+                <a target="_blank" rel="noreferrer" class="svg-instagram" aria-label="Follow us on Instagram"
+                    href="http://instagram.com/halo">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20 3.603c5.34 0 5.972.021 8.081.117 1.95.09 3.01.415 3.714.688.934.363 1.6.797 2.3 1.496.7.7 1.134 1.366 1.496 2.3.274.705.6 1.764.688 3.714.096 2.108.117 2.741.117 8.082 0 5.34-.02 5.972-.117 8.081-.089 1.95-.414 3.01-.688 3.714-.363.934-.797 1.6-1.496 2.3-.7.7-1.366 1.134-2.3 1.496-.705.274-1.764.6-3.714.688-2.108.096-2.74.117-8.081.117-5.34 0-5.974-.02-8.082-.117-1.95-.089-3.009-.414-3.714-.688-.934-.363-1.6-.797-2.3-1.496-.7-.7-1.134-1.366-1.496-2.3-.273-.705-.599-1.764-.688-3.714-.096-2.108-.117-2.74-.117-8.081 0-5.34.021-5.973.117-8.082.09-1.95.415-3.009.688-3.714.363-.934.797-1.6 1.496-2.3.7-.7 1.366-1.134 2.3-1.496.705-.273 1.764-.599 3.714-.688 2.11-.096 2.741-.117 8.082-.117zM20 0c-5.432 0-6.113.023-8.246.12-2.129.098-3.583.436-4.855.93a9.795 9.795 0 0 0-3.542 2.307A9.796 9.796 0 0 0 1.05 6.9C.556 8.17.218 9.625.12 11.754.024 13.887 0 14.568 0 20c0 5.431.023 6.113.12 8.246.098 2.128.436 3.582.93 4.854a9.795 9.795 0 0 0 2.307 3.543A9.802 9.802 0 0 0 6.9 38.95c1.271.494 2.726.832 4.854.93 2.133.097 2.815.12 8.246.12 5.432 0 6.113-.023 8.247-.12 2.128-.098 3.582-.436 4.854-.93a9.796 9.796 0 0 0 3.543-2.307A9.803 9.803 0 0 0 38.95 33.1c.495-1.272.833-2.726.93-4.854.098-2.133.12-2.815.12-8.246 0-5.432-.022-6.113-.12-8.246-.097-2.129-.435-3.583-.93-4.855a9.796 9.796 0 0 0-2.306-3.542A9.802 9.802 0 0 0 33.1 1.05C31.828.556 30.374.218 28.246.12 26.113.024 25.43 0 20 0z"
+                            fill="#fff"></path>
+                        <path
+                            d="M20 9.73C14.326 9.73 9.73 14.328 9.73 20c0 5.671 4.598 10.27 10.27 10.27 5.67 0 10.269-4.599 10.269-10.27 0-5.672-4.597-10.27-10.27-10.27zm0 16.936a6.666 6.666 0 1 1 0-13.333 6.666 6.666 0 0 1 0 13.333zM30.676 11.723a2.4 2.4 0 1 0 0-4.8 2.4 2.4 0 0 0 0 4.8z"
+                            fill="#fff"></path>
+                    </svg></a>
+                <a target="_blank" rel="noreferrer" class="svg-tiktok" aria-label="Follow us on TikTok"
+                    href="https://www.tiktok.com/@halo">
+                    <svg width="25" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M33.807 8.786c-4.198 0-7.614-3.416-7.614-7.614C26.193.524 25.669 0 25.021 0h-6.277c-.646 0-1.171.524-1.171 1.172v25.732a4.482 4.482 0 0 1-4.477 4.477 4.482 4.482 0 0 1-4.476-4.477 4.481 4.481 0 0 1 4.476-4.477c.648 0 1.172-.524 1.172-1.171v-6.277c0-.647-.524-1.172-1.172-1.172C5.875 13.807 0 19.682 0 26.904 0 34.126 5.875 40 13.096 40s13.097-5.875 13.097-13.096v-11.39a16.117 16.117 0 0 0 7.614 1.892c.648 0 1.172-.524 1.172-1.172V9.958c0-.647-.524-1.172-1.172-1.172z"
+                            fill="#fff"></path>
+                    </svg></a>
+                <a target="_blank" rel="noreferrer" class="svg-youtube" aria-label="Follow us on Youtube"
+                    href="https://www.youtube.com/halo">
+                    <svg width="55" height="38" viewBox="0 0 55 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M53.153 5.934a6.798 6.798 0 0 0-4.8-4.799C44.117 0 27.142 0 27.142 0S10.166 0 5.934 1.135a6.798 6.798 0 0 0-4.799 4.8C0 10.164 0 19 0 19s0 8.834 1.135 13.066a6.798 6.798 0 0 0 4.8 4.799C10.164 38 27.141 38 27.141 38s16.975 0 21.207-1.135a6.798 6.798 0 0 0 4.8-4.8C54.282 27.836 54.282 19 54.282 19s0-8.834-1.13-13.066zm-31.44 21.208V10.858L35.814 19l-14.103 8.142z"
+                            fill="#fff"></path>
+                    </svg></a>
+                <a target="_blank" rel="noreferrer" class="svg-discord" aria-label="Follow us on Discord"
+                    href="https://discord.gg/halo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36"
+                        width="25" height="40">
+                        <path class="cls-1"
+                            d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.11 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2a75.57 75.57 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.1 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.9-72.15zM42.45 65.69C36.18 65.69 31 60 31 53s5-12.74 11.43-12.74S54 46 53.89 53s-5.05 12.69-11.44 12.69zm42.24 0C78.41 65.69 73.25 60 73.25 53s5-12.74 11.44-12.74S96.23 46 96.12 53s-5.04 12.69-11.43 12.69z">
+                        </path>
+                    </svg></a>
+                <a target="_blank" rel="noreferrer" class="svg-facebook" aria-label="Follow us on Facebook"
+                    href="https://www.facebook.com/Halo">
+                    <svg width="21" height="40" viewBox="0 0 21 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6.233 22.5V40h7.671V22.5h5.72l1.088-7.24h-6.808v-4.697c0-1.98.951-3.91 4-3.91H21V.488S18.19 0 15.505 0C9.898 0 6.233 3.467 6.233 9.743v5.518H0V22.5h6.233z"
+                            fill="#fff"></path>
+                    </svg></a>
+                <a target="_blank" rel="noreferrer" class="svg-twitch" aria-label="Follow us on Twitch"
+                    href="https://www.twitch.tv/halo"><svg width="35" height="40" viewBox="0 0 35 40" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M7.143 0L0 7.143v25.714h8.571V40l7.143-7.143h5.715L34.286 20V0H7.143zm24.286 18.571l-5.715 5.715H20l-5 5v-5H8.571V2.857H31.43v15.714z"
+                            fill="#fff"></path>
+                        <path d="M27.143 7.857h-2.857v8.572h2.857V7.857zM19.286 7.857h-2.857v8.572h2.857V7.857z"
+                            fill="#fff"></path>
+                    </svg></a>
+            </div>
+            <p>&copy; Halo 2025</p>
+        </div>
+    </footer>
+    <script src="assets/scripts/animations.js"></script>
+    <script type="module" src="assets/scripts/data.js"></script>
+</body>
+
+</html>
