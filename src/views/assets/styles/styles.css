@@ -112,10 +112,20 @@ p {
   height: 70vh;
   max-width: 100%;
 }
+.main-intro cite {
+  position: absolute;
+  right: 0;
+  padding: 20px;
+  display: flex;
+  color: black;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.8);
+}
 .main-intro .main-title-intro {
   position: absolute;
   left: 0;
-  bottom: 40vh;
+  bottom: 20vh;
   display: flex;
   flex-direction: column;
   border-top: 2px solid;
@@ -123,7 +133,7 @@ p {
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
   text-transform: uppercase;
-  padding: 10px 20px 20px 20px;
+  padding: 20px;
   width: calc(100% - 40px);
   height: -moz-fit-content;
   height: fit-content;
@@ -131,14 +141,14 @@ p {
 }
 .main-intro .main-title-intro h1 {
   font-size: xx-large;
-  font-weight: 200;
+  font-weight: 300;
   color: white;
 }
 .main-intro .main-title-intro p {
   font-weight: 100;
   font-size: large;
 }
-.main-intro #intro-video {
+.main-intro #introVideo {
   -o-object-fit: cover;
      object-fit: cover;
   position: relative;

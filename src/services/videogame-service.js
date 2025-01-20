@@ -1,30 +1,29 @@
-import { Novel } from "../model/novel.js"
+import { Videogame } from "../model/videogame.js";
 
-export class NovelService {
+export class VideogameService {
     constructor() {
-        this.url = "../services/providers/data/novels.json"
+        this.url = "../services/providers/data/videogames.json"
     }
 
     /**
-     * 
-     * @returns {Promise<Novel[]>}: novels
+     * @returns {Promise<Videogame[]>} videogames
      */
-    async getNovels() {
-        let novels = []
+    async getVideogames() {
+        let videogames = []
         try {
             const response = await fetch(this.url)
             if (!response.ok) {
                 throw new Error('No se cargaron los datos correctamente')
             } else {
                 const data = await response.json()
-                novels = data.map(element => {
-                    return new Novel({...element})
+                videogames = data.map(videogame => {
+                    return new Videogame({ ...videogame })
                 });
             }
         } catch (e) {
             console.error(e)
         } finally {
-            return novels
+            return videogames
         }
     }
 }

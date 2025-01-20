@@ -3,7 +3,7 @@
  */
 function closeMenu() {
     const header = document.getElementById("start")
-    const headerMenu = document.getElementById("header-menu")
+    const headerMenu = document.getElementById("headerMenu")
     if (headerMenu.clientHeight > header.clientHeight) {
         const controlIsChecked = document.getElementById("control").checked
         document.getElementById("control").checked = !controlIsChecked

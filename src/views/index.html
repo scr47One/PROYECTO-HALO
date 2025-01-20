@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="assets/multimedia/image/icon-halo.ico">
+    <script type="module" src="assets/scripts/data.js"></script>
     <title>Halo</title>
 </head>
 
@@ -26,34 +27,31 @@
             </span>
             <input type="checkbox" id="control">
             <label for="control" class="material-icons btn-show"></label>
-            <ul id="header-menu" onclick="closeMenu()">
+            <ul id="headerMenu" onclick="closeMenu()">
                 <li><a href="#intro">Intro</a></li>
-                <li><a href="#videojuegos">Videojuegos</a></li>
-                <li><a href="#novelas">Novelas</a></li>
-                <li><a href="#personajes">Personajes</a></li>
+                <li><a href="#videogames">Videojuegos</a></li>
+                <li><a href="#novels">Novelas</a></li>
+                <li><a href="#characters">Personajes</a></li>
                 <li><a href="#links">Acerca de</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="intro" class="main-intro">
-            <video 
-                onclick="this.paused ? this.play() : this.pause();" 
-                preload="auto" 
-                muted
-                poster="assets/multimedia/image/halo-intro.webp" 
-                loop id="intro-video">
+            <video onclick="this.paused ? this.play() : this.pause();" preload="auto" muted
+                poster="assets/multimedia/image/halo-intro.webp" loop id="introVideo">
                 <source src="assets/multimedia/video/intro.mp4">
             </video>
+            <cite>Pulsa sobre el fondo para reproducir o pausar</cite>
             <div class="main-title-intro">
                 <h1>LA SAGA HALO</h1>
                 <p>Esta es una saga de videojuegos, junto con novelas, largometrajes, cortometrajes y una serie,
                     que principalmente sigue el viaje del Jefe Maestro el spartan Jhon 117.
                     Solo se expondran los juegos realizados por la empresa de desarrollo Bungie</p>
-                <cite>Pulsa sobre el fondo para reproducir o pausar</cite>
             </div>
         </section>
-        <section id="videojuegos" class="">
+        <section id="videogames"></section>
+        <section id="videogames1" class="">
             <section id="halo-ce" class="main-section main-section-ce">
                 <h2>Halo: Combat Evolved</h2>
                 <div class="section-content">
@@ -191,8 +189,7 @@
                         <div class="section-video">
                             <h3>Trailer</h3>
                             <video loop preload="auto" class="auto-play"
-                                src="assets/multimedia/video/halo-odst-trailer.mp4"
-                                controls></video>
+                                src="assets/multimedia/video/halo-odst-trailer.mp4" controls></video>
                         </div>
                     </div>
                 </div>
@@ -230,172 +227,123 @@
                         <div class="section-video">
                             <h3>Trailer</h3>
                             <video loop preload="auto" class="auto-play"
-                                src="assets/multimedia/video/halo-reach-trailer.mp4"
-                                controls></video>
+                                src="assets/multimedia/video/halo-reach-trailer.mp4" controls></video>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="main-section section-table" id="novelas">
-                <h2>Novelas</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Autor</th>
-                            <th>Trama</th>
-                            <th>Portada</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Halo: The Fall of Reach</td>
-                            <td>Eric Nylund</td>
-                            <td>
-                                <span>
-                                    Narra el origen del programa Spartan-II y la creación del Jefe Maestro. Después de
-                                    ser secuestrado de niño, el Jefe Maestro es entrenado en combate para luchar contra
-                                    los alienígenas Covenant en una guerra por el control del universo
-                                </span>
-                            </td>
-                            <td><img src="assets/multimedia/image/halo-for.jpg" alt=""></td>
-                        </tr>
-                        <tr>
-                            <td>Halo: The Flood</td>
-                            <td>William C. Dietz</td>
-                            <td><span>Es una novela que cuenta los eventos del primer videojuego de la serie Halo desde
-                                    la perspectiva de varios personajes, incluyendo al Jefe Maestro. La historia sigue
-                                    la lucha de la humanidad contra los Covenant y la amenaza de los Flood, una raza
-                                    parasitaria que puede convertir a cualquier ser vivo en un monstruo.</span></td>
-                            <td><img src="assets/multimedia/image/halo-tf.jpg" alt=""></td>
-                        </tr>
-                        <tr>
-                            <td>Halo: First Strike</td>
-                            <td>Eric Nylund</td>
-                            <td><span> El Jefe Maestro lidera un grupo de Spartans en una misión para destruir una base
-                                    Covenant y descubren información sobre un arma secreta llamada «Halo». La carrera
-                                    para detener a los Covenant y los Flood continúa en una nueva batalla por la
-                                    supervivencia de la humanidad.</span></td>
-                            <td><img src="assets/multimedia/image/halo-fs.jpg" alt=""></td>
-                        </tr>
-                        <tr>
-                            <td>Halo: Ghosts of Onyx</td>
-                            <td>Eric Nylund</td>
-                            <td><span>Sigue la historia de un grupo de Spartans y un equipo de científicos que viajan a
-                                    un mundo artificial llamado Onyx. Allí descubren un secreto peligroso y deben luchar
-                                    contra una amenaza sorprendente que podría cambiar el curso de la guerra contra los
-                                    Covenant.</span></td>
-                            <td><img src="assets/multimedia/image/halo-go.jpg" alt=""></td>
-                        </tr>
-                        <tr>
-                            <td>Halo: Contact Harvest</td>
-                            <td>Joseph Staten</td>
-                            <td><span>Cuenta cómo la humanidad conoció a los alienígenas Covenant. La novela sigue a un
-                                    grupo de soldados y civiles que luchan por mantener el control de la colonia Harvest
-                                    mientras los Covenant invaden y una inteligencia artificial rebelde amenaza con
-                                    destruir todo lo que queda.</span></td>
-                            <td><img src="assets/multimedia/image/halo-ch.jpg" alt=""></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            <section class="main-section" id="personajes">
-                <h2>Personajes</h2>
-                <div class="section-content">
-                    <div class="section-card-container">
-                        <div class="card-content card-primary">
-                            <div class="card-image">
-                                <img src="assets/multimedia/image/master-chief.jpg" alt="Master Chief">
-                            </div>
-                            <div class="card-title">
-                                <h4>Master Chief</h4>
-                            </div>
-                            <div class="card-text">
-                                <p>Master Chief (en español: Jefe Maestro), conocido también como JOHN-117, es un
-                                    personaje y el protagonista principal de la serie de videojuegos Halo. SPARTAN-117
-                                    es uno de los últimos soldados Spartan del proyecto SPARTAN-II, nombre clave del
-                                    proyecto creado por la UNSC para crear supersoldados capaces de repeler las fuerzas
-                                    de combate del Covenant o Forerunner</p>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-image">
-                                <img src="assets/multimedia/image/inquisidor.jpg" alt="Master Chief">
-                            </div>
-                            <div class="card-title">
-                                <h4>Inquisidor</h4>
-                            </div>
-                            <div class="card-text">
-                                <p>El Inquisidor (nombre real según "The Cole Protocol": Thel 'Vadaam)es un personaje
-                                    Elite en las series de Halo 2 y Halo 3. En un principio, Comandante Supremo de la
-                                    flota Particle Justice, y luego de su fracaso resguardando el primer anillo, "La
-                                    Voluntad de Los Profetas".</p>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-image">
-                                <img src="assets/multimedia/image/avery-j.avif" alt="Master Chief">
-                            </div>
-                            <div class="card-title">
-                                <h4>Avery Johnson</h4>
-                            </div>
-                            <div class="card-text">
-                                <p>Es un marino que encabeza las fuerzas humanas contra los Flood y el Covenant, Johnson
-                                    en uno de los pocos marines que logran sobrevivir a la destrucción de la Instalación
-                                    04 y es rescatado por Cortana y el Jefe Maestro durante la novela Halo: First
-                                    Strike.</p>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-image">
-                                <img src="assets/multimedia/image/cortana.webp" alt="Master Chief">
-                            </div>
-                            <div class="card-title">
-                                <h4>Cortana</h4>
-                            </div>
-                            <div class="card-text">
-                                <p>Es una inteligencia artificial de la UNSC, y compañera del Jefe Maestro. Fue
-                                    construida clonando el cerebro de Catherine Elizabeth Halsey, la creadora del
-                                    proyecto Spartan. </p>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-image">
-                                <img src="assets/multimedia/image/katerine-h.webp" alt="Master Chief">
-                            </div>
-                            <div class="card-title">
-                                <h4>Catherine Halsey</h4>
-                            </div>
-                            <div class="card-text">
-                                <p>La Doctora Catherine Elizabeth Halsey es una científica civil de la UNSC. Ella
-                                    aparece en las novelas Halo: The Fall of Reach, Halo: First Strike, y Halo: Ghosts
-                                    of Onyx, como también en Halo Legends «Homecoming» y en la misión «El Paquete» en
-                                    Halo: Reach.</p>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-image">
-                                <img src="assets/multimedia/image/miranda-k.jpg" alt="Master Chief">
-                            </div>
-                            <div class="card-title">
-                                <h4>Miranda Keyes</h4>
-                            </div>
-                            <div class="card-text">
-                                <p>La comandante Miranda Keyes es la hija de Jacob Keyes y Catherine Halsey, quien
-                                    todavía vivía cuando era ella más joven. Debido a la rivalidad entre Halsey y
-                                    Miranda ella cambió su apellido (en ese entonces Halsey) por el de su padre (Keyes).
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-            <h3>Tema oficial de Halo </h3>
-            <audio controls class="auto-play">
-                <source src="assets/multimedia/audio/Halo Theme Song Original.mp3" type="audio/mp3">
-            </audio>
         </section>
+        <section class="main-section section-table" id="novels">
+            <h2>Novelas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Autor</th>
+                        <th>Trama</th>
+                        <th>Portada</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    
+                </tbody>
+            </table>
+        </section>
+        <section class="main-section" id="characters">
+            <h2>Personajes</h2>
+            <div class="section-content">
+                <div class="section-card-container">
+                    <div class="card-content card-primary">
+                        <div class="card-image">
+                            <img src="assets/multimedia/image/master-chief.jpg" alt="Master Chief">
+                        </div>
+                        <div class="card-title">
+                            <h4>Master Chief</h4>
+                        </div>
+                        <div class="card-text">
+                            <p>Master Chief (en español: Jefe Maestro), conocido también como JOHN-117, es un
+                                personaje y el protagonista principal de la serie de videojuegos Halo. SPARTAN-117
+                                es uno de los últimos soldados Spartan del proyecto SPARTAN-II, nombre clave del
+                                proyecto creado por la UNSC para crear supersoldados capaces de repeler las fuerzas
+                                de combate del Covenant o Forerunner</p>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-image">
+                            <img src="assets/multimedia/image/inquisidor.jpg" alt="Master Chief">
+                        </div>
+                        <div class="card-title">
+                            <h4>Inquisidor</h4>
+                        </div>
+                        <div class="card-text">
+                            <p>El Inquisidor (nombre real según "The Cole Protocol": Thel 'Vadaam)es un personaje
+                                Elite en las series de Halo 2 y Halo 3. En un principio, Comandante Supremo de la
+                                flota Particle Justice, y luego de su fracaso resguardando el primer anillo, "La
+                                Voluntad de Los Profetas".</p>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-image">
+                            <img src="assets/multimedia/image/avery-j.avif" alt="Master Chief">
+                        </div>
+                        <div class="card-title">
+                            <h4>Avery Johnson</h4>
+                        </div>
+                        <div class="card-text">
+                            <p>Es un marino que encabeza las fuerzas humanas contra los Flood y el Covenant, Johnson
+                                en uno de los pocos marines que logran sobrevivir a la destrucción de la Instalación
+                                04 y es rescatado por Cortana y el Jefe Maestro durante la novela Halo: First
+                                Strike.</p>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-image">
+                            <img src="assets/multimedia/image/cortana.webp" alt="Master Chief">
+                        </div>
+                        <div class="card-title">
+                            <h4>Cortana</h4>
+                        </div>
+                        <div class="card-text">
+                            <p>Es una inteligencia artificial de la UNSC, y compañera del Jefe Maestro. Fue
+                                construida clonando el cerebro de Catherine Elizabeth Halsey, la creadora del
+                                proyecto Spartan. </p>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-image">
+                            <img src="assets/multimedia/image/katerine-h.webp" alt="Master Chief">
+                        </div>
+                        <div class="card-title">
+                            <h4>Catherine Halsey</h4>
+                        </div>
+                        <div class="card-text">
+                            <p>La Doctora Catherine Elizabeth Halsey es una científica civil de la UNSC. Ella
+                                aparece en las novelas Halo: The Fall of Reach, Halo: First Strike, y Halo: Ghosts
+                                of Onyx, como también en Halo Legends «Homecoming» y en la misión «El Paquete» en
+                                Halo: Reach.</p>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-image">
+                            <img src="assets/multimedia/image/miranda-k.jpg" alt="Master Chief">
+                        </div>
+                        <div class="card-title">
+                            <h4>Miranda Keyes</h4>
+                        </div>
+                        <div class="card-text">
+                            <p>La comandante Miranda Keyes es la hija de Jacob Keyes y Catherine Halsey, quien
+                                todavía vivía cuando era ella más joven. Debido a la rivalidad entre Halsey y
+                                Miranda ella cambió su apellido (en ese entonces Halsey) por el de su padre (Keyes).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <h3>Tema oficial de Halo </h3>
+        <audio controls class="auto-play">
+            <source src="assets/multimedia/audio/Halo Theme Song Original.mp3" type="audio/mp3">
+        </audio>
     </main>
     <footer class="footer">
         <div id="contact" class="footer-form main-section">
@@ -583,7 +531,6 @@
         </div>
     </footer>
     <script src="assets/scripts/animations.js"></script>
-    <script type="module" src="assets/scripts/data.js"></script>
 </body>
 
 </html>

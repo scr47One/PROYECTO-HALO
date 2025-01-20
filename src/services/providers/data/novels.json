@@ -1,30 +1,30 @@
 [
     {
-        "name": "Halo: The Fall of Reach",
+        "title": "Halo: The Fall of Reach",
         "author": "Eric Nylund",
         "plot": "Narra el origen del programa Spartan-II y la creación del Jefe Maestro. Después de ser secuestrado de niño, el Jefe Maestro es entrenado en combate para luchar contra los alienígenas Covenant en una guerra por el control del universo",
         "image": "assets/multimedia/image/halo-for.jpg"
     },
     {
-        "name": "Halo: The Flood",
+        "title": "Halo: The Flood",
         "author": "William C. Dietz",
         "plot": "Es una novela que cuenta los eventos del primer videojuego de la serie Halo desde la perspectiva de varios personajes, incluyendo al Jefe Maestro. La historia sigue la lucha de la humanidad contra los Covenant y la amenaza de los Flood, una raza parasitaria que puede convertir a cualquier ser vivo en un monstruo.",
         "image": "assets/multimedia/image/halo-tf.jpg"
     },
     {
-        "name": "Halo: First Strike",
+        "title": "Halo: First Strike",
         "author": "Eric Nylund",
         "plot": "El Jefe Maestro lidera un grupo de Spartans en una misión para destruir una base Covenant y descubren información sobre un arma secreta llamada «Halo». La carrera para detener a los Covenant y los Flood continúa en una nueva batalla por la supervivencia de la humanidad.",
         "image": "assets/multimedia/image/halo-fs.jpg"
     },
     {
-        "name": "Halo: Ghosts of Onyx",
+        "title": "Halo: Ghosts of Onyx",
         "author": "Eric Nylund",
         "plot": "Sigue la historia de un grupo de Spartans y un equipo de científicos que viajan a un mundo artificial llamado Onyx. Allí descubren un secreto peligroso y deben luchar contra una amenaza sorprendente que podría cambiar el curso de la guerra contra los Covenant.",
         "image": "assets/multimedia/image/halo-go.jpg"
     },
     {
-        "name": "Halo: Contact Harvest",
+        "title": "Halo: Contact Harvest",
         "author": "Joseph Staten",
         "plot": "Cuenta cómo la humanidad conoció a los alienígenas Covenant. La novela sigue a un grupo de soldados y civiles que luchan por mantener el control de la colonia Harvest mientras los Covenant invaden y una inteligencia artificial rebelde amenaza con destruir todo lo que queda.",
         "image": "assets/multimedia/image/halo-ch.jpg"
