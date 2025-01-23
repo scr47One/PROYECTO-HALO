@@ -76,7 +76,7 @@
         "name": "Halo Wars: Definitive Edition",
         "description": "Una versión remasterizada del juego de estrategia en tiempo real Halo Wars, con gráficos mejorados y nuevas características.",
         "price": 19.99,
-        "image": "https://example.com/images/halo_wars_definitive.jpg",
+        "image": "https://images.placeholders.dev/?width=600&height=400",
         "type": "game",
         "discount": 10
     },
@@ -85,7 +85,7 @@
         "name": "Halo: Nightfall (Serie)",
         "description": "Una serie de acción en vivo que sigue a Jameson Locke y su equipo en una misión para descubrir una nueva amenaza para la humanidad.",
         "price": 9.99,
-        "image": "https://example.com/images/halo_nightfall.jpg",
+        "image": "https://images.placeholders.dev/?width=600&height=400",
         "type": "movie",
         "discount": 0
     },
@@ -94,7 +94,7 @@
         "name": "Halo: The Flood (Novela)",
         "description": "La segunda novela de la saga Halo, que adapta los eventos del juego original Halo: Combat Evolved en una narrativa emocionante.",
         "price": 14.99,
-        "image": "https://example.com/images/halo_the_flood.jpg",
+        "image": "https://images.placeholders.dev/?width=600&height=400",
         "type": "book",
         "discount": 15
     },
@@ -103,7 +103,7 @@
         "name": "Halo: Ghosts of Onyx (Novela)",
         "description": "Una novela ambientada después de los eventos de Halo 3, que se centra en la creación de los soldados Spartan-III.",
         "price": 14.99,
-        "image": "https://example.com/images/halo_ghosts_of_onyx.jpg",
+        "image": "https://images.placeholders.dev/?width=600&height=400",
         "type": "book",
         "discount": 10
     },
@@ -112,7 +112,7 @@
         "name": "Halo: Broken Circle (Novela)",
         "description": "Una novela que profundiza en la historia del Covenant y sus facciones internas antes de los eventos del primer juego de Halo.",
         "price": 14.99,
-        "image": "https://example.com/images/halo_broken_circle.jpg",
+        "image": "https://images.placeholders.dev/?width=600&height=400",
         "type": "book",
         "discount": 5
     },
@@ -121,7 +121,7 @@
         "name": "Halo: Hunters in the Dark (Novela)",
         "description": "Una novela que sigue a un equipo de humanos y élites que se unen para cazar un poderoso artefacto.",
         "price": 14.99,
-        "image": "https://example.com/images/halo_hunters_in_the_dark.jpg",
+        "image": "https://images.placeholders.dev/?width=600&height=400",
         "type": "book",
         "discount": 10
     },
@@ -130,7 +130,7 @@
         "name": "Halo: New Blood (Novela)",
         "description": "La historia de un joven soldado, Edward Buck, mientras se une a la lucha contra el Covenant en los primeros años del conflicto de Halo.",
         "price": 14.99,
-        "image": "https://example.com/images/halo_new_blood.jpg",
+        "image": "https://images.placeholders.dev/?width=600&height=400",
         "type": "book",
         "discount": 20
     },
@@ -139,7 +139,7 @@
         "name": "Halo: The Master Chief Statue",
         "description": "Una figura coleccionable de alta calidad de Master Chief, perfecta para cualquier fanático de Halo.",
         "price": 129.99,
-        "image": "https://example.com/images/halo_masterchief_statue.jpg",
+        "image": "https://images.placeholders.dev/?width=600&height=400",
         "type": "other",
         "discount": 10
     },
@@ -148,7 +148,7 @@
         "name": "Halo: Combat Evolved Soundtrack",
         "description": "La banda sonora icónica del juego original Halo: Combat Evolved, disponible para descarga digital.",
         "price": 9.99,
-        "image": "https://example.com/images/halo_combat_soundtrack.jpg",
+        "image": "https://images.placeholders.dev/?width=600&height=400",
         "type": "music",
         "discount": 0
     },
@@ -157,7 +157,7 @@
         "name": "Halo: Fireteam Raven (Arcade)",
         "description": "Un juego de disparos cooperativo en el universo de Halo, donde los jugadores luchan juntos a lo largo de una intensa campaña.",
         "price": 0,
-        "image": "https://example.com/images/halo_fireteam_raven.jpg",
+        "image": "https://images.placeholders.dev/?width=600&height=400",
         "type": "game",
         "discount": 0
     },
@@ -166,7 +166,7 @@
         "name": "Halo: Master Chief T-shirt",
         "description": "Una camiseta premium con la imagen icónica de Master Chief de la saga Halo.",
         "price": 19.99,
-        "image": "https://example.com/images/halo_masterchief_tshirt.jpg",
+        "image": "https://images.placeholders.dev/?width=600&height=400",
         "type": "other",
         "discount": 5
     },
@@ -175,7 +175,7 @@
         "name": "Halo: Cortana Collectible Figure",
         "description": "Una figura limitada y detallada de Cortana, la IA compañera de Master Chief en la saga Halo.",
         "price": 99.99,
-        "image": "https://example.com/images/halo_cortana_figure.jpg",
+        "image": "https://images.placeholders.dev/?width=600&height=400",
         "type": "other",
         "discount": 15
     },
@@ -184,7 +184,7 @@
         "name": "Halo: Anniversary Soundtrack",
         "description": "La banda sonora remasterizada de Halo: Combat Evolved Anniversary, con nuevas composiciones y una experiencia auditiva mejorada.",
         "price": 12.99,
-        "image": "https://example.com/images/halo_anniversary_soundtrack.jpg",
+        "image": "https://images.placeholders.dev/?width=600&height=400",
         "type": "music",
         "discount": 0
     },
@@ -193,7 +193,7 @@
         "name": "Halo: The Cole Protocol (Novela)",
         "description": "Una novela que sigue a un grupo de soldados que enfrentan una nueva amenaza mientras intentan descubrir los secretos de un artefacto alienígena.",
         "price": 14.99,
-        "image": "https://example.com/images/halo_cole_protocol.jpg",
+        "image": "https://images.placeholders.dev/?width=600&height=400",
         "type": "book",
         "discount": 10
     },
@@ -202,7 +202,7 @@
         "name": "Halo: Meridian Divide (Novela)",
         "description": "Una novela que explora las consecuencias de la guerra contra el Covenant y las tensiones políticas dentro de la humanidad.",
         "price": 14.99,
-        "image": "https://example.com/images/halo_meridian_divide.jpg",
+        "image": "https://images.placeholders.dev/?width=600&height=400",
         "type": "book",
         "discount": 15
     },
@@ -211,7 +211,7 @@
         "name": "Halo: Lone Wolf (Novela)",
         "description": "Sigue las aventuras de un soldado Spartan mientras lucha por sobrevivir en medio de un conflicto en expansión, enfrentándose a su destino.",
         "price": 14.99,
-        "image": "https://example.com/images/halo_lone_wolf.jpg",
+        "image": "https://images.placeholders.dev/?width=600&height=400",
         "type": "book",
         "discount": 10
     },
@@ -220,7 +220,7 @@
         "name": "Halo: Elite Zealot Helmet",
         "description": "Un casco coleccionable inspirado en el diseño de los élites Zealot, utilizado por los Covenant en la serie Halo.",
         "price": 149.99,
-        "image": "https://example.com/images/halo_zealot_helmet.jpg",
+        "image": "https://images.placeholders.dev/?width=600&height=400",
         "type": "other",
         "discount": 10
     },
@@ -229,7 +229,7 @@
         "name": "Halo: The Art of Halo 3",
         "description": "Un libro que recoge el arte conceptual y final de Halo 3, proporcionando una visión única sobre el proceso creativo del juego.",
         "price": 39.99,
-        "image": "https://example.com/images/halo_art_of_halo_3.jpg",
+        "image": "https://images.placeholders.dev/?width=600&height=400",
         "type": "book",
         "discount": 5
     },
@@ -238,7 +238,7 @@
         "name": "Halo: Mythos (Novela Gráfica)",
         "description": "Una novela gráfica que expande la historia de Halo, explorando las primeras batallas entre humanos y Covenant.",
         "price": 24.99,
-        "image": "https://example.com/images/halo_mythos.jpg",
+        "image": "https://images.placeholders.dev/?width=600&height=400",
         "type": "book",
         "discount": 15
     },
@@ -247,7 +247,7 @@
         "name": "Halo: Reach - Limited Edition",
         "description": "Edición limitada del juego Halo: Reach, con contenido exclusivo y una figura de colección de Noble Team.",
         "price": 99.99,
-        "image": "https://example.com/images/halo_reach_limited.jpg",
+        "image": "https://images.placeholders.dev/?width=600&height=400",
         "type": "game",
         "discount": 20
     },
@@ -256,7 +256,7 @@
         "name": "Halo: Spartan Locke Figure",
         "description": "Figura coleccionable de Spartan Locke, un personaje clave en Halo 5: Guardians.",
         "price": 89.99,
-        "image": "https://example.com/images/halo_spartan_locke_figure.jpg",
+        "image": "https://images.placeholders.dev/?width=600&height=400",
         "type": "other",
         "discount": 10
     },
@@ -265,7 +265,7 @@
         "name": "Halo: Combat Evolved Multiplayer Map Pack",
         "description": "Un paquete de mapas multijugador adicional para Halo: Combat Evolved, con nuevos escenarios y modos de juego.",
         "price": 14.99,
-        "image": "https://example.com/images/halo_ce_map_pack.jpg",
+        "image": "https://images.placeholders.dev/?width=600&height=400",
         "type": "game",
         "discount": 0
     }
