@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="assets/multimedia/image/icon-halo.ico">
-    <script type="module" src="assets/scripts/data.js"></script>
     <title>Halo</title>
 </head>
 
@@ -32,18 +31,19 @@
                 <li><a href="#videogames">Videojuegos</a></li>
                 <li><a href="#novels">Novelas</a></li>
                 <li><a href="#characters">Personajes</a></li>
+                <li><a href="components/store/store.html">tienda</a></li>
                 <li><a href="#links">Acerca de</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="intro" class="main-intro">
+        <section id="intro">
             <video onclick="this.paused ? this.play() : this.pause();" preload="auto" muted
                 poster="assets/multimedia/image/halo-intro.webp" loop id="introVideo">
                 <source src="assets/multimedia/video/intro.mp4">
             </video>
             <cite>Pulsa sobre el fondo para reproducir o pausar</cite>
-            <div class="main-title-intro">
+            <div id="contentIntro">
                 <h1>LA SAGA HALO</h1>
                 <p>Esta es una saga de videojuegos, junto con novelas, largometrajes, cortometrajes y una serie,
                     que principalmente sigue el viaje del Jefe Maestro el spartan Jhon 117.
@@ -51,188 +51,6 @@
             </div>
         </section>
         <section id="videogames"></section>
-        <section id="videogames1" class="">
-            <section id="halo-ce" class="main-section main-section-ce">
-                <h2>Halo: Combat Evolved</h2>
-                <div class="section-content">
-                    <div class="section-text">
-                        <h3>Trama</h3>
-                        <p>
-                            El Pillar of Autumn descubre un anillo desconocido y es atacado por el Covenant.
-                            El capitán Keyes confía a Cortana al Jefe Maestro para proteger la Tierra.
-                            La nave aterriza en el anillo, donde Master Chief organiza la defensa contra el Covenant.
-                            Keyes es capturado, pero se revela que el anillo es un arma, y buscan detener al Covenant.
-                            Master Chief descubre el parásito Flood y se asocia con la IA 343 Guilty Spark.
-                            Tras aprender que el anillo destruye toda la vida sensible, deciden destruirlo.
-                            Recuperan el implante neuronal de Keyes para desactivar la autodestrucción del anillo.
-                            Master Chief y Cortana desestabilizan los reactores del Pillar of Autumn y escapan.
-                            La amenaza no ha terminado, ya que 343 Guilty Spark sobrevive tras la destrucción del
-                            anillo.
-                        </p>
-                    </div>
-                    <div class="section-multimedia">
-                        <div class="section-img">
-                            <h3>Portada</h3>
-                            <img src="assets/multimedia/image/halo-ce.jpg" alt="Halo: ce">
-                        </div>
-                        <div class="section-video">
-                            <h3>Trailer</h3>
-                            <video loop preload="auto" class="auto-play" controls>
-                                <source src="assets/multimedia/video/halo-ce-trailer.mp4">
-                            </video>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="halo-2" class="main-section main-section-halo2">
-                <h2>Halo 2</h2>
-                <div class="section-content">
-                    <div class="section-text">
-                        <h3>Trama</h3>
-                        <p>
-                            Halo 2 comienza con el juicio de un Élite despojado de su rango en High Charity.
-                            Le ofrecen convertirse en Árbitro para sofocar rebeliones y recuperar a 343 Guilty Spark.
-                            En la Tierra, el almirante Hood y el Jefe Maestro defienden contra una invasión Covenant.
-                            El Profeta del Pesar huye a Halo, y el Jefe Maestro lo persigue para evitar la activación.
-                            Tras la muerte de Regret, el Covenant bombardea la zona y surge discordia entre sus razas.
-                            El Inquisidor, como nuevo líder, es enviado con el Jefe Maestro para detener Halo.
-                            Gravemind revela la verdad detrás del Gran Viaje y usa a los héroes como distracción.
-                            La ciudad se llena de Flood y el Profeta de la Misericordia es consumido por ellos.
-                            Tártaro activa el anillo, pero es derrotado por el Inquisidor y Johnson antes de desactivar
-                            Halo.
-                            Cortana destruye High Charity y Halo, mientras el Jefe Maestro sigue a Truth hacia la
-                            Tierra.
-                            En una escena post créditos, Gravemind toma el control de High Charity y manipula a Cortana.
-                        </p>
-                    </div>
-                    <div class="section-multimedia">
-                        <div class="section-img">
-                            <h3>Portada</h3>
-                            <img src="assets/multimedia/image/halo-2.png" alt="Halo 2">
-                        </div>
-                        <div class="section-video">
-                            <h3>Trailer</h3>
-                            <video loop preload="auto" class="auto-play" controls
-                                src="assets/multimedia/video/halo-2-trailer.mp4"></video>
-                        </div>
-                    </div>
-            </section>
-            <section id="halo-3" class="main-section main-section-halo3">
-                <h2>Halo 3</h2>
-                <div class="section-content">
-                    <div class="section-text">
-                        <h3>Trama</h3>
-                        <p>
-                            Tras los eventos de *Halo: Uprising*, el Jefe Maestro llega a la Tierra.
-                            Junto a Johnson e Inquisidor, planean detener al Profeta de la Verdad.
-                            Verdad activa un portal y se escapa con sus seguidores, y el Flood invade la Tierra.
-                            El Jefe, el Inquisidor, y las Élites siguen a Verdad a través del portal.
-                            Llegan al Arca, donde Verdad puede activar todos los Halos.
-                            El Flood infesta el Arca y captura a Johnson, quien debe activar los anillos.
-                            Gravemind forma una tregua con el Jefe y el Inquisidor para detener a Verdad.
-                            Tras matar a Verdad, Gravemind se vuelve contra ellos.
-                            Descubren que el Arca está creando un nuevo Halo para reemplazar el destruido.
-                            El Jefe decide activar el nuevo Halo para salvar la galaxia de la infestación Flood.
-                            Rescatan a Cortana, quien tiene el Índice, y destruyen High Charity.
-                            Johnson muere tras intentar activar el anillo y Guilty Spark se sacrifica para detenerlo.
-                            El Jefe activa el anillo y escapa en el *Forward Unto Dawn*, mientras la nave se destruye.
-                            En la Tierra, se celebra un servicio por los héroes caídos en la guerra contra el Covenant.
-                            La mitad trasera del *Forward Unto Dawn* va a la deriva en el espacio, y Cortana deja una
-                            baliza.
-                            El Jefe entra en sueño criónico y Cortana le dice que lo extrañará, pero él la consuela.
-                            Si se completa en dificultad Legendaria, el *Forward Unto Dawn* se dirige a un planeta
-                            desconocido.
-                        </p>
-                    </div>
-                    <div class="section-multimedia">
-                        <div class="section-img">
-                            <h3>Portada</h3>
-                            <img src="assets/multimedia/image/halo-3.jpg" alt="Halo 3">
-                        </div>
-                        <div class="section-video">
-                            <h3>Trailer</h3>
-                            <video loop preload="auto" class="auto-play" controls
-                                src="assets/multimedia/video/halo-3-trailer.mp4"></video>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="halo-odst" class="main-section main-section-halo-odst">
-                <h2>Halo 3: ODST</h2>
-                <div class="section-content">
-                    <div class="section-text">
-                        <h3>Trama</h3>
-                        <p>
-                            Después de la caída de Reach, un escuadrón de ODST (Orbital Drop Shock Troopers) es enviado
-                            a la
-                            ciudad de Nueva Mombasa.
-                            El escuadrón se dispersa al aterrizar, y el jugador controla a un soldado ODST llamado el
-                            "Rookie".
-                            Mientras busca a sus compañeros, descubre que el Covenant ha planeado destruir la ciudad
-                            usando
-                            una
-                            nave alienígena.
-                            En su búsqueda, el "Rookie" revive recuerdos de los demás miembros del escuadrón, quienes
-                            luchan
-                            por
-                            detener el ataque del Covenant.
-                            Finalmente, el escuadrón se reúne y detiene el plan del Covenant, destruyendo la nave con la
-                            ayuda
-                            del Jefe Maestro.
-                        </p>
-                    </div>
-                    <div class="section-multimedia">
-                        <div class="section-img">
-                            <h3>Portada</h3>
-                            <img src="assets/multimedia/image/halo-odst.jpg" alt="Halo odst" />
-                        </div>
-                        <div class="section-video">
-                            <h3>Trailer</h3>
-                            <video loop preload="auto" class="auto-play"
-                                src="assets/multimedia/video/halo-odst-trailer.mp4" controls></video>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="halo-reach" class="main-section main-section-halo-reach">
-                <h2>Halo reach</h2>
-                <div class="section-content">
-                    <div class="section-text">
-                        <h3>Trama</h3>
-                        <p>
-                            El juego sigue a un escuadrón de Spartans de la UNSC en el planeta Reach, un mundo clave en
-                            la
-                            lucha
-                            contra el Covenant.
-                            El jugador controla a Noble 6, un nuevo miembro del escuadrón Noble, durante la caída del
-                            planeta.
-                            El escuadrón Noble lucha para proteger Reach de los ataques Covenant, pero los enemigos
-                            abruman
-                            la
-                            defensa.
-                            Mientras luchan por evitar la destrucción del planeta, descubren que el Covenant busca
-                            destruir
-                            la
-                            inteligencia artificial Cortana, clave para la victoria humana.
-                            El sacrificio final de Noble 6 permite que la IA sea evacuada, pero Reach es destruido y la
-                            guerra
-                            continúa.
-                        </p>
-                    </div>
-                    <div class="section-multimedia">
-                        <div class="section-img">
-                            <h3>Portada</h3>
-                            <img src="assets/multimedia/image/halo-reach.webp" alt="Halo Reach">
-                        </div>
-                        <div class="section-video">
-                            <h3>Trailer</h3>
-                            <video loop preload="auto" class="auto-play"
-                                src="assets/multimedia/video/halo-reach-trailer.mp4" controls></video>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </section>
         <section class="main-section section-table" id="novels">
             <h2>Novelas</h2>
             <table>
@@ -252,8 +70,8 @@
         <section class="main-section" id="characters">
             <h2>Personajes</h2>
             <div class="section-content">
-                <div class="section-card-container">
-                    <div class="card-content card-primary">
+                <div class="card-container">
+                    <div class="card card-primary">
                         <div class="card-image">
                             <img src="assets/multimedia/image/master-chief.jpg" alt="Master Chief">
                         </div>
@@ -268,21 +86,23 @@
                                 de combate del Covenant o Forerunner</p>
                         </div>
                     </div>
-                    <div class="card-content">
+                    <div class="card">
                         <div class="card-image">
                             <img src="assets/multimedia/image/inquisidor.jpg" alt="Master Chief">
                         </div>
-                        <div class="card-title">
-                            <h4>Inquisidor</h4>
-                        </div>
-                        <div class="card-text">
-                            <p>El Inquisidor (nombre real según "The Cole Protocol": Thel 'Vadaam)es un personaje
-                                Elite en las series de Halo 2 y Halo 3. En un principio, Comandante Supremo de la
-                                flota Particle Justice, y luego de su fracaso resguardando el primer anillo, "La
-                                Voluntad de Los Profetas".</p>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <h4>Inquisidor</h4>
+                            </div>
+                            <div class="card-text">
+                                <p>El Inquisidor (nombre real según "The Cole Protocol": Thel 'Vadaam)es un personaje
+                                    Elite en las series de Halo 2 y Halo 3. En un principio, Comandante Supremo de la
+                                    flota Particle Justice, y luego de su fracaso resguardando el primer anillo, "La
+                                    Voluntad de Los Profetas".</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="card-content">
+                    <div class="card">
                         <div class="card-image">
                             <img src="assets/multimedia/image/avery-j.avif" alt="Master Chief">
                         </div>
@@ -296,7 +116,7 @@
                                 Strike.</p>
                         </div>
                     </div>
-                    <div class="card-content">
+                    <div class="card">
                         <div class="card-image">
                             <img src="assets/multimedia/image/cortana.webp" alt="Master Chief">
                         </div>
@@ -309,7 +129,7 @@
                                 proyecto Spartan. </p>
                         </div>
                     </div>
-                    <div class="card-content">
+                    <div class="card">
                         <div class="card-image">
                             <img src="assets/multimedia/image/katerine-h.webp" alt="Master Chief">
                         </div>
@@ -323,7 +143,7 @@
                                 Halo: Reach.</p>
                         </div>
                     </div>
-                    <div class="card-content">
+                    <div class="card">
                         <div class="card-image">
                             <img src="assets/multimedia/image/miranda-k.jpg" alt="Master Chief">
                         </div>
@@ -348,7 +168,7 @@
     <footer class="footer">
         <div id="contact" class="footer-form main-section">
             <section>
-                <p>Contacto</p>
+                <h2>Contacto</h2>
                 <cite>Envíanos un mensaje!</cite><br><br>
                 <form action="response.html" method="post">
                     <fieldset>
@@ -530,6 +350,7 @@
             <p>&copy; Halo 2025</p>
         </div>
     </footer>
+    <script type="module" src="assets/scripts/data.js" async defer></script>
     <script src="assets/scripts/animations.js"></script>
 </body>
 

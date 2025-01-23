@@ -3,35 +3,35 @@
         "id": "halo-ce",
         "title": "Halo: Combat Evolved",
         "plot": "El Pillar of Autumn descubre un anillo desconocido y es atacado por el Covenant. El capitán Keyes confía a Cortana al Jefe Maestro para proteger la Tierra. La nave aterriza en el anillo, donde Master Chief organiza la defensa contra el Covenant. Keyes es capturado, pero se revela que el anillo es un arma, y buscan detener al Covenant. Master Chief descubre el parásito Flood y se asocia con la IA 343 Guilty Spark. Tras aprender que el anillo destruye toda la vida sensible, deciden destruirlo. Recuperan el implante neuronal de Keyes para desactivar la autodestrucción del anillo. Master Chief y Cortana desestabilizan los reactores del Pillar of Autumn y escapan. La amenaza no ha terminado, ya que 343 Guilty Spark sobrevive tras la destrucción del anillo.",
-        "image": "assets/multimedia/image/halo-ce.jpg",
-        "video": "assets/multimedia/video/halo-ce-trailer.mp4"
+        "cover": "assets/multimedia/image/halo-ce.jpg",
+        "trailer": "assets/multimedia/video/halo-ce-trailer.mp4"
     },
     {
         "id": "halo-2",
         "title": "Halo 2",
         "plot": "Halo 2 comienza con el juicio de un Élite despojado de su rango en High Charity. Le ofrecen convertirse en Árbitro para sofocar rebeliones y recuperar a 343 Guilty Spark. En la Tierra, el almirante Hood y el Jefe Maestro defienden contra una invasión Covenant. El Profeta del Pesar huye a Halo, y el Jefe Maestro lo persigue para evitar la activación. Tras la muerte de Regret, el Covenant bombardea la zona y surge discordia entre sus razas. El Inquisidor, como nuevo líder, es enviado con el Jefe Maestro para detener Halo. Gravemind revela la verdad detrás del Gran Viaje y usa a los héroes como distracción. La ciudad se llena de Flood y el Profeta de la Misericordia es consumido por ellos. Tártaro activa el anillo, pero es derrotado por el Inquisidor y Johnson antes de desactivar Halo. Cortana destruye High Charity y Halo, mientras el Jefe Maestro sigue a Truth hacia la Tierra. En una escena post créditos, Gravemind toma el control de High Charity y manipula a Cortana.",
-        "image": "assets/multimedia/image/halo-2.png",
-        "video": "assets/multimedia/video/halo-2-trailer.mp4"
+        "cover": "assets/multimedia/image/halo-2.png",
+        "trailer": "assets/multimedia/video/halo-2-trailer.mp4"
     },
     {
         "id": "halo-3",
         "title": "Halo 3",
         "plot": "Tras los eventos de *Halo: Uprising*, el Jefe Maestro llega a la Tierra. Junto a Johnson e Inquisidor, planean detener al Profeta de la Verdad. Verdad activa un portal y se escapa con sus seguidores, y el Flood invade la Tierra. El Jefe, el Inquisidor, y las Élites siguen a Verdad a través del portal. Llegan al Arca, donde Verdad puede activar todos los Halos. El Flood infesta el Arca y captura a Johnson, quien debe activar los anillos. Gravemind forma una tregua con el Jefe y el Inquisidor para detener a Verdad. Tras matar a Verdad, Gravemind se vuelve contra ellos. Descubren que el Arca está creando un nuevo Halo para reemplazar el destruido. El Jefe decide activar el nuevo Halo para salvar la galaxia de la infestación Flood. Rescatan a Cortana, quien tiene el Índice, y destruyen High Charity. Johnson muere tras intentar activar el anillo y Guilty Spark se sacrifica para detenerlo. El Jefe activa el anillo y escapa en el *Forward Unto Dawn*, mientras la nave se destruye. En la Tierra, se celebra un servicio por los héroes caídos en la guerra contra el Covenant. La mitad trasera del *Forward Unto Dawn* va a la deriva en el espacio, y Cortana deja una baliza. El Jefe entra en sueño criónico y Cortana le dice que lo extrañará, pero él la consuela. Si se completa en dificultad Legendaria, el *Forward Unto Dawn* se dirige a un planeta desconocido.",
-        "image": "assets/multimedia/image/halo-3.jpg",
-        "video": "assets/multimedia/video/halo-3-trailer.mp4"
+        "cover": "assets/multimedia/image/halo-3.jpg",
+        "trailer": "assets/multimedia/video/halo-3-trailer.mp4"
     },
     {
         "id": "halo-odst",
         "title": "Halo 3: ODST",
         "plot": "Después de la caída de Reach, un escuadrón de ODST (Orbital Drop Shock Troopers) es enviado a la ciudad de Nueva Mombasa. El escuadrón se dispersa al aterrizar, y el jugador controla a un soldado ODST llamado el 'Rookie'. Mientras busca a sus compañeros, descubre que el Covenant ha planeado destruir la ciudad usando una nave alienígena. En su búsqueda, el 'Rookie' revive recuerdos de los demás miembros del escuadrón, quienes luchan por detener el ataque del Covenant. Finalmente, el escuadrón se reúne y detiene el plan del Covenant, destruyendo la nave con la ayuda del Jefe Maestro.",
-        "image": "assets/multimedia/image/halo-odst.jpg",
-        "video": "assets/multimedia/video/halo-odst-trailer.mp4"
+        "cover": "assets/multimedia/image/halo-odst.jpg",
+        "trailer": "assets/multimedia/video/halo-odst-trailer.mp4"
     },
     {
         "id": "halo-reach",
         "title": "Halo Reach",
         "plot": "El juego sigue a un escuadrón de Spartans de la UNSC en el planeta Reach, un mundo clave en la lucha contra el Covenant. El jugador controla a Noble 6, un nuevo miembro del escuadrón Noble, durante la caída del planeta. El escuadrón Noble lucha para proteger Reach de los ataques Covenant, pero los enemigos abruman la defensa. Mientras luchan por evitar la destrucción del planeta, descubren que el Covenant busca destruir la inteligencia artificial Cortana, clave para la victoria humana. El sacrificio final de Noble 6 permite que la IA sea evacuada, pero Reach es destruido y la guerra continúa.",
-        "image": "assets/multimedia/image/halo-reach.webp",
-        "video": "assets/multimedia/video/halo-reach-trailer.mp4"
+        "cover": "assets/multimedia/image/halo-reach.webp",
+        "trailer": "assets/multimedia/video/halo-reach-trailer.mp4"
     }
 ]

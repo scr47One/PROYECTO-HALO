@@ -28,13 +28,13 @@ h2 {
     color: var(--text-primary-color);
     text-transform: uppercase;
     margin-bottom: 10px;
-    font-size: x-large;
+    font-size: 2.5rem;
     font-weight: 200;
 }
 
 h3 {
     text-transform: uppercase;
-    font-size: large;
+    font-size: 2rem;
     color: var(--text-secondary-color);
     font-weight: 200;
     background-color: linear-gradient(to right, rgba(16, 14, 24, 1), rgba(16, 14, 24, 0.2));
@@ -114,7 +114,7 @@ p {
     background-size: cover;
 }
 
-.main-intro {
+#intro {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -133,7 +133,7 @@ p {
         background-color: rgba(255, 255, 255, 0.8);
     }
     
-    .main-title-intro {
+    #contentIntro{
         position: absolute;
         left: 0;
         bottom: 20vh;
@@ -148,8 +148,8 @@ p {
         height: fit-content;
         
         h1 {
-            font-size: xx-large;
-            font-weight: 300;
+            font-size: 3rem;
+            font-weight: 200;
             color: white;
         }
 
@@ -239,27 +239,7 @@ p {
     }
 }
 
-.main-section-ce {
-    background-image: linear-gradient(to right, rgba(16, 14, 24, 1), rgba(16, 14, 24, 0.8)), url('../multimedia/image/halo-ce.webp');
-}
-
-.main-section-halo2 {
-    background-image: linear-gradient(to right bottom, rgba(16, 14, 24, 1), rgba(16, 14, 24, 0.8)), url('../multimedia/image/halo-2.png');
-}
-
-.main-section-halo3 {
-    background-image: linear-gradient(to right bottom, rgba(16, 14, 24, 1), rgba(16, 14, 24, 0.8)), url('../multimedia/image/halo-3.jpg');
-}
-
-.main-section-halo-odst {
-    background-image: linear-gradient(to right bottom, rgba(16, 14, 24, 1), rgba(16, 14, 24, 0.8)), url('../multimedia/image/halo-odst.jpg');
-}
-
-.main-section-halo-reach {
-    background-image: linear-gradient(to right bottom, rgba(16, 14, 24, 1), rgba(16, 14, 24, 0.8)), url('../multimedia/image/halo-reach.webp');
-}
-
-.card-content {
+.card {
     width: 100%;
     height: 50vh;
     background-color: var(--highlight-bg-color);
@@ -274,28 +254,46 @@ p {
     
     .card-image {
         object-fit: cover;
-        height: calc(60% - 30px);
+        max-height: calc(50% - 30px);
+        min-height: calc(50% - 30px);
         width: 100%;
-
+        overflow: hidden;
+        align-items: center;
+        justify-items: center;
+        
         img {
             width: 100%;
-            height: 100%;
+            height: auto;
+            justify-self: center;
         }
     }
 
-    .card-title {
-        display: block;
-        text-transform: uppercase;
-        padding: 10px;
+    .card-content {
+        .card-title {
+            display: block;
+            text-transform: uppercase;
+            padding: 10px;
+        }
+    
+        .card-text {
+            display: block;
+            padding: 10px;
+        }
     }
 
-    .card-text {
-        display: block;
-        padding: 10px;
-    }
 }
 
-.section-card-container {
+.chip {
+    border-radius: 10px;
+    padding: 10px;
+    width: fit-content;
+    background-color: var(--highlight-secondary-bg-color-translucent);
+    color: black;
+    font-weight: 300;
+    font-size: large;
+}
+
+.card-container {
     padding: 20px 300px 20px 300px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -328,6 +326,10 @@ p {
             margin-top: 40px;
         }
     }
+}
+
+.price {
+    font-weight: 400;
 }
 
 .card-mc {
@@ -494,7 +496,7 @@ p {
     
     }
 }
-
+// #region media
 
 @media (max-width: 1920px) {
     .section-text {
@@ -524,14 +526,37 @@ p {
         }
     }
 
-    .section-card-container {
-        padding: 20px 200px 20px 200px;
+    .card-container {
+        padding: 20px 40px 20px 40px;
         height: auto;
+        max-width: 100%;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
 
-        .card-content {
-            height: fit-content;
+        .card {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            min-height: 50vh;
+            max-height: 50vh;
+            overflow: hidden;
+
+            .card-image {
+                position: absolute;
+                width: 100%;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .card-content {
+                z-index: 1;
+                background: linear-gradient(to top, rgba(16, 14, 24, 1), transparent);
+            }
         }
 
         .card-primary {
@@ -542,20 +567,18 @@ p {
             grid-row: 1;
 
             .card-image {
-                height: calc(60% - 30px);
-
+                max-height: calc(60% - 30px);
                 img {
                     width: 100%;
                 }
             }
         }
     }
-
 }
 
 @media only screen and (max-width: 1200px) {
 
-    .section-card-container {
+    .card-container {
         grid-template-columns: 1fr;
         padding: 20px;
     }

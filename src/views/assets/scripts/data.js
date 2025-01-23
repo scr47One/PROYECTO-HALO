@@ -30,7 +30,9 @@ async function fillVideogamesSection() {
 
     videogames.forEach(videogame => {
         const mainSection = document.createElement('section')
+        mainSection.style.backgroundImage = 'linear-gradient(to right, rgba(16, 14, 24, 1), rgba(16, 14, 24, 0.51)), url("'+videogame.cover+'")'
         mainSection.classList.add('main-section')
+
         const sectionContent = document.createElement('section')
         sectionContent.classList.add('section-content')
         const sectionText = document.createElement('section')
@@ -38,7 +40,7 @@ async function fillVideogamesSection() {
         const sectionMultimedia = document.createElement('section')
         sectionMultimedia.classList.add('section-multimedia')
         const sectionImage = document.createElement('section')
-        sectionImage.classList.add('section-image')
+        sectionImage.classList.add('section-img')
         const sectionVideo = document.createElement('section')
         sectionVideo.classList.add('section-video')
 
@@ -46,18 +48,50 @@ async function fillVideogamesSection() {
         title.innerHTML = videogame.title
         mainSection.appendChild(title)
 
+        //#region texto
         const titleTextSection = document.createElement('h3')
         titleTextSection.innerHTML = 'Trama'
         const contentTextSection = document.createElement('p')
         contentTextSection.innerHTML = videogame.plot
-
         sectionText.appendChild(titleTextSection)
         sectionText.appendChild(contentTextSection)
+        // #endregion
+
+        // #region multimedia
+        const titleCoverSection = document.createElement('h3')
+        titleCoverSection.innerHTML = 'Portada'
+        const imageSection = document.createElement('img')
+        imageSection.src = videogame.cover
+        imageSection.alt = videogame.title + ' cover'
+
+        sectionImage.appendChild(titleCoverSection)
+        sectionImage.appendChild(imageSection)
+
+        sectionMultimedia.appendChild(sectionImage)
+
+        const titleTrailerSection = document.createElement('h3')
+        titleTrailerSection.innerHTML = 'Video'
+
+        const trailerSection = document.createElement('video')
+        trailerSection.loop = true
+        trailerSection.controls = true
+        trailerSection.preload = 'auto'
+        trailerSection.classList.add('auto-play')
+        trailerSection.src = videogame.trailer
+        trailerSection.alt = videogame.title + ' trailer'
+
+        sectionVideo.appendChild(titleTrailerSection)
+        sectionVideo.appendChild(trailerSection)
+
+        sectionMultimedia.appendChild(sectionVideo)
+        // #endregion
 
         sectionContent.appendChild(sectionText)
+        sectionContent.appendChild(sectionMultimedia)
         mainSection.appendChild(sectionContent)
         section.appendChild(mainSection)
     })
 }
 
+await fillVideogamesSection()
 await fillNovelsTable()

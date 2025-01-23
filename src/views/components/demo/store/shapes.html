@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <div id="app"></div>
+        <div class="side-container                                      ">
+            <div id="cartContainer">
+            </div>
+            <div class="card">
+                <div>
+                    <input type="text" class="input" id="coupon" placeholder="Aplicar cupón">
+                    <button class="btn-add" id="btnCoupon">aplicar</button>
+                </div>
+                <div class="chip-group" id="applied"></div>
+            </div>
+            <div class="card">
+                <div>
+                    <label for="total">Total $</label>
+                    <span type="text" class="input" id="total"></span>
+                </div>
+                <div>
+                    <label for="coupon">Total ahorrado $</label>
+                    <span type="text" class="input"  id="totalDiscount"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="toast" id="toast">
+        <span class="toast-message" id="toastMessage">Toast</span>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
