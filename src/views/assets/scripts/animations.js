@@ -15,6 +15,7 @@ function closeMenu() {
  */
 function runAutoPlay () {
     const videoPlayers = document.querySelectorAll(".auto-play");
+    console.log(videoPlayers.length)
     videoPlayers.forEach(videoPlayer => {
         videoPlayer?.addEventListener('mouseover', function () {
             this.volume = 0.03
@@ -26,6 +27,8 @@ function runAutoPlay () {
     });
 }
 
-runAutoPlay()
+window.addEventListener("load", function(){
+    runAutoPlay()
+});
 
 
