@@ -176,51 +176,37 @@
         </audio>
     </main>
     <footer class="footer">
-        <div id="contact" class="footer-form main-section">
-            <section>
-                <h2>Contacto</h2>
-                <cite>Envíanos un mensaje!</cite><br><br>
-                <form action="response.html" method="post">
+        <div id="contact" class="footer-form">
+            <h2>Contacto</h2>
+            <cite>Envíanos un mensaje!</cite><br><br>
+            <form action="response.html" method="POST">
+                <div>
                     <fieldset>
                         <legend>Datos generales</legend>
-                        <label for="name">Nombre</label><br>
-                        <input type="text" id="contact-name" maxlength="25" required placeholder="Tu nombre" /><br><br>
-
-                        <label for="email">E-mail</label><br>
-                        <input list="emails" name="email" id="contact-email" required
-                            placeholder="tuemail@email.com" /><br><br>
-
-                        <label for="area">Área</label><br>
-                        <select name="area" id="">
-                            <option value="1">Redacción 1</option>
-                            <option value="1">Redacción 2</option>
-                            <option value="1">Redacción 3</option>
-                        </select><br>
-
-                        <datalist id="emails">
-                            <option value="correo@correo.com"></option>
-                            <option value="correo1@correo.com"></option>
-                            <option value="correo2@correo.com"></option>
-                            <option value="correo3@correo.com"></option>
-                        </datalist>
+                        <label for="name">Nombre</label>
+                        <input type="text" id="contact-name" maxlength="25" required placeholder="Tu nombre" />
+                        <label for="email">E-mail</label>
+                        <input name="email" id="contact-email" required
+                            placeholder="tuemail@email.com" />
                     </fieldset>
-                    <br>
+                </div>
+                <div>
                     <fieldset>
                         <legend>Motivo de contacto</legend>
                         <label for="message">Mensaje</label><br>
                         <textarea type="text" name="message" id="contact-message" required cols="36" rows="5"
                             placeholder="Escribe tu mensaje aquí"></textarea>
-                        <div>
-                            <div class="btn-secondary">
-                                <input type="reset" value="Reset">
+                            <div class="form-actions">
+                                <div class="btn-secondary">
+                                    <input type="reset" value="Reset">
+                                </div>
+                                <div class="btn-primary">
+                                    <input type="submit" value="Send">
+                                </div>
                             </div>
-                            <div class="btn-primary">
-                                <input type="submit" value="Send">
-                            </div>
-                        </div>
-                    </fieldset><br><br>
-                </form><br>
-            </section>
+                    </fieldset>
+                </div>
+            </form>
         </div>
         <div id="links" class="main-section footer-data">
             <h2>Links</h2>

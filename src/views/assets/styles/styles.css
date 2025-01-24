@@ -47,8 +47,26 @@ h3 {
   margin-top: 20px;
 }
 
-p {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+#cartBadge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  width: -moz-max-content;
+  width: max-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  font-size: 1rem;
+  font-weight: 400;
+  visibility: hidden;
+  color: black;
+  transition: 0.3s;
+  background-color: var(--highlight-primary-bg-color);
+}
+
+p,
+span {
+  font-family: "Segoe UI", Roboto, Helvetica, sans-serif;
   font-size: large;
   color: var(--text-primary-color);
   font-weight: 100;
@@ -69,11 +87,12 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  align-content: center;
   transition: all 0.5s;
   text-transform: uppercase;
   background-color: var(--highlight-bg-color-translucent);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 .main-header nav span img {
   max-height: 100px;
@@ -88,17 +107,38 @@ p {
 }
 .main-header nav ul {
   list-style: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 .main-header nav ul li {
-  display: inline-block;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 100px;
 }
 .main-header nav ul li a {
+  font-weight: 300;
+}
+.main-header nav ul li label {
+  font-weight: 100;
+}
+.main-header nav ul li input {
+  visibility: hidden;
+}
+.main-header nav ul li a,
+.main-header nav ul li label {
   text-decoration: none;
   padding: 10px;
   color: white;
-  font-weight: 300;
+  height: calc(100% - 20px);
+  width: 100px;
+  align-content: center;
+  justify-items: center;
+  text-align: center;
 }
-.main-header nav ul li a:hover {
+.main-header nav ul li a:hover,
+.main-header nav ul li label:hover {
   transition: all 0.3s;
   background-color: var(--darkest-bg-color);
 }
@@ -307,6 +347,17 @@ p {
   background-image: url("../multimedia/image/master-chief.jpg");
 }
 
+input[type=number] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
 input,
 button {
   border: 0pt;
@@ -405,26 +456,44 @@ button {
 }
 .footer .footer-form {
   display: flex;
+  flex-direction: column;
   justify-content: start;
-  align-items: center;
+  min-width: calc(40% - 40px);
 }
 .footer .footer-form fieldset {
+  margin: 20px 0 20px 0;
   padding: 20px;
   font-weight: thin;
   border-color: var(--text-terciary-color);
+  width: calc(100% - 40px);
 }
 .footer .footer-form fieldset input[type=text],
+.footer .footer-form fieldset input[name=email],
 .footer .footer-form fieldset select {
   border: 0px;
   padding: 10px;
   background-color: var(--highlight-input-color);
   color: white;
   width: calc(100% - 20px);
+  margin: 10px 0 20px 0;
+}
+.footer .footer-form fieldset .form-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+.footer .footer-form fieldset .form-actions .btn-primary,
+.footer .footer-form fieldset .form-actions .btn-secondary {
+  width: calc(var(--min-btn-width) * 2);
+}
+.footer .footer-form fieldset label {
+  margin-top: 10px;
 }
 .footer .footer-form fieldset textarea {
   resize: none;
   background-color: var(--highlight-input-color);
-  margin-bottom: 20px;
+  margin: 10px 0 20px 0;
+  width: 100%;
 }
 .footer .footer-form fieldset input:focus,
 .footer .footer-form fieldset textarea:focus,
@@ -459,7 +528,8 @@ button {
   color: rgb(0, 0, 0);
   background-color: var(--highlight-primary-bg-color);
 }
-.btn-primary:hover {
+.btn-primary input:hover,
+.btn-primary button:hover {
   background-color: var(--highlight-primary-bg-color-translucent);
 }
 
@@ -471,19 +541,68 @@ button {
   color: black;
   background-color: var(--highlight-secondary-bg-color);
 }
-.btn-secondary:hover {
+.btn-secondary input:hover,
+.btn-secondary button:hover {
   background-color: var(--highlight-secondary-bg-color-translucent);
 }
 
-.chip {
-  padding: 10px;
+.chip-group {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+.chip-group p {
+  font-weight: bold;
   width: -moz-fit-content;
   width: fit-content;
-  background-color: var(--highlight-secondary-bg-color-translucent);
-  color: black;
-  font-weight: 300;
-  font-size: large;
+  padding: 10px;
   text-transform: uppercase;
+  font-size: large;
+  color: black;
+  margin: 0 20px 0 0;
+  background-color: var(--highlight-secondary-bg-color-translucent);
+}
+
+.product-top-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: end;
+  align-items: center;
+  background-color: var(--highlight-bg-color);
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+}
+.product-top-bar .btn-order-container {
+  height: var(--min-element-height);
+  width: calc(var(--min-btn-width) * 2);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.product-top-bar .btn-order-container .btn-order-input {
+  width: 100%;
+  height: 100%;
+  visibility: collapse;
+  position: absolute;
+}
+.product-top-bar .btn-order-container .btn-order-text {
+  font-weight: 200;
+  text-transform: uppercase;
+  font-size: 1rem;
+  width: 60%;
+}
+.product-top-bar .btn-order-container label.material-symbols-outlined {
+  font-weight: 100;
+}
+.product-top-bar .btn-order-container:hover {
+  background-color: var(--accent-color);
 }
 
 .product-card-container {
@@ -500,10 +619,9 @@ button {
   overflow: hidden;
   background-color: var(--highlight-bg-color);
   padding: 20px;
-  height: 60vh;
-}
-.product-card-container .product-card .chip {
-  align-self: flex-end;
+  height: 50vh;
+  min-height: 400px;
+  transition: all 0.5s;
 }
 .product-card-container .product-card .product-card-image {
   -o-object-fit: contain;
@@ -513,39 +631,56 @@ button {
   height: calc(50% - 40px);
 }
 .product-card-container .product-card .product-card-image .cover-container {
+  position: relative;
+  display: flex;
   width: 100%;
   height: 100%;
-  display: flex;
+  overflow: hidden;
   justify-content: center;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   background-color: var(--highlight-bg-color-translucent);
 }
 .product-card-container .product-card .product-card-image .cover-container img {
+  position: absolute;
   height: 100%;
-  width: calc(40% - 40px);
 }
 .product-card-container .product-card .product-card-title {
   text-wrap: nowrap;
   white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 100%;
+  overflow: hidden;
+  max-width: calc(100% - 20px);
+  min-width: calc(100% - 20px);
   color: white;
   font-size: 1.5rem;
   font-weight: 300;
   text-transform: uppercase;
-  margin-top: 20px;
+  padding: 20px 0 20px 0;
+  border-bottom: solid 2px var(--text-primary-color);
+}
+.product-card-container .product-card .product-card-text {
+  display: block;
+  text-overflow: ellipsis;
+  line-height: 1.6rem;
+  max-height: 4.8rem;
+  overflow: hidden;
 }
 .product-card-container .product-card .product-card-bottom {
   position: absolute;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   bottom: 20px;
   width: calc(100% - 40px);
+  background-color: var(--highlight-bg-color);
 }
-.product-card-container .product-card .product-card-bottom .product-card-price, .product-card-container .product-card .product-card-bottom .product-card-price-discount {
+.product-card-container .product-card .product-card-bottom .chip-group {
+  justify-content: start;
+}
+.product-card-container .product-card .product-card-bottom .product-card-price,
+.product-card-container .product-card .product-card-bottom .product-card-price-discount {
   align-self: center;
   font-size: 1.7rem;
   font-weight: 400;
@@ -566,32 +701,202 @@ button {
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
+  overflow: visible;
 }
 .tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
+  visibility: collapse;
+  width: 0;
+  top: 25%;
+  left: 0;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Segoe UI";
+  padding: 10px;
+  border-radius: var(--border-radius-element);
+  background-color: rgba(0, 0, 0, 0.7411764706);
+  color: #fff;
+  transition: all 0.2s ease-out;
 }
-.tooltip .tooltiptext:hover {
+.tooltip:hover > .tooltiptext {
   visibility: visible;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .side-bar {
   position: fixed;
-  right: 0;
   top: 100px;
-  max-width: 30vw;
+  right: 0;
   width: 0;
   height: calc(100vh - 40px);
   background-color: var(--accent-color);
+  padding: 20px;
+  visibility: collapse;
   transition: all 0.2s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+.side-bar .cart-total {
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-top: solid 2px white;
+  max-height: 100px;
+  justify-content: space-between;
+}
+.side-bar .cart-total #total {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.btn-cart-container li {
+  position: relative;
+}
+
+.cart-card-container {
+  display: block;
+  width: calc(100% - 40px);
+  height: calc(80% - 40px);
+  overflow-y: auto;
+}
+.cart-card-container .cart-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--highlight-bg-color);
+  padding: 20px;
+  margin-bottom: 20px;
+  height: 10vh;
+  transition: all 0.5s;
+}
+.cart-card-container .cart-card .cart-card-image {
+  grid-column: 1;
+  display: flex;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-size: cover;
+  overflow: hidden;
+  height: 100%;
+  width: 30%;
+  margin-right: 20px;
+  max-width: calc(40% - 20px);
+}
+.cart-card-container .cart-card .cart-card-image .cover-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background-color: var(--highlight-bg-color-translucent);
+}
+.cart-card-container .cart-card .cart-card-image .cover-container img {
+  position: absolute;
+  height: 100%;
+}
+.cart-card-container .cart-card .cart-card-section {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  max-width: calc(45% - 20px);
+  margin-right: 20px;
+  justify-self: start;
+}
+.cart-card-container .cart-card .cart-card-section .cart-card-title {
+  text-wrap: nowrap;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-bottom: solid 2px var(--text-primary-color);
+}
+.cart-card-container .cart-card .cart-card-section .cart-card-text {
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.cart-card-container .cart-card .cart-card-tail {
+  grid-column: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3 1fr);
+  width: calc(40% - 20px);
+}
+.cart-card-container .cart-card .cart-card-tail .cart-card-price {
+  grid-column: 1;
+  grid-row: 1;
+}
+.cart-card-container .cart-card .cart-card-tail .cart-card-price-discount {
+  grid-column: 1;
+  grid-row: 2;
+}
+.cart-card-container .cart-card .cart-card-tail .cart-card-discount {
+  grid-column: 1;
+  grid-row: 3;
+}
+.cart-card-container .cart-card .cart-card-tail button {
+  grid-column: 2;
+  grid-row: 1;
+  background: transparent;
+  color: white;
+  width: var(--min-btn-width);
+}
+.cart-card-container .cart-card .cart-card-tail .cart-card-quantity-input {
+  grid-column: 2;
+  grid-row: 2/span 3;
+  display: flex;
+  flex-direction: row;
+}
+.cart-card-container .cart-card .cart-card-tail .cart-card-quantity-input button,
+.cart-card-container .cart-card .cart-card-tail .cart-card-quantity-input input {
+  display: inline-block;
+  width: calc(var(--min-btn-width) / 3);
+  justify-items: center;
+  justify-content: center;
+  width: 30%;
+}
+.cart-card-container .cart-card .cart-card-tail .cart-card-quantity-input button {
+  background-color: var(--highlight-primary-bg-color);
+  color: black;
+}
+.cart-card-container .cart-card .cart-card-tail .cart-card-quantity-input input {
+  background-color: var(--accent-color);
+  font-weight: 300;
+  font-size: 1rem;
+  color: white;
+  font-family: Oxanium;
+}
+.cart-card-container .cart-card .cart-card-tail .cart-card-price,
+.cart-card-container .cart-card .cart-card-tail .cart-card-price-discount {
+  align-self: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text-primary-color);
+}
+.cart-card-container .cart-card .cart-card-tail .cart-card-price-discount {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-secondary-color);
+}
+.cart-card-container .cart-card .cart-card-tail .cart-card-discount {
+  align-self: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--text-terciary-color);
 }
 
 @media (max-width: 1920px) {
@@ -664,6 +969,9 @@ button {
   .product-card-container {
     grid-template-columns: repeat(3, 1fr);
   }
+  .product-card-container .product-card-text {
+    max-height: 3.2rem;
+  }
 }
 @media only screen and (max-width: 1200px) {
   .section-content .section-multimedia {
@@ -706,6 +1014,9 @@ button {
     width: 20px;
     height: 20px;
   }
+  .footer .footer-form {
+    width: 100%;
+  }
   .product-card-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -733,6 +1044,7 @@ button {
   }
   .main-header nav ul {
     position: fixed;
+    flex-direction: column;
     width: 100%;
     top: 105px;
     height: 0;
@@ -743,18 +1055,20 @@ button {
     transition: all 0.2s ease-out;
   }
   .main-header nav ul li {
-    display: inline-block;
     width: 100%;
     text-align: left;
     gap: 40px;
     visibility: collapse;
+    height: calc(14.2857142857% - 40px);
   }
-  .main-header nav ul li a {
+  .main-header nav ul li a,
+  .main-header nav ul li label {
     display: inline-block;
     width: 100%;
     color: var(--text-primary-color);
   }
-  .main-header nav ul li a:hover {
+  .main-header nav ul li a:hover,
+  .main-header nav ul li label:hover {
     background-color: var(--highlight-secondary-bg-color-translucent);
     color: black;
   }

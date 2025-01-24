@@ -155,15 +155,8 @@ createProductTable()
 //#region cart
 const cart = []
 
-function addCartProduct(id, cantidad) {
-    const prodExist = cart.findIndex(producto => producto.id === id)
-    if (prodExist !== -1 && cart.length > 0) {
-        cart[prodExist].cantidad = parseInt(cart[prodExist].cantidad) + parseInt(cantidad)
-    } else {
-        cart.push({ ...productos.find(producto => producto.id === id), total: 0, cantidad })
-    }
-    createCartTable()
-}
+ 
+
 const cartContainer = document.getElementById('cartContainer')
 
 function createCartTable() {
