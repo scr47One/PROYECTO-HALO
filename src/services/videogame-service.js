@@ -2,7 +2,7 @@ import { Videogame } from "../model/videogame.js";
 
 export class VideogameService {
     constructor() {
-        this.url = "../services/providers/data/videogames.json"
+        this.url = "../services/providers/local/videogames.json"
     }
 
     /**

@@ -2,7 +2,7 @@ import { Novel } from "../model/novel.js"
 
 export class NovelService {
     constructor() {
-        this.url = "../services/providers/data/novels.json"
+        this.url = "../services/providers/local/novels.json"
     }
 
     /**

@@ -1,6 +1,7 @@
 import { ProductService } from '../../../../../services/product-service.js'
 import { quickSort } from './utils.js'
 import { Cart } from '../../../../../model/cart.js'
+import { Product } from '../../../../../model/product.js'
 
 const productService = new ProductService()
 
@@ -23,11 +24,11 @@ async function chargeProductCards() {
             productOrder = document.createElement('div')
             productOrder.classList.add('product-top-bar')
             productOrder.id = 'productOrder'
-            const nonOrder = ['id', 'image', 'description']
-            const headers = [...Object.keys(products[0]).filter(value => !nonOrder.includes(value))]
             productOrder.innerHTML = 'Ordenar'
-            headers.forEach((entry) => addOrderBy(productOrder, entry))
             topBar.appendChild(productOrder)
+            const nonOrder = ['id', 'image', 'description', 'author']
+            const headers = [...Object.keys(products[0]).filter(value => !nonOrder.includes(value))]
+            headers.forEach((entry) => addOrderBy(productOrder, entry))
         } else {
             productOrder = document.getElementById('productOrder')
             let children = productOrder.getElementsByTagName('button')
@@ -44,85 +45,69 @@ async function chargeProductCards() {
         products.forEach(product => {
             //card
             const card = document.createElement('div')
-            card.classList.add('product-card')
-            //content
             const cardTitle = document.createElement('div')
-            cardTitle.classList.add('product-card-title')
-            cardTitle.innerHTML = product.name
-
             const cardText = document.createElement('p')
-            cardText.classList.add('product-card-text')
-            cardText.innerHTML = product.description
-
-            //#region IMAGE
             const cardImage = document.createElement('div')
+            const coverContainer = document.createElement('div')
+            const imageCover = document.createElement('img')
+            const cardBottom = document.createElement('div')
+            const chipGroup = document.createElement('div')
+            const chipType = document.createElement('p')
+            const cardTextPrice = document.createElement('h4')
+            const cardDivButton = document.createElement('div')
+            const cardAddCartButton = document.createElement('button')
+
+            card.classList.add('product-card')
+            cardTitle.classList.add('product-card-title')
+            cardText.classList.add('product-card-text')
+            cardImage.classList.add('product-card-image')
+            coverContainer.classList.add('cover-container')
+            cardBottom.classList.add('product-card-bottom')
+            chipGroup.classList.add('chip-group')
+            cardTextPrice.classList.add('product-card-price')
+            cardDivButton.classList.add('btn-primary')
+
+            cardTitle.innerHTML = product.name
+            cardText.innerHTML = product.description
             cardImage.style.backgroundImage = 'url("' + product.image + '")'
             cardImage.alt = product.name + ' cover'
-            cardImage.classList.add('product-card-image')
-
-            const coverContainer = document.createElement('div')
-            coverContainer.classList.add('cover-container')
-
-            const imageCover = document.createElement('img')
             imageCover.src = product.image
             imageCover.alt = product.name + ' cover'
-
-            coverContainer.appendChild(imageCover)
-            cardImage.appendChild(coverContainer)
-            //#endregion
-
-            //#region bottom
-
-            const cardBottom = document.createElement('div')
-            cardBottom.classList.add('product-card-bottom')
-
-            const chipGroup = document.createElement('div')
-            chipGroup.classList.add('chip-group')
-            const chipType = document.createElement('p')
             chipType.innerHTML = product.type
+            cardTextPrice.innerHTML = '$' + product.price
+            cardAddCartButton.id = product.id + 'btn'
+            cardAddCartButton.innerHTML = 'añadir'
+
             chipGroup.appendChild(chipType)
             cardBottom.appendChild(chipGroup)
-
-            const cardTextPrice = document.createElement('h4')
-            cardTextPrice.classList.add('product-card-price')
-            cardTextPrice.innerHTML = '$' + product.price
             cardBottom.appendChild(cardTextPrice)
 
             if (product.discount > 0) {
                 const chipDiscount = document.createElement('p')
+                const cardTextPriceDiscount = document.createElement('h4')
+                const cardTextDiscount = document.createElement('h4')
+                cardTextPriceDiscount.classList.add('product-card-price-discount')
+                cardTextDiscount.classList.add('product-card-discount')
+
                 chipDiscount.style.backgroundColor = 'var(--highlight-primary-bg-color-translucent)'
                 chipDiscount.innerHTML = 'oferta'
-                chipGroup.appendChild(chipDiscount)
-
                 cardTextPrice.style.textDecoration = 'line-through'
-                const cardTextPriceDiscount = document.createElement('h4')
-                cardTextPriceDiscount.classList.add('product-card-price-discount')
                 cardTextPriceDiscount.innerHTML = '$' + (product.price - ((product.price * product.discount / 100))).toFixed(2)
-
-                const cardTextDiscount = document.createElement('h4')
-                cardTextDiscount.classList.add('product-card-discount')
                 cardTextDiscount.innerHTML = '-' + product.discount + '%'
 
+                chipGroup.appendChild(chipDiscount)
                 cardBottom.appendChild(cardTextPriceDiscount)
                 cardBottom.appendChild(cardTextDiscount)
             }
 
-            //#region button
-            const cardDivButton = document.createElement('div')
-            cardDivButton.classList.add('btn-primary')
-            const cardAddCartButton = document.createElement('button')
-            cardAddCartButton.id = product.id + 'btn'
-            cardAddCartButton.innerHTML = 'añadir'
-            cardDivButton.addEventListener('click', () => {
-                addCartProduct(product.id, 1)
-            })
-            //#endregion
-            cardDivButton.appendChild(cardAddCartButton)
-            cardBottom.appendChild(cardDivButton)
-            //#endregion
+            cardDivButton.addEventListener('click', () => fillProductView(product))
 
             addToolTip(cardTitle, product.name)
 
+            cardDivButton.appendChild(cardAddCartButton)
+            cardBottom.appendChild(cardDivButton)
+            coverContainer.appendChild(imageCover)
+            cardImage.appendChild(coverContainer)
             card.appendChild(cardImage)
             card.appendChild(cardTitle)
             card.appendChild(cardText)
@@ -131,6 +116,78 @@ async function chargeProductCards() {
         })
     }
 }
+
+/**
+ * 
+ * @param {Product} product 
+ */
+function fillProductView(product) {
+    const windowProduct = document.getElementById('windowProduct');
+
+    const viewBackgroundContainer = document.getElementById('viewBackgroundContainer');
+    const viewCoverContainer = document.getElementById('viewCoverContainer');
+    const viewTitle = document.getElementById('viewTitle');
+    const viewAuthor = document.getElementById('viewAuthor');
+    const viewPrice = document.getElementById('viewPrice');
+    const viewChipGroup = document.getElementById('viewChipGroup');
+    const viewBtnReturn = document.getElementById('viewBtnReturn');
+    const viewBtnAdd = document.getElementById('viewBtnAdd');
+    const viewDescription = document.getElementById('viewDescription');
+
+    const viewChipType = document.createElement('p')
+
+
+    viewBackgroundContainer.style.backgroundImage = `url('${product.image}')`
+    viewCoverContainer.style.backgroundImage = `url('${product.image}')`
+    viewTitle.innerHTML = product.name
+    viewAuthor.innerHTML = product.author
+    viewPrice.innerHTML = '$' + product.price
+    viewChipType.innerHTML = product.type
+    viewDescription.innerHTML = product.description
+    windowProduct.style.visibility = 'visible'
+    windowProduct.style.opacity = '1'
+    windowProduct.style.width = 'calc(100% - 200px)'
+    windowProduct.style.height = 'calc(100% - 200px)'
+    
+    if (product.discount > 0) {
+        const viewOffer = document.createElement('p')
+        const viewDiscount = document.getElementById('viewDiscount')
+        const viewPriceDiscount = document.getElementById('viewPriceDiscount');
+
+        viewOffer.innerHTML = 'oferta'
+        viewPrice.style.textDecoration = 'line-through'
+        viewOffer.style.backgroundColor = 'var(--highlight-primary-bg-color-translucent)'
+        viewDiscount.innerHTML = '-' + product.discount + '%'
+        viewPriceDiscount.innerHTML = '$' + (product.price - ((product.price * product.discount / 100))).toFixed(2)
+        viewChipGroup.appendChild(viewOffer)
+    }
+
+    viewBtnReturn.addEventListener('click', () => {
+        windowProduct.style.visibility = 'hidden'
+        windowProduct.style.opacity = '0'
+        windowProduct.style.width = '0'
+        windowProduct.style.height = '0'
+        windowProduct.style.transition = 'opacity 0.2s linear, visibility 0.2s linear, width 0.2s linear, height 0.2s linear'
+        resetProductView()
+    })
+    viewBtnAdd.addEventListener('click', () => {
+        addCartProduct(product.id, 1)
+    })
+    viewChipGroup.appendChild(viewChipType)
+}
+
+function resetProductView() {
+    const viewChipGroup = document.getElementById('viewChipGroup');
+    const viewDiscount = document.getElementById('viewDiscount');
+    const viewPriceDiscount = document.getElementById('viewPriceDiscount');
+    const viewPrice = document.getElementById('viewPrice');
+
+    viewPrice.style.textDecoration = 'none'
+    viewDiscount.innerHTML = ''
+    viewPriceDiscount.innerHTML = ''
+    viewChipGroup.innerHTML = ''
+}
+
 
 /**
  * @type Array<Cart> */
@@ -153,29 +210,26 @@ function addOrderBy(htmlElement, value) {
 
     const chevUp = 'stat_1'
     const chevDown = 'stat_minus_1'
-
     const orderBtn = document.createElement('div')
-    orderBtn.classList.add('btn-order-container')
-
     const inputOrdrBtn = document.createElement('input')
+    const labelOrdrBtn = document.createElement('label')
+    const labelOrdrText = document.createElement('label')
+
+    orderBtn.classList.add('btn-order-container')
     inputOrdrBtn.classList.add('btn-order-input')
+    labelOrdrBtn.classList.add('material-symbols-outlined')
+    labelOrdrText.classList.add('btn-order-text')
+
     inputOrdrBtn.type = 'checkbox'
     inputOrdrBtn.id = 'btnOrderProductPrice-' + value
-
-    const labelOrdrBtn = document.createElement('label')
     labelOrdrBtn.htmlFor = 'btnOrderProductPrice-' + value
-    labelOrdrBtn.classList.add('material-symbols-outlined')
     labelOrdrBtn.innerHTML = chevDown
-
-    const labelOrdrText = document.createElement('label')
     labelOrdrText.htmlFor = 'btnOrderProductPrice-' + value
-    labelOrdrText.classList.add('btn-order-text')
     labelOrdrText.innerHTML = value
 
     orderBtn.appendChild(inputOrdrBtn)
     orderBtn.appendChild(labelOrdrText)
     orderBtn.appendChild(labelOrdrBtn)
-
     htmlElement.appendChild(orderBtn)
 
     inputOrdrBtn.addEventListener('click', () => {
@@ -186,15 +240,31 @@ function addOrderBy(htmlElement, value) {
 }
 
 const sideBar = document.getElementById('sideBar')
-const buttonCart = document.getElementById('buttonCart')
 
+const buttonCart = document.getElementById('buttonCart')
 buttonCart.addEventListener('click', () => {
     if (buttonCart.checked) {
         sideBar.style.visibility = 'visible'
         sideBar.style.width = '50vw'
+        sideBar.style.opacity = '1'
     } else {
         sideBar.style.visibility = 'collapse'
         sideBar.style.width = '0'
+        sideBar.style.opacity = '0'
+        sideBar.style.transition = 'opacity 0.2s linear, visibility 0.2s linear, width 0.2s linear'
+    }
+})
+
+const _buttonCart = document.getElementById('_buttonCart')
+_buttonCart.addEventListener('click', () => {
+    if (_buttonCart.checked) {
+        sideBar.style.visibility = 'visible'
+        sideBar.style.width = '50vw'
+        sideBar.style.opacity = '1'
+    } else {
+        sideBar.style.visibility = 'collapse'
+        sideBar.style.width = '0'
+        sideBar.style.opacity = '0'
     }
 })
 
@@ -204,11 +274,7 @@ cartContainer.classList.add('cart-card-container')
 const discountCode = 0
 
 async function chargeCart() {
-
-    let children = cartContainer.getElementsByClassName('cart-card')
-    if (children.length > 0) {
-        for (let i = children.length - 1; i > -1; i--) { cartContainer.removeChild(children[i]) }
-    }
+    cartContainer.innerHTML = ''
 
     let total = 0
     const badge = document.getElementById('cartBadge')
@@ -218,52 +284,41 @@ async function chargeCart() {
 
         cart.map(product => {
             const card = document.createElement('div')
-            card.classList.add('cart-card')
-            //#region IMAGE
             const cardImage = document.createElement('div')
+            const coverContainer = document.createElement('div')
+            const imageCover = document.createElement('img')
+            const cardSection = document.createElement('div')
+            const cardTitle = document.createElement('div')
+            const cardText = document.createElement('p')
+            const cardBottom = document.createElement('div')
+            const cardTextPriceContainer = document.createElement('div')
+            const cardTextPrice = document.createElement('h4')
+
+            card.classList.add('cart-card')
+            cardImage.classList.add('cart-card-image')
+            coverContainer.classList.add('cover-container')
+            cardSection.classList.add('cart-card-section')
+            cardTitle.classList.add('cart-card-title')
+            cardText.classList.add('cart-card-text')
+            cardBottom.classList.add('cart-card-tail')
+            cardTextPriceContainer.classList.add('cart-card-price-container')
+            cardTextPrice.classList.add('cart-card-price')
+
             cardImage.style.backgroundImage = 'url("' + product.image + '")'
             cardImage.alt = product.name + ' cover'
-            cardImage.classList.add('cart-card-image')
-
-            const coverContainer = document.createElement('div')
-            coverContainer.classList.add('cover-container')
-
-            const imageCover = document.createElement('img')
             imageCover.src = product.image
             imageCover.alt = product.name + ' cover'
+            cardTitle.innerHTML = product.name
+            cardText.innerHTML = product.description
+            cardTextPrice.innerHTML = '$' + (product.price * product.quantity).toFixed(2)
+            let subtotal = ((product.price - ((product.price * (product.discount + discountCode) / 100))) * product.quantity).toFixed(2)
+            total += parseFloat(subtotal)
 
             coverContainer.appendChild(imageCover)
             cardImage.appendChild(coverContainer)
-            //#endregion
-
-            //#region bottom
-            const cardSection = document.createElement('div')
-            cardSection.classList.add('cart-card-section')
-
-            const cardTitle = document.createElement('div')
-            cardTitle.classList.add('cart-card-title')
-            cardTitle.innerHTML = product.name
-
-            const cardText = document.createElement('p')
-            cardText.classList.add('cart-card-text')
-            cardText.innerHTML = product.description
-
             cardSection.appendChild(cardTitle)
             cardSection.appendChild(cardText)
-
-            const cardBottom = document.createElement('div')
-            cardBottom.classList.add('cart-card-tail')
-
-            const cardTextPriceContainer = document.createElement('div')
-            cardTextPriceContainer.classList.add('cart-card-price-container')
-
-            const cardTextPrice = document.createElement('h4')
-            cardTextPrice.classList.add('cart-card-price')
-            cardTextPrice.innerHTML = '$' + (product.price * product.quantity).toFixed(2)
             cardBottom.appendChild(cardTextPrice)
-
-            let subtotal = ((product.price - ((product.price * (product.discount + discountCode) / 100))) * product.quantity).toFixed(2)
-            total += parseFloat(subtotal)
 
             if (product.discount > 0) {
                 cardTextPrice.style.textDecoration = 'line-through'
@@ -279,12 +334,12 @@ async function chargeCart() {
                 cardBottom.appendChild(cardTextDiscount)
             }
 
-            //#region button //! cambios aquí
+            //#region button
             const cardRemove = document.createElement('button')
             cardRemove.classList.add('material-symbols-outlined')
             cardRemove.innerHTML = 'delete'
 
-            cardRemove.addEventListener('click', () => {
+            cardRemove.addEventListener('click', (e) => {
                 cart.splice(cart.indexOf(cart.find(element => element.id === product.id)), 1)
                 chargeCart()
             })
@@ -308,7 +363,7 @@ async function chargeCart() {
             cardMinusButton.addEventListener('click', () => {
                 cardAddCartButton.stepDown()
                 product.quantity = cardAddCartButton.value
-                if(cardAddCartButton.value <= 0) cart.splice(cart.indexOf(cart.find(element => element.id === product.id)), 1)
+                if (cardAddCartButton.value <= 0) cart.splice(cart.indexOf(cart.find(element => element.id === product.id)), 1)
                 chargeCart()
             })
 
@@ -317,6 +372,11 @@ async function chargeCart() {
             cardAddCartButton.id = product.id + 'qtty'
             cardAddCartButton.placeholder = '0'
             cardAddCartButton.value = product.quantity
+
+            cardAddCartButton.addEventListener('change', () => {
+                product.quantity = cardAddCartButton.value
+                chargeCart()
+            })
 
             //#endregion
             cardDivButton.appendChild(cardPlusButton)

@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="assets/multimedia/image/icon-halo.ico">
+    <script src="assets/scripts/animations.js" defer></script>
     <title>Halo</title>
 </head>
 
@@ -186,8 +187,7 @@
                         <label for="name">Nombre</label>
                         <input type="text" id="contact-name" maxlength="25" required placeholder="Tu nombre" />
                         <label for="email">E-mail</label>
-                        <input name="email" id="contact-email" required
-                            placeholder="tuemail@email.com" />
+                        <input name="email" id="contact-email" required placeholder="tuemail@email.com" />
                     </fieldset>
                 </div>
                 <div>
@@ -196,14 +196,14 @@
                         <label for="message">Mensaje</label><br>
                         <textarea type="text" name="message" id="contact-message" required cols="36" rows="5"
                             placeholder="Escribe tu mensaje aquí"></textarea>
-                            <div class="form-actions">
-                                <div class="btn-secondary">
-                                    <input type="reset" value="Reset">
-                                </div>
-                                <div class="btn-primary">
-                                    <input type="submit" value="Send">
-                                </div>
+                        <div class="form-actions">
+                            <div class="btn-secondary">
+                                <input type="reset" value="Limpiar">
                             </div>
+                            <div class="btn-primary">
+                                <input type="submit" value="enviar">
+                            </div>
+                        </div>
                     </fieldset>
                 </div>
             </form>
@@ -350,7 +350,6 @@
         </div>
     </footer>
     <script type="module" src="assets/scripts/data.js"></script>
-    <script src="assets/scripts/animations.js" defer></script>
 </body>
 
 </html>

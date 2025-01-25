@@ -75,7 +75,7 @@ async function fillVideogamesSection() {
         const trailerSection = document.createElement('video')
         trailerSection.loop = true
         trailerSection.controls = true
-        trailerSection.preload = 'auto'
+        trailerSection.preload = 'metadata'
         trailerSection.classList.add('auto-play')
         trailerSection.src = videogame.trailer
         trailerSection.alt = videogame.title + ' trailer'

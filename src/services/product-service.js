@@ -2,7 +2,7 @@ import { Product } from "../model/product.js";
 
 export class ProductService {
     constructor() {
-        this.url = "/src/services/providers/data/products.json"
+        this.url = "/src/services/providers/local/products.json"
     }
 
     /**
@@ -24,7 +24,8 @@ export class ProductService {
                     element.price,
                     element.image,
                     element.type,
-                    element.discount));
+                    element.discount,
+                    element.author));
             }
         } catch (e) {
             console.error(e)

@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "name": "Halo: The Master Chief Collection",
+        "description": "La Master Chief Collection agrupa todos los juegos de Halo con el personaje de Master Chief en un solo paquete.",
+        "price": 39.99,
+        "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/976730/capsule_616x353.jpg?t=1670458602",
+        "type": "juego",
+        "discount": 10,
+        "author": "343 Industries"
+    },
+    {
+        "id": 2,
+        "name": "Halo Infinite",
+        "description": "La última entrega de la saga Halo, enfocada en el regreso de Master Chief para luchar contra los Banished y una nueva amenaza misteriosa.",
+        "price": 59.99,
+        "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1708091/capsule_616x353.jpg?t=1706638660",
+        "type": "juego",
+        "discount": 5,
+        "author": "343 Industries"
+    },
+    {
+        "id": 3,
+        "name": "Halo Points",
+        "description": "Moneda virtual utilizada para comprar contenido dentro de los juegos de Halo.",
+        "price": 9.99,
+        "image": "https://store-images.s-microsoft.com/image/apps.12598.14391729169593930.99b1a4f2-04bb-4b59-943b-0961d25f2696.5f644d6d-91a2-43c3-968d-e861fecbc56e?q=90&w=480&h=270",
+        "type": "juego",
+        "discount": 0,
+        "author": "Microsoft Studios"
+    },
+    {
+        "id": 4,
+        "name": "Halo: The Fall of Reach (Novela)",
+        "description": "La primera novela de la saga Halo, que detalla los orígenes de Master Chief y el programa Spartan-II.",
+        "price": 14.99,
+        "image": "https://m.media-amazon.com/images/I/71KB8qUeQaL._AC_UF894,1000_QL80_.jpg",
+        "type": "libro",
+        "discount": 15,
+        "author": "Eric Nylund"
+    },
+    {
+        "id": 5,
+        "name": "Halo: Combat Evolved Anniversary - Digital Edition",
+        "description": "Una versión remasterizada del clásico Halo: Combat Evolved, con gráficos mejorados y mapas multijugador.",
+        "price": 29.99,
+        "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1064221/capsule_616x353.jpg?t=1634231276",
+        "type": "juego",
+        "discount": 20,
+        "author": "343 Industries"
+    },
+    {
+        "id": 6,
+        "name": "Halo: Spartan Assault (Móvil)",
+        "description": "Un juego de disparos de arriba hacia abajo en el universo de Halo, disponible para dispositivos móviles.",
+        "price": 4.99,
+        "image": "https://store-images.s-microsoft.com/image/apps.33461.9007199266246750.f909a15b-19f6-4a02-b196-304ded2b15b6.79c5b2e9-f6b7-491e-942e-28dc20d78c6f?q=90&w=480&h=270",
+        "type": "juego",
+        "discount": 0,
+        "author": "Vanguard Games"
+    },
+    {
+        "id": 7,
+        "name": "Halo: Spartan Strike (Móvil)",
+        "description": "Otro juego de disparos de arriba hacia abajo ambientado en el universo Halo, con nuevas misiones y armas.",
+        "price": 4.99,
+        "image": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ef02abe3-63cc-4dfa-8eab-5543cf3bcf4f/d83b0cs-e4dbe9f0-37d5-4433-a42f-ea30b539acdd.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VmMDJhYmUzLTYzY2MtNGRmYS04ZWFiLTU1NDNjZjNiY2Y0ZlwvZDgzYjBjcy1lNGRiZTlmMC0zN2Q1LTQ0MzMtYTQyZi1lYTMwYjUzOWFjZGQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.vjni82EEvjGif9ewO37q0gCy6cCetPZ8eM5rqfKk2fA",
+        "type": "juego",
+        "discount": 0,
+        "author": "Vanguard Games"
+    },
+    {
+        "id": 8,
+        "name": "Halo 5: Guardians",
+        "description": "La quinta entrega principal de la saga Halo, que sigue a Master Chief y un nuevo personaje, el agente Locke.",
+        "price": 49.99,
+        "image": "https://store-images.s-microsoft.com/image/apps.50236.69279545232152045.f1a4a87c-fcc9-4b7c-a620-f6c56eb2d5ad.f0eeb1d4-a30c-4a21-8bcb-46ed84669b5c",
+        "type": "juego",
+        "discount": 15,
+        "author": "343 Industries"
+    },
+    {
+        "id": 9,
+        "name": "Halo Wars: Definitive Edition",
+        "description": "Una versión remasterizada del juego de estrategia en tiempo real Halo Wars, con gráficos mejorados y nuevas características.",
+        "price": 19.99,
+        "image": "https://store-images.s-microsoft.com/image/apps.54072.68131417927341023.6f4f8f73-402d-42d7-8fff-a37b68438b32.3177700b-acd5-42f3-b2bc-9bd10bfbf465",
+        "type": "juego",
+        "discount": 10,
+        "author": "343 Industries"
+    },
+    {
+        "id": 10,
+        "name": "Halo: Nightfall (Serie)",
+        "description": "Una serie de acción en vivo que sigue a Jameson Locke y su equipo en una misión para descubrir una nueva amenaza para la humanidad.",
+        "price": 9.99,
+        "image": "https://www.lavanguardia.com/peliculas-series/images/serie/poster/2014/11/w1280/6UxfdZDHklInmrK0gnRhPdFrrcd.jpg",
+        "type": "pelicula",
+        "discount": 0,
+        "author": "Ridley Scott"
+    },
+    {
+        "id": 11,
+        "name": "Halo: The Flood (Novela)",
+        "description": "La segunda novela de la saga Halo, que adapta los eventos del juego original Halo: Combat Evolved en una narrativa emocionante.",
+        "price": 14.99,
+        "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSm2rOjTNbyrJh17gjd4jYOgK-UQu91JU08GZUEduovXOOuu08zwjrRlTy5CHEoqhEnNvlcIWu58TJRpax4ntYbQDWU4Bba3Z52k9ct2_inaM8JlOG_CUYw7seX4WfDgtM1Y8na4s7E7g/s2048/HEF2019C.jpg",
+        "type": "libro",
+        "discount": 15,
+        "author": "William C. Dietz"
+    },
+    {
+        "id": 12,
+        "name": "Halo: Ghosts of Onyx (Novela)",
+        "description": "Una novela ambientada después de los eventos de Halo 3, que se centra en la creación de los soldados Spartan-III.",
+        "price": 14.99,
+        "image": "https://m.media-amazon.com/images/I/716eltwlQiL._AC_UF894,1000_QL80_.jpg",
+        "type": "libro",
+        "discount": 10,
+        "author": "Eric Nylund"
+    },
+    {
+        "id": 13,
+        "name": "Halo: Broken Circle (Novela)",
+        "description": "Una novela que profundiza en la historia del Covenant y sus facciones internas antes de los eventos del primer juego de Halo.",
+        "price": 14.99,
+        "image": "https://m.media-amazon.com/images/I/91R33+nSEJL._UF894,1000_QL80_.jpg",
+        "type": "libro",
+        "discount": 5,
+        "author": "John Shirley"
+    },
+    {
+        "id": 14,
+        "name": "Halo: Hunters in the Dark (Novela)",
+        "description": "Una novela que sigue a un equipo de humanos y élites que se unen para cazar un poderoso artefacto.",
+        "price": 14.99,
+        "image": "https://m.media-amazon.com/images/I/819STFGP7HL._AC_UF1000,1000_QL80_.jpg",
+        "type": "libro",
+        "discount": 10,
+        "author": "Peter David"
+    },
+    {
+        "id": 15,
+        "name": "Halo: New Blood (Novela)",
+        "description": "La historia de un joven soldado, Edward Buck, mientras se une a la lucha contra el Covenant en los primeros años del conflicto de Halo.",
+        "price": 14.99,
+        "image": "https://m.media-amazon.com/images/I/819BLGGRNzL.jpg",
+        "type": "libro",
+        "discount": 20,
+        "author": "Matt Forbeck"
+    }
+]

@@ -1,5 +1,5 @@
 export class Product {
-    constructor(id, name, description, price, image, type, discount) {
+    constructor(id, name, description, price, image, type, discount, author) {
         this.id = id
         this.name = name
         this.description = description
@@ -7,5 +7,6 @@ export class Product {
         this.image = image
         this.type = type
         this.discount = discount
+        this.author = author
     }
 }

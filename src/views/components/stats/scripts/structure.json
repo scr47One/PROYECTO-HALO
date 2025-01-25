@@ -1,0 +1,178 @@
+{
+  "data": {
+    "stats": {
+      "core": {
+        "summary": {
+          "kills": "valor",
+          "deaths": "valor",
+          "assists": "valor",
+          "betrayals": "valor",
+          "suicides": "valor",
+          "spawns": "valor",
+          "max_killing_spree": "valor",
+          "vehicles": {
+            "destroys": "valor",
+            "hijacks": "valor"
+          },
+          "medals": {
+            "total": "valor",
+            "unique": "valor"
+          },
+          "objectives_completed": "valor"
+        },
+        "damage": {
+          "taken": "valor",
+          "dealt": "valor"
+        },
+        "shots": {
+          "fired": "valor",
+          "hit": "valor",
+          "missed": "valor",
+          "accuracy": "valor"
+        },
+        "rounds": {
+          "won": "valor",
+          "lost": "valor",
+          "tied": "valor"
+        },
+        "breakdown": {
+          "kills": {
+            "melee": "valor",
+            "grenades": "valor",
+            "headshots": "valor",
+            "power_weapons": "valor",
+            "sticks": "valor",
+            "assassinations": "valor",
+            "vehicles": {
+              "splatters": "valor"
+            },
+            "miscellaneous": {
+              "repulsor": "valor",
+              "fusion_coils": "valor"
+            }
+          },
+          "assists": {
+            "emp": "valor",
+            "driver": "valor",
+            "callouts": "valor"
+          },
+          "vehicles": {
+            "destroys": [
+              {"value": "valor", "count": "valor"}
+            ],
+            "hijacks": [
+              {"value": "valor", "count": "valor"}
+            ]
+          },
+          "medals": [
+            {"id": "valor", "count": "valor"}
+          ]
+        },
+        "kdr": "valor",
+        "kda": "valor",
+        "scores": {
+          "personal": "valor",
+          "points": "valor"
+        }
+      },
+      "modes": {
+        "capture_the_flag": {
+          "flag_capture_assists": "valor",
+          "flag_captures": "valor",
+          "flag_carriers_killed": "valor",
+          "flag_grabs": "valor",
+          "flag_returners_killed": "valor",
+          "flag_returns": "valor",
+          "flag_secures": "valor",
+          "flag_steals": "valor",
+          "kills_as_flag_carrier": "valor",
+          "kills_as_flag_returner": "valor",
+          "time_as_flag_carrier": {
+            "seconds": "valor",
+            "human": "valor"
+          }
+        },
+        "elimination": {
+          "allies_revived": "valor",
+          "elimination_assists": "valor",
+          "eliminations": "valor",
+          "enemy_revives_denied": "valor",
+          "executions": "valor",
+          "kills_as_last_player_standing": "valor",
+          "last_players_standing_killed": "valor",
+          "rounds_survived": "valor",
+          "times_revived_by_ally": "valor"
+        },
+        "extraction": {
+          "extraction_conversions_completed": "valor",
+          "extraction_conversions_denied": "valor",
+          "extraction_initiations_completed": "valor",
+          "extraction_initiations_denied": "valor",
+          "successful_extractions": "valor"
+        },
+        "oddball": {
+          "kills_as_skull_carrier": "valor",
+          "longest_time_as_skull_carrier": {
+            "seconds": "valor",
+            "human": "valor"
+          },
+          "skull_carriers_killed": "valor",
+          "skull_grabs": "valor",
+          "skull_scoring_ticks": "valor",
+          "time_as_skull_carrier": {
+            "seconds": "valor",
+            "human": "valor"
+          }
+        },
+        "zones": {
+          "total_zone_occupation_time": {
+            "seconds": "valor",
+            "human": "valor"
+          },
+          "zone_captures": "valor",
+          "zone_defensive_kills": "valor",
+          "zone_offensive_kills": "valor",
+          "zone_scoring_ticks": "valor",
+          "zone_secures": "valor"
+        },
+        "stockpile": {
+          "kills_as_power_seed_carrier": "valor",
+          "power_seed_carriers_killed": "valor",
+          "power_seeds_deposited": "valor",
+          "power_seeds_stolen": "valor",
+          "time_as_power_seed_carrier": {
+            "seconds": "valor",
+            "human": "valor"
+          },
+          "time_as_power_seed_driver": {
+            "seconds": "valor",
+            "human": "valor"
+          }
+        },
+        "pvp": {
+          "assists": "valor",
+          "deaths": "valor",
+          "kills": "valor"
+        }
+      }
+    },
+    "matches": {
+      "wins": "valor",
+      "losses": "valor",
+      "ties": "valor",
+      "completed": "valor"
+    },
+    "time_played": {
+      "seconds": "valor",
+      "human": "valor"
+    }
+  },
+  "additional": {
+    "params": {
+      "gamertag": "valor"
+    },
+    "query": {
+      "filter": "valor"
+    }
+  }
+}

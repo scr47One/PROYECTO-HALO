@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Store</title>
+    <title>Stats</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../assets/styles/styles.css">
@@ -21,80 +21,28 @@
 <body>
     <header class="main-header" id="start">
         <nav>
-            <span class="logo">
+            <span>
                 <img src="../../assets/multimedia/image/Halo-Logo.png">
             </span>
-            
-            <input type="checkbox" id="_buttonCart">
-            <label id="_btnCart" for="_buttonCart" class="material-symbols-outlined btn-cart">
-                <span class="badge" id="_cartBadge"></span>
-            </label>
             <input type="checkbox" id="control">
             <label for="control" class="material-icons btn-show"></label>
-
             <ul id="headerMenu" onclick="closeMenu()">
                 <li><a href="../../index.html#intro">Intro</a></li>
                 <li><a href="../../index.html#videogames">Videojuegos</a></li>
                 <li><a href="../../index.html#novels">Novelas</a></li>
                 <li><a href="../../index.html#characters">Personajes</a></li>
                 <li><a href="#links">Acerca de</a></li>
-                <li class="btn-cart-container">
-                    <input type="checkbox" id="buttonCart">
-                    <label id="btnCart" for="buttonCart" class="material-symbols-outlined btn-cart">
-                        <span class="badge" id="cartBadge"></span>
-                    </label>
-                </li>
             </ul>
         </nav>
     </header>
     <main>
-        <div id="topBar"></div>
-        <div id="products" class="product-card-container"></div>
-        <div id="windowProduct" class="product-card-view">
-            <div class="product-card">
-                <div class="product-card-image" id="viewBackgroundContainer">
-                    <div class="info-container">
-                        <div class="cover-container" id="viewCoverContainer">
-                            <span></span>
-                        </div>
-                        <div class="product-card-info">
-                            <div class="product-card-info-title" id="viewTitle"></div>
-                            <div class="product-card-info-author" id="viewAuthor"></div>
-                            <div class="product-card-prices">
-                                <h4 class="product-card-price" id="viewPrice"></h4>
-                                <h4 class="product-card-price-discount" id="viewPriceDiscount"></h4>
-                                <h4 class="product-card-discount" id="viewDiscount"></h4>
-                            </div>
-                            <div class="product-card-actions">
-                                <div class="btn-secondary">
-                                    <button id="viewBtnReturn">regresar</button>
-                                </div>
-                                <div class="btn-primary">
-                                    <button id="viewBtnAdd">añadir</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="chip-group" id="viewChipGroup"></div>
-                <div class="product-card-text">
-                    <h3>Descripción</h3>
-                    <p id="viewDescription"></p>
-                </div>
-            </div>
+        <div class="container">
+            <h2>Top #5 global</h2>
+            <div class="card-container"></div>
         </div>
-        <div id="sideBar" class="side-bar">
-            <div>
-                <h2>Carrito de compras</h2>
-            </div>
-            <div id="cartContainer"></div>
-            <div class="cart-total">
-                <h3>Total</h3>
-                <div id="total"></div>
-                <div class="btn-primary">
-                    <button>pagar</button>
-                </div>
-            </div>
+        <div class="container">
+            <h2>Perfil personal</h2>
+            <div class="card-container"></div>
         </div>
     </main>
     <footer class="footer">

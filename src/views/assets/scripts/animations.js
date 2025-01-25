@@ -27,8 +27,10 @@ function runAutoPlay () {
     });
 }
 
-window.addEventListener("load", function(){
-    runAutoPlay()
+document.addEventListener("DOMContentLoaded", function(){
+    setTimeout(()=>{
+        runAutoPlay()
+    }, 500)
 });
 
 
