@@ -167,7 +167,7 @@ span {
                     content: 'shopping_cart';
                     transition: transform 0.4s ease, content 0.4s ease;
                 }
-    
+
                 #buttonCart:checked~.btn-cart::before {
                     content: 'close';
                     transform: rotate(180deg);
@@ -398,6 +398,109 @@ span {
 
     }
 }
+
+.container {
+    height: fit-content;
+    width: calc(100% - 40px);
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    h2 {
+        width: 100%;
+    }
+
+    input {
+        display: inline;
+        height: var(--min-element-height);
+        margin-right: 20px;
+    }
+
+    .player-card {
+        margin-top: 20px;
+        width: 100%;
+        background-color: var(--highlight-bg-color);
+
+        .player-background {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+
+            .player-icon-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                height: 100%;
+                width: fit-content;
+                padding: 20px;
+                z-index: 3;
+    
+                img {
+                    height: 20vh;
+                }
+            }
+    
+            .player-info {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+    
+                .player-gamertag {
+                    font-size: 2.5rem;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    padding: 20px;
+                }
+    
+                .player-text {
+                    font-size: 1.5rem;
+                    font-weight: 200;
+                    padding: 20px;
+                }
+
+                #rank {
+                    grid-column: 1;
+                    grid-row: 2;
+                }
+
+                #xpNextLevel {
+                    font-weight: 500;
+                    color: var(--text-secondary-color);
+                    grid-column: 2 / span 3;
+                    grid-row: 2;
+                }
+            }
+    
+            progress {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: var(--min-element-height);
+                opacity: 0;
+    
+                &[value].player-progress {
+                    transition: all 0.5s ease-in-out;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+    
+                    &::-webkit-progress-bar {
+                        background: var(--highlight-bg-color);
+                    }
+    
+                    &::-webkit-progress-value {
+                        background: var(--highlight-primary-bg-color);
+                    }
+                }
+            }
+        }
+
+    }
+}
+
 
 
 .card-mc {
@@ -927,7 +1030,8 @@ button {
                             color: var(--text-terciary-color);
                         }
 
-                        .product-card-discount, .product-card-price-discount {
+                        .product-card-discount,
+                        .product-card-price-discount {
                             margin-left: 20px;
                         }
                     }
@@ -939,6 +1043,7 @@ button {
                         bottom: 20px;
                         width: 50%;
                         height: fit-content;
+
                         .btn-primary,
                         .btn-secondary {
                             width: calc(var(--min-btn-width) * 1.5);
@@ -956,7 +1061,7 @@ button {
             padding: 20px 40px 20px 40px;
             display: block;
             overflow: hidden;
-            
+
             p {
                 line-height: 1.2rem;
                 text-overflow: ellipsis;
@@ -988,7 +1093,7 @@ button {
         color: #fff;
     }
 
-    &:hover > .tooltiptext {
+    &:hover>.tooltiptext {
         visibility: visible;
         opacity: 1;
         transition: opacity 0.3s;
@@ -1189,6 +1294,7 @@ button {
         }
     }
 }
+
 
 // #region media
 @media (max-width: 1920px) {

@@ -363,6 +363,94 @@ span {
   grid-row: 1;
 }
 
+.container {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: calc(100% - 40px);
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container h2 {
+  width: 100%;
+}
+.container input {
+  display: inline;
+  height: var(--min-element-height);
+  margin-right: 20px;
+}
+.container .player-card {
+  margin-top: 20px;
+  width: 100%;
+  background-color: var(--highlight-bg-color);
+}
+.container .player-card .player-background {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.container .player-card .player-background .player-icon-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 20px;
+  z-index: 3;
+}
+.container .player-card .player-background .player-icon-container img {
+  height: 20vh;
+}
+.container .player-card .player-background .player-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.container .player-card .player-background .player-info .player-gamertag {
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 20px;
+}
+.container .player-card .player-background .player-info .player-text {
+  font-size: 1.5rem;
+  font-weight: 200;
+  padding: 20px;
+}
+.container .player-card .player-background .player-info #rank {
+  grid-column: 1;
+  grid-row: 2;
+}
+.container .player-card .player-background .player-info #xpNextLevel {
+  font-weight: 500;
+  color: var(--text-secondary-color);
+  grid-column: 2/span 3;
+  grid-row: 2;
+}
+.container .player-card .player-background progress {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: var(--min-element-height);
+  opacity: 0;
+}
+.container .player-card .player-background progress[value].player-progress {
+  transition: all 0.5s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.container .player-card .player-background progress[value].player-progress::-webkit-progress-bar {
+  background: var(--highlight-bg-color);
+}
+.container .player-card .player-background progress[value].player-progress::-webkit-progress-value {
+  background: var(--highlight-primary-bg-color);
+}
+
 .card-mc {
   background-image: url("../multimedia/image/master-chief.jpg");
 }
@@ -840,7 +928,8 @@ button {
   font-weight: 300;
   color: var(--text-terciary-color);
 }
-.product-card-view .product-card .product-card-image .info-container .product-card-info .product-card-prices .product-card-discount, .product-card-view .product-card .product-card-image .info-container .product-card-info .product-card-prices .product-card-price-discount {
+.product-card-view .product-card .product-card-image .info-container .product-card-info .product-card-prices .product-card-discount,
+.product-card-view .product-card .product-card-image .info-container .product-card-info .product-card-prices .product-card-price-discount {
   margin-left: 20px;
 }
 .product-card-view .product-card .product-card-image .info-container .product-card-info .product-card-actions {

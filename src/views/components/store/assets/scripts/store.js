@@ -188,7 +188,6 @@ function resetProductView() {
     viewChipGroup.innerHTML = ''
 }
 
-
 /**
  * @type Array<Cart> */
 const cart = []

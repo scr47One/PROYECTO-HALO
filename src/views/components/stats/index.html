@@ -31,18 +31,38 @@
                 <li><a href="../../index.html#videogames">Videojuegos</a></li>
                 <li><a href="../../index.html#novels">Novelas</a></li>
                 <li><a href="../../index.html#characters">Personajes</a></li>
+                <li><a href="index.html">Multijugador</a></li>
                 <li><a href="#links">Acerca de</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <div class="container">
-            <h2>Top #5 global</h2>
-            <div class="card-container"></div>
-        </div>
-        <div class="container">
-            <h2>Perfil personal</h2>
-            <div class="card-container"></div>
+            <h2>Carrera spartan</h2>
+            <input type="text" id="gamertagInput" placeholder="Ingresa tu gamertag" />
+            <div class="btn-primary">
+                <button id="search">Buscar</button>
+            </div>
+            <div class="player-card">
+                <div class="player-background" id="background">
+                    <div class="player-avatar" id="avatar"><span></span></div>
+                    <div class="player-icon-container" id="icons">
+                        <img id="adornmentIcon"></img>
+                    </div>
+                    <div class="player-info">
+                        <div class="player-gamertag" id="gamertag"></div>
+                        <div class="player-text" id="title"></div>
+                        <div class="player-text" id="subtitle"></div>
+                        <div class="player-text" id="rank"></div>
+                        <div class="player-text" id="xpNextLevel"></div>
+                    </div>
+                    <div class="chip-group">
+                        <p class="player-chip" id="tier"></p>
+                        <p class="player-chip" id="type"></p>
+                    </div>
+                    <progress class="player-progress" id="level"></progress>
+                </div>
+            </div>
         </div>
     </main>
     <footer class="footer">
@@ -218,8 +238,7 @@
             <p>&copy; Halo 2025</p>
         </div>
     </footer>
-    <script src="assets/scripts/store.js" type="module" async defer></script>
-    <script src="../stats/scripts/data.js" type="module" async defer></script>
+    <script src="assets/scripts/data.js" type="module" async defer></script>
     <script src="../../assets/scripts/animations.js"></script>
 </body>
 
