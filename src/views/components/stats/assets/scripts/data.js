@@ -118,6 +118,7 @@ search.addEventListener('click', async () => {
  * @param {Player} player 
  */
 function chargePlayerCareer(player) {
+    console.log(player)
     resetPlayerCareer()
     const background = document.getElementById("background");
     background.style.backgroundColor = player.colorPrimary;
@@ -155,10 +156,12 @@ function chargePlayerCareer(player) {
 
     // Para los textos adicionales
     const level = document.getElementById("level");
-    level.max = player.totalXp
-    level.value = player.threshold
+    level.max = 100
+    level.value = (( player.totalXp * 100 ) / player.nextLevelThreshold).toFixed(2)
     level.style.opacity = '1'
     level.style.transition = 'opacity 0.5s'
+    const currentXp = document.getElementById("currentXp");
+    currentXp.innerText =  player.totalXp + ' XP';
 
     const xpNextLevel = document.getElementById("xpNextLevel");
     xpNextLevel.innerText = 'XP para el siguiente nivel: ' + player.remainingXpToNextLevel;

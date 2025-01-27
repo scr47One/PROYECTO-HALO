@@ -397,7 +397,6 @@ span {
   height: 100%;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 20px;
   z-index: 3;
 }
 .container .player-card .player-background .player-icon-container img {
@@ -409,6 +408,7 @@ span {
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-bottom: var(--min-element-height);
 }
 .container .player-card .player-background .player-info .player-gamertag {
   font-size: 2.5rem;
@@ -430,6 +430,15 @@ span {
   color: var(--text-secondary-color);
   grid-column: 2/span 3;
   grid-row: 2;
+}
+.container .player-card .player-background .current-xp {
+  position: absolute;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  z-index: 100;
+  bottom: calc(var(--min-element-height) / 4);
+  left: 50%;
 }
 .container .player-card .player-background progress {
   position: absolute;
