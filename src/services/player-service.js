@@ -1,5 +1,5 @@
-import { ApiResponse, careerRank } from "./providers/remote/halo-api.js"
-import { Player } from "../model/player.js"
+import { ApiResponse, careerRank, leaderBoards } from "./providers/remote/halo-api.js"
+import { Player, LeaderBoardPlayer } from "../model/player.js"
 
 export class PlayerService {
 
@@ -39,6 +39,22 @@ export class PlayerService {
     }
 
     async getTopLeaderBoards(playlist) {
-        let url3 = `https://sr-nextjs.vercel.app/api/halodotapi?path=%2Fgames%2Fhalo-infinite%2Ftooling%2Fleaderboards%2Fcsr%3Fplaylist_id%3D${playlist}`
+        /**@type LeaderBoardPlayer[] */
+        let players;
+        try {
+            const response = await fetch(leaderBoards(playlist))
+            if (!response.ok) {
+                throw new Error('No se cargaron los datos correctamente')
+            } else {
+                const {data, _}  = await response.json()
+                players = data.map(element =>
+                    new LeaderBoardPlayer(element.player.gamertag,element.player.gamerpic_url,element.rank, element.score)
+                )
+            }
+        } catch (e) {
+            console.error(e)
+        } finally {
+            return players
+        }
     }
 }

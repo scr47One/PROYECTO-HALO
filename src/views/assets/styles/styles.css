@@ -47,27 +47,27 @@ h3 {
   margin-top: 20px;
 }
 
-input,
-button {
-  font-family: Oxanium;
-  font-weight: 400;
+input[type=number] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
-#cartBadge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 5px;
-  width: -moz-max-content;
-  width: max-content;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
-  font-size: 1rem;
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input,
+button,
+select,
+option {
+  border: 0pt;
+  box-shadow: none;
+  padding: 10px;
+  font-family: Oxanium;
   font-weight: 400;
-  visibility: hidden;
-  color: black;
-  transition: 0.3s;
-  background-color: var(--highlight-primary-bg-color);
+  border-radius: 0px;
 }
 
 p,
@@ -374,9 +374,10 @@ span {
 .container h2 {
   width: 100%;
 }
-.container input {
+.container input, .container select {
   display: inline;
   height: var(--min-element-height);
+  width: var(--min-input-width);
   margin-right: 20px;
 }
 .container .player-card {
@@ -459,27 +460,73 @@ span {
 .container .player-card .player-background progress[value].player-progress::-webkit-progress-value {
   background: var(--highlight-primary-bg-color);
 }
+.container .player-card-container {
+  width: 100%;
+  height: 50vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.container .player-card-container .player-card {
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+}
+.container .player-card-container .player-card .player-background {
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  height: 100%;
+  width: 100%;
+  position: relative;
+  padding: 20px;
+  align-items: center;
+}
+.container .player-card-container .player-card .player-background .player-avatar {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  height: calc(20vh - 40px);
+  width: calc(20vh - 40px);
+}
+.container .player-card-container .player-card .player-background .player-avatar span {
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../multimedia/image/icon-halo.png");
+}
+.container .player-card-container .player-card .player-background .player-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 40px);
+  width: calc(100% - 40px);
+  text-transform: uppercase;
+}
+.container .player-card-container .player-card .player-background .player-info .player-gamertag {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.container .player-card-container .player-card .player-background .player-info .player-score {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+.container .player-card-container .player-card .player-background .chip-group {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 
 .card-mc {
   background-image: url("../multimedia/image/master-chief.jpg");
-}
-
-input[type=number] {
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  appearance: textfield;
-}
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-}
-
-input,
-button {
-  border: 0pt;
-  box-shadow: none;
-  padding: 10px;
 }
 
 .footer {
@@ -1172,6 +1219,23 @@ button {
   color: var(--text-terciary-color);
 }
 
+#cartBadge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  width: -moz-max-content;
+  width: max-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  font-size: 1rem;
+  font-weight: 400;
+  visibility: hidden;
+  color: black;
+  transition: 0.3s;
+  background-color: var(--highlight-primary-bg-color);
+}
+
 @media (max-width: 1920px) {
   .section-text {
     width: calc(100% - 40px);
@@ -1245,6 +1309,9 @@ button {
   .product-card-container .product-card-text {
     max-height: 3.2rem;
   }
+  .container .player-card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 @media only screen and (max-width: 1200px) {
   .section-content .section-multimedia {
@@ -1305,11 +1372,14 @@ button {
   .footer .footer-form {
     width: calc(100% - 40px);
   }
-  .product-card-container {
+  .container .product-card-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (max-width: 912px) {
+  .player-card-container {
+    grid-template-columns: 1fr;
+  }
   .main-header nav {
     display: flex;
   }
@@ -1378,7 +1448,7 @@ button {
     background-color: var(--highlight-secondary-bg-color-translucent);
     color: black;
   }
-  .product-card-container {
+  .container .product-card-container {
     grid-template-columns: 1fr;
   }
 }

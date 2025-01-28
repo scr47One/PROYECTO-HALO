@@ -55,9 +55,9 @@ class PlayerStats {
 }
 
 class LeaderBoardPlayer {
-    constructor(gamertag, gamepicUrl, rank, score) {
+    constructor(gamertag, gamerpicUrl, rank, score) {
         this.gamertag = gamertag;
-        this.gamepicUrl = gamepicUrl;
+        this.gamerpicUrl = gamerpicUrl;
         this.rank = rank;
         this.score = score;
     }

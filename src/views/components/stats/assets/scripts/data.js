@@ -1,4 +1,4 @@
-import { Player } from "../../../../../model/player.js";
+import { LeaderBoardPlayer, Player } from "../../../../../model/player.js";
 import { PlayerService } from "../../../../../services/player-service.js";
 
 const playerService = new PlayerService()
@@ -66,42 +66,72 @@ let playlist = [
     }
 ]
 
+const cardContainer = document.getElementById('cardContainer');
+const select = document.getElementById('gameType')
+playlist.forEach(type => {
+    const option = document.createElement('option')
+    option.value = type.value
+    option.innerText = type.text
+    select.append(option)
+})
+
+const leaderBoard = document.getElementById('leaderBoard');
+
+select.addEventListener('change', () => {
+    cardContainer.innerHTML = ''
+})
+
+leaderBoard.addEventListener('click', async () => {
+    const option = document.getElementById('gameType');
+    const players = await playerService.getTopLeaderBoards(option.value)
+    chargeLeaderBoard(players)
+})
+/**
+ * 
+ * @param {LeaderBoardPlayer[]} players 
+ */
 function chargeLeaderBoard(players) {
-    const cardContainer = document.getElementById('cardContainer');
+    
     if (players.length > 0) {
-        const playerCard = document.createElement('div');
-        playerCard.classList.add('player-card');
+        players.map(player => {
+            const playerCard = document.createElement('div');
+            playerCard.classList.add('player-card');
+            playerCard.style.backgroundImage = `url(${player.gamerpicUrl})`;
+    
+            const playerBackground = document.createElement('div');
+            playerBackground.classList.add('player-background');
+    
+            const playerAvatar = document.createElement('div');
+            playerAvatar.classList.add('player-avatar');
+            const avatarSpan = document.createElement('span');
+            playerAvatar.appendChild(avatarSpan);
+            avatarSpan.style.backgroundImage = `url(${player.gamerpicUrl})`;
 
-        const playerBackground = document.createElement('div');
-        playerBackground.classList.add('player-background');
-
-        const playerAvatar = document.createElement('div');
-        playerAvatar.classList.add('player-avatar');
-        const avatarSpan = document.createElement('span');
-        playerAvatar.appendChild(avatarSpan);
-
-        const playerInfo = document.createElement('div');
-        playerInfo.classList.add('player-info');
-
-        const playerGamertag = document.createElement('div');
-        playerGamertag.classList.add('player-gamertag');
-
-        const playerScore = document.createElement('div');
-        playerScore.classList.add('player-score');
-
-        const chipGroup = document.createElement('div');
-        chipGroup.classList.add('chip-group');
-        const chipText = document.createElement('p');
-        chipGroup.appendChild(chipText);
-
-        playerInfo.appendChild(playerGamertag);
-        playerInfo.appendChild(playerScore);
-        playerInfo.appendChild(chipGroup);
-        playerBackground.appendChild(playerAvatar);
-        playerBackground.appendChild(playerInfo);
-        playerCard.appendChild(playerBackground);
-
-        cardContainer.appendChild(playerCard);
+            const playerInfo = document.createElement('div');
+            playerInfo.classList.add('player-info');
+    
+            const playerGamertag = document.createElement('div');
+            playerGamertag.classList.add('player-gamertag');
+            playerGamertag.innerText = player.gamertag;
+    
+            const playerScore = document.createElement('div');
+            playerScore.classList.add('player-score');
+            playerScore.innerText = 'puntuación: ' + player.score;
+    
+            const chipGroup = document.createElement('div');
+            chipGroup.classList.add('chip-group');
+            const chipText = document.createElement('p');
+            chipGroup.appendChild(chipText);
+            chipText.innerText = '#' + player.rank;
+    
+            playerInfo.appendChild(playerGamertag);
+            playerInfo.appendChild(playerScore);
+            playerInfo.appendChild(chipGroup);
+            playerBackground.appendChild(playerAvatar);
+            playerBackground.appendChild(playerInfo);
+            playerCard.appendChild(playerBackground);
+            cardContainer.appendChild(playerCard);
+        })
     }
 }
 
