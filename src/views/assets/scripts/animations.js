@@ -1,5 +1,6 @@
+// TODO: implementar caso de prueba para este método
 /**
- * @description close on click in nav menu when is in small screens
+ * 
  */
 function closeMenu() {
     const header = document.getElementById("start")

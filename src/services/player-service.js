@@ -3,6 +3,7 @@ import { Player, LeaderBoardPlayer } from "../model/player.js"
 
 export class PlayerService {
 
+    // TODO: implementar caso de prueba para este método
     async getPlayerCareerRank(nickName) {
         /**@type Player */
         let rank;
@@ -38,6 +39,7 @@ export class PlayerService {
         }
     }
 
+    // TODO: implementar caso de prueba para este método
     async getTopLeaderBoards(playlist) {
         /**@type LeaderBoardPlayer[] */
         let players;

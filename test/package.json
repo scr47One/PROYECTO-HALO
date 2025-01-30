@@ -1,0 +1,30 @@
+{
+  "name": "proyecto-halo",
+  "version": "1.0.0",
+  "description": "Files to test the app",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha ./*.spec.js --no-timeouts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scr47One/PROYECTO-HALO.git"
+  },
+  "author": "Humberto Gonzalez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scr47One/PROYECTO-HALO/issues"
+  },
+  "homepage": "https://github.com/scr47One/PROYECTO-HALO#readme",
+  "dependencies": {
+    "assert": "^2.1.0",
+    "package.json": "^2.0.1",
+    "selenium-webdriver": "^4.28.1"
+  },
+  "devDependencies": {
+    "mocha": "^11.1.0"
+  }
+}

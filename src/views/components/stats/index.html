@@ -28,24 +28,21 @@
             <label for="control" class="material-icons btn-show"></label>
             <ul id="headerMenu" onclick="closeMenu()">
                 <li><a href="../../index.html#intro">Intro</a></li>
-                <li><a href="../../index.html#videogames">Videojuegos</a></li>
-                <li><a href="../../index.html#novels">Novelas</a></li>
-                <li><a href="../../index.html#characters">Personajes</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-button">SAGA</a>
+                    <div class="dropdown-content">
+                        <a href="../../index.html#videogames">Videojuegos</a>
+                        <a href="../../index.html#novels">Novelas</a>
+                        <a href="../../index.html#characters">Personajes</a>
+                    </div>
+                </li>
                 <li><a href="index.html">Multijugador</a></li>
+                <li><a href="../store/index.html">tienda</a></li>
                 <li><a href="#links">Acerca de</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <div class="container" id="board">
-            <h2>Mejores jugadores</h2>
-            <select type="text" id="gameType" placeholder="Modo de juego"></select>
-            <div class="btn-primary">
-                <button id="leaderBoard">Buscar</button>
-            </div>         
-            <div id="cardContainer" class="player-card-container"></div>   
-        </div>
-        
         <div class="container">
             <h2>Carrera spartan</h2>
             <input type="text" id="gamertagInput" placeholder="Ingresa tu gamertag" />
@@ -70,9 +67,17 @@
                         <p class="player-chip" id="type"></p>
                     </div>
                     <p class="current-xp" id="currentXp"></p>
-                    <progress class="player-progress" id="level"></progress>
+                    <progress value="0" max="100" class="player-progress" id="level"></progress>
                 </div>
             </div>
+        </div>
+        <div class="container" id="board">
+            <h2>Mejores jugadores</h2>
+            <select type="text" id="gameType" placeholder="Modo de juego"></select>
+            <div class="btn-primary">
+                <button id="leaderBoard">Buscar</button>
+            </div>
+            <div id="cardContainer" class="player-card-container"></div>
         </div>
     </main>
     <footer class="footer">

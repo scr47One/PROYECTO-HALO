@@ -67,7 +67,8 @@ let playlist = [
 ]
 
 const cardContainer = document.getElementById('cardContainer');
-const select = document.getElementById('gameType')
+const select = document.getElementById('gameType');
+
 playlist.forEach(type => {
     const option = document.createElement('option')
     option.value = type.value
@@ -86,21 +87,22 @@ leaderBoard.addEventListener('click', async () => {
     const players = await playerService.getTopLeaderBoards(option.value)
     chargeLeaderBoard(players)
 })
+
 /**
  * 
  * @param {LeaderBoardPlayer[]} players 
  */
 function chargeLeaderBoard(players) {
-    
+
     if (players.length > 0) {
         players.map(player => {
             const playerCard = document.createElement('div');
             playerCard.classList.add('player-card');
             playerCard.style.backgroundImage = `url(${player.gamerpicUrl})`;
-    
+
             const playerBackground = document.createElement('div');
             playerBackground.classList.add('player-background');
-    
+
             const playerAvatar = document.createElement('div');
             playerAvatar.classList.add('player-avatar');
             const avatarSpan = document.createElement('span');
@@ -109,26 +111,28 @@ function chargeLeaderBoard(players) {
 
             const playerInfo = document.createElement('div');
             playerInfo.classList.add('player-info');
-    
+
             const playerGamertag = document.createElement('div');
             playerGamertag.classList.add('player-gamertag');
             playerGamertag.innerText = player.gamertag;
-    
+
             const playerScore = document.createElement('div');
             playerScore.classList.add('player-score');
             playerScore.innerText = 'puntuación: ' + player.score;
-    
+
             const chipGroup = document.createElement('div');
             chipGroup.classList.add('chip-group');
             const chipText = document.createElement('p');
             chipGroup.appendChild(chipText);
             chipText.innerText = '#' + player.rank;
-    
+
             playerInfo.appendChild(playerGamertag);
             playerInfo.appendChild(playerScore);
             playerInfo.appendChild(chipGroup);
+
             playerBackground.appendChild(playerAvatar);
             playerBackground.appendChild(playerInfo);
+
             playerCard.appendChild(playerBackground);
             cardContainer.appendChild(playerCard);
         })
@@ -143,30 +147,26 @@ search.addEventListener('click', async () => {
     chargePlayerCareer(player)
 })
 
+// TODO: implementar caso de prueba para este método
 /**
  * 
  * @param {Player} player 
  */
 function chargePlayerCareer(player) {
-    console.log(player)
     resetPlayerCareer()
     const background = document.getElementById("background");
     background.style.backgroundColor = player.colorPrimary;
     background.style.opacity = '1'
-    // Para el avatar
+
     const avatar = document.getElementById("avatar");
     avatar.style.backgroundImage = `url(${player.icon})`;
 
-    // Para el contenedor de íconos
     const avatarContainer = document.getElementById("avatar");
     avatarContainer.style.backgroundImage = `url(${player.icon})`;
-
-    // Para las imágenes dentro del contenedor de íconos
 
     const adornmentIcon = document.getElementById("adornmentIcon");
     adornmentIcon.src = player.adornmentIcon;
 
-    // Para los elementos de información del jugador
     const gamertag = document.getElementById("gamertag");
     gamertag.innerText = player.gamertag;
     const title = document.getElementById("title");
@@ -176,7 +176,6 @@ function chargePlayerCareer(player) {
     const rank = document.getElementById("rank");
     rank.innerText = 'RANGO: ' + player.rank;
 
-    // Para los chips
     const tier = document.getElementById("tier");
     tier.innerText = player.tier;
     tier.style.backgroundColor = player.colorSecondary;
@@ -184,14 +183,12 @@ function chargePlayerCareer(player) {
     type.innerText = player.type;
     type.style.backgroundColor = player.colorSecondary;
 
-    // Para los textos adicionales
     const level = document.getElementById("level");
     level.max = 100
-    level.value = (( player.totalXp * 100 ) / player.nextLevelThreshold).toFixed(2)
+    level.value = ((player.totalXp * 100) / player.nextLevelThreshold).toFixed(2)
     level.style.opacity = '1'
-    level.style.transition = 'opacity 0.5s'
     const currentXp = document.getElementById("currentXp");
-    currentXp.innerText =  player.totalXp + ' XP';
+    currentXp.innerText = player.totalXp + ' XP';
 
     const xpNextLevel = document.getElementById("xpNextLevel");
     xpNextLevel.innerText = 'XP para el siguiente nivel: ' + player.remainingXpToNextLevel;
@@ -234,8 +231,6 @@ function resetPlayerCareer() {
     const xpNextLevel = document.getElementById("xpNextLevel");
     xpNextLevel.innerText = 'none';
 
-    level.style.opacity = '0'
-    level.style.transition = 'opacity 0.5s'
     background.style.opacity = '0'
     background.style.transition = 'opacity 0.5s'
 }

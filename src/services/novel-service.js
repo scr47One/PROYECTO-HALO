@@ -8,7 +8,9 @@ export class NovelService {
     /**
      * 
      * @returns {Promise<Novel[]>}: novels
+     * 
      */
+    // TODO: implementar caso de prueba para este método
     async getNovels() {
         let novels = []
         try {

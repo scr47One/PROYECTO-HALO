@@ -24,23 +24,25 @@
             <span class="logo">
                 <img src="../../assets/multimedia/image/Halo-Logo.png">
             </span>
-            
-            <input type="checkbox" id="_buttonCart">
-            <label id="_btnCart" for="_buttonCart" class="material-symbols-outlined btn-cart">
-                <span class="badge" id="_cartBadge"></span>
-            </label>
+
             <input type="checkbox" id="control">
             <label for="control" class="material-icons btn-show"></label>
 
             <ul id="headerMenu" onclick="closeMenu()">
                 <li><a href="../../index.html#intro">Intro</a></li>
-                <li><a href="../../index.html#videogames">Videojuegos</a></li>
-                <li><a href="../../index.html#novels">Novelas</a></li>
-                <li><a href="../../index.html#characters">Personajes</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-button">SAGA</a>
+                    <div class="dropdown-content">
+                        <a href="../../index.html#videogames">Videojuegos</a>
+                        <a href="../../index.html#novels">Novelas</a>
+                        <a href="../../index.html#characters">Personajes</a>
+                    </div>
+                </li>
+                <li><a href="../stats/index.html">Multijugador</a></li>
                 <li><a href="#links">Acerca de</a></li>
                 <li class="btn-cart-container">
                     <input type="checkbox" id="buttonCart">
-                    <label id="btnCart" for="buttonCart" class="material-symbols-outlined btn-cart">
+                    <label for="buttonCart" class="material-symbols-outlined btn-cart">
                         <span class="badge" id="cartBadge"></span>
                     </label>
                 </li>
@@ -51,7 +53,7 @@
         <div id="topBar"></div>
         <div id="products" class="product-card-container"></div>
         <div id="windowProduct" class="product-card-view">
-            <div class="product-card">
+            <div id="windowProductCard" class="product-card">
                 <div class="product-card-image" id="viewBackgroundContainer">
                     <div class="info-container">
                         <div class="cover-container" id="viewCoverContainer">
@@ -271,7 +273,6 @@
         </div>
     </footer>
     <script src="assets/scripts/store.js" type="module" async defer></script>
-    <script src="../stats/scripts/data.js" type="module" async defer></script>
     <script src="../../assets/scripts/animations.js"></script>
 </body>
 
