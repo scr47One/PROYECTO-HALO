@@ -97,18 +97,27 @@
                 <div>
                     <fieldset>
                         <legend>Datos generales</legend>
-                        <label for="contact-name">Nombre</label>
-                        <input name="name" type="text" id="contact-name" maxlength="25" required placeholder="Tu nombre" />
-                        <label for="email">E-mail</label>
-                        <input name="email" id="contact-email" required placeholder="tuemail@email.com" />
+                        <div class="form-input">
+                            <label for="contact-name">Nombre</label>
+                            <input name="name" type="text" id="contact-name" maxlength="25" placeholder="Tu nombre" />
+                            <p class="form-error" id="nameError"></p>
+                        </div>
+                        <div class="form-input email">
+                            <label for="email">E-mail</label>
+                            <input name="email" id="contact-email" placeholder="tuemail@email.com" />
+                            <p class="form-error" id="emailError"></p>
+                        </div>
                     </fieldset>
                 </div>
                 <div>
                     <fieldset>
                         <legend>Motivo de contacto</legend>
-                        <label for="message">Mensaje</label><br>
-                        <textarea type="text" name="message" id="contact-message" required cols="36" rows="5"
-                            placeholder="Escribe tu mensaje aquí"></textarea>
+                        <div class="form-input text-area">
+                            <label for="message">Mensaje</label>
+                            <textarea type="text" name="message" id="contact-message" cols="36" rows="5"
+                                placeholder="Escribe tu mensaje aquí"></textarea>
+                            <p class="form-error" id="messageError"></p>
+                        </div>
                         <div class="form-actions">
                             <div class="btn-secondary">
                                 <input type="reset" value="Limpiar">
