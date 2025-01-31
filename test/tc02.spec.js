@@ -36,11 +36,12 @@ describe('Añadir productos al carrito', () => {
 
     it('Verificar el precio total del carrito', async () => {
         const total = await driver.findElement(By.id('total'));
-        total.getText().then((text) => {
-            assert.strictEqual(text, '$35.99', 'El total del carrito no es correcto');
-            assert.notEqual(text, '$0.00', 'El precio del producto no es correcto')
-            assert.notEqual(text, '', 'El precio del producto no es correcto')
-        });
+        const text = await total.getText()
+
+        assert.strictEqual(text, '$35.99', 'El total del carrito no es correcto');
+        assert.notEqual(text, '$0.00', 'El precio del producto no es correcto')
+        assert.notEqual(text, '', 'El precio del producto no es correcto')
+
     });
 
     it('Añadir producto al carrito desde el carrito', async () => {

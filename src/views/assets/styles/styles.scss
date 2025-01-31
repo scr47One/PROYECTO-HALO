@@ -8,6 +8,7 @@ html {
     --success-color: rgb(57, 167, 84);
     --primary-color: rgb(40, 80, 211);
     --error-color: rgb(252, 43, 43);
+    --error-color-background: rgba(252, 43, 43, 0.171);
     --darkest-bg-color: rgb(16, 14, 24);
     --highlight-bg-color: rgb(45, 40, 61);
     --highlight-bg-color-translucent: rgba(45, 40, 61, 0.719);
@@ -780,7 +781,7 @@ span {
                 background-color: var(--highlight-input-color);
                 color: white;
                 width: calc(100% - 20px);
-                margin: 10px 0 20px 0;
+                margin: 10px 0 10px 0;
             }
 
             .form-actions {
@@ -799,10 +800,12 @@ span {
             }
 
             textarea {
+                color: white;
                 resize: none;
+                padding: 10px;
                 background-color: var(--highlight-input-color);
-                margin: 10px 0 20px 0;
-                width: 100%;
+                margin: 10px 0 10px 0;
+                width: calc(100% - 20px);
             }
 
             input:focus,
@@ -1507,6 +1510,14 @@ span {
         font-weight: 500;
         font-size: large;
     }
+}
+
+.form-error {
+    color: var(--error-color);
+    background-color: var(--error-color-background);
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
 }
 
 @media (max-width: 1920px) {

@@ -25,7 +25,6 @@ describe('Vista previa del producto', () => {
     it('Cerrar vista previa del producto', async () => {
         const viewBtnReturn = await driver.findElement(By.id('viewBtnReturn'));
         await viewBtnReturn.click();
-
         const preview = await driver.findElement(By.id('windowProduct'));
         const isVisible = await preview.isDisplayed();
         assert.ok(!isVisible, 'La vista previa del producto no se cierra');
