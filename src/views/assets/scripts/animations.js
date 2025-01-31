@@ -1,4 +1,3 @@
-// TODO: implementar caso de prueba para este método
 /**
  * 
  */

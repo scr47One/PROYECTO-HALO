@@ -5,7 +5,6 @@ export class ProductService {
         this.url = "/src/services/providers/local/products.json"
     }
 
-    // TODO: implementar caso de prueba para este método
     /**
      * @returns {Promise<Product[] | undefined>} products
      */
@@ -35,7 +34,6 @@ export class ProductService {
         }
     }
 
-    // TODO: implementar caso de prueba para este método
     /**
      * @param {number} id
      * @returns {Promise<Product>} product

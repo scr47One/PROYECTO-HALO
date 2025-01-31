@@ -155,8 +155,9 @@ async function chargeProductCards() {
     if (products.length > 0) {
         cleanProductCards()
         addOrderBar()
-        products.forEach(product => {
+        products.forEach((product, index) => {
             const card = setProductCard(product)
+            card.id = product.id + 'card' + index
             productsContainer.appendChild(card)
         })
         toastMessage('Productos cargados correctamente', 'primary')
@@ -305,10 +306,11 @@ cartContainer.classList.add('cart-card-container')
 let total = 0
 const discountCode = 0
 
-function applyDiscount(product, subtotal) {
+function applyDiscount(product) {
     const cardTextPriceDiscount = document.createElement('h4')
     cardTextPriceDiscount.classList.add('cart-card-price-discount')
-    cardTextPriceDiscount.innerHTML = '$' + subtotal
+    cardTextPriceDiscount.innerHTML = '$' + product.total
+    cardTextPriceDiscount.style.textDecoration = 'line-through'
     const cardTextDiscount = document.createElement('h4')
     cardTextDiscount.classList.add('cart-card-discount')
     cardTextDiscount.innerHTML = '-' + product.discount + '%'
@@ -344,7 +346,10 @@ function setCardBody(product) {
     return cardSection
 }
 
+// TODO: refactorizar
 function setCardBottom(product) {
+    let subtotal = ((product.total - ((product.total * (product.discount + discountCode) / 100)))).toFixed(2)
+    total += parseFloat(subtotal)
     const cardBottom = document.createElement('div')
     const cardTextPriceContainer = document.createElement('div')
     const cardTextPrice = document.createElement('h4')
@@ -353,13 +358,10 @@ function setCardBottom(product) {
     cardTextPriceContainer.classList.add('cart-card-price-container')
     cardTextPrice.classList.add('cart-card-price')
     cardTextPrice.id = product.id + 'price'
-    cardTextPrice.innerHTML = '$' + (product.total).toFixed(2)
+    cardTextPrice.innerHTML = '$' + parseFloat(subtotal).toFixed(2)
     cardBottom.appendChild(cardTextPrice)
-    let subtotal = ((product.total - ((product.total * (product.discount + discountCode) / 100)))).toFixed(2)
-    total += parseFloat(subtotal)
     if (product.discount > 0) {
-        cardTextPrice.style.textDecoration = 'line-through'
-        const { cardTextPriceDiscount, cardTextDiscount } = applyDiscount(product, subtotal)
+        const { cardTextPriceDiscount, cardTextDiscount } = applyDiscount(product)
         cardBottom.appendChild(cardTextPriceDiscount)
         cardBottom.appendChild(cardTextDiscount)
     }
@@ -368,6 +370,7 @@ function setCardBottom(product) {
     const cardRemove = document.createElement('button')
     cardRemove.classList.add('material-symbols-outlined')
     cardRemove.innerHTML = 'delete'
+    cardRemove.id = product.id + 'delete'
     removeContainer.appendChild(cardRemove)
     cardBottom.appendChild(removeContainer)
     cardBottom.appendChild(cardDivButton)
@@ -383,10 +386,12 @@ function setQuantityButtons(product, suffix) {
     const cardPlusButton = document.createElement('button')
     cardPlusButton.classList.add('material-symbols-outlined')
     cardPlusButton.innerHTML = 'add'
+    cardPlusButton.id = product.id + 'qtty' + suffix + 'Add'
 
     const cardMinusButton = document.createElement('button')
     cardMinusButton.classList.add('material-symbols-outlined')
     cardMinusButton.innerHTML = 'remove'
+    cardMinusButton.id = product.id + 'qtty' + suffix + 'Remove'
 
     const cardAddCartButton = document.createElement('input')
     cardAddCartButton.type = 'number'
@@ -476,7 +481,6 @@ function removeCartProduct(id) {
     chargeCart()
     toastMessage('Producto eliminado del carrito', 'success')
 }
-
 
 //#region coupon
 function Coupon(name, discount, startDate, endDate) {

@@ -1,7 +1,7 @@
 const assert = require('assert');
 const { Builder, By, Browser, WebDriver } = require('selenium-webdriver');
 
-describe('Mostrar vista previa del producto', () => {
+describe('Vista previa del producto', () => {
     /**
      * @type {WebDriver} driver
      */
@@ -20,6 +20,15 @@ describe('Mostrar vista previa del producto', () => {
         const preview = await driver.findElement(By.id('windowProduct'));
         const isVisible = await preview.isDisplayed();
         assert.ok(isVisible, 'La vista previa del producto no se muestra');
+    });
+
+    it('Cerrar vista previa del producto', async () => {
+        const viewBtnReturn = await driver.findElement(By.id('viewBtnReturn'));
+        await viewBtnReturn.click();
+
+        const preview = await driver.findElement(By.id('windowProduct'));
+        const isVisible = await preview.isDisplayed();
+        assert.ok(!isVisible, 'La vista previa del producto no se cierra');
     });
 
     after(() => {

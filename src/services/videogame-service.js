@@ -5,7 +5,6 @@ export class VideogameService {
         this.url = "../services/providers/local/videogames.json"
     }
 
-    // TODO: implementar caso de prueba para este método
     /**
      * @returns {Promise<Videogame[]>} videogames
      */

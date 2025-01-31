@@ -92,7 +92,15 @@ leaderBoard.addEventListener('click', async () => {
 })
 
 async function getPlayers() {
-    return (await playerService.getTopLeaderBoards(currentValue)).slice(0, 10)
+    let players = []
+    try {
+        const response = await playerService.getTopLeaderBoards(currentValue)
+        if (response === null) throw new Error('No se encontraron jugadores')
+        players = response.slice(0, 10)
+        return players
+    } catch (error) {
+        toastMessage(error, 'error')
+    }
 }
 
 window.onload = async () => {
@@ -154,9 +162,19 @@ const search = document.getElementById('search');
 
 search.addEventListener('click', async () => {
     const input = document.getElementById('gamertagInput');
-    const player = await playerService.getPlayerCareerRank(input.value)
-    chargePlayerCareer(player)
+    chargePlayerCareer(await getPlayerCareerRank(input.value))
 })
+
+async function getPlayerCareerRank(gamertag) {
+    let player = null
+    try {
+        player = await playerService.getPlayerCareerRank(gamertag)
+        if (player === null) throw new Error('Jugador no encontrado')
+        return player
+    } catch (error) {
+        toastMessage( error, 'error')
+    }
+}
 
 /**
  * 

@@ -1,5 +1,6 @@
 import { ApiResponse, careerRank, leaderBoards, serviceRecord } from "./providers/remote/halo-api.js"
 import { Player, LeaderBoardPlayer, PlayerStats } from "../model/player.js"
+import { toastMessage } from "../views/assets/scripts/feedback.js";
 
 export class PlayerService {
 
@@ -80,8 +81,6 @@ export class PlayerService {
                     data.current.attributes.colors[0],
                     data.current.attributes.colors[1]
                 )
-                console.log(rank)
-                console.log(await this.getPlayerStats(nickName, 'all' ))
             }
         } catch (e) {
             console.error(e)
@@ -92,16 +91,20 @@ export class PlayerService {
 
     async getTopLeaderBoards(playlist) {
         /**@type LeaderBoardPlayer[] */
-        let players;
+        let players = null;
         try {
             const response = await fetch(leaderBoards(playlist))
             if (!response.ok) {
                 throw new Error('No se cargaron los datos correctamente')
             } else {
                 const {data, _}  = await response.json()
-                players = data.map(element =>
-                    new LeaderBoardPlayer(element.player.gamertag,element.player.gamerpic_url,element.rank, element.score)
-                )
+                if (!data) {
+                    throw new Error('No se cargaron los datos correctamente')
+                } else {
+                    players = data.map(element =>
+                        new LeaderBoardPlayer(element.player.gamertag,element.player.gamerpic_url,element.rank, element.score)
+                    )
+                }
             }
         } catch (e) {
             console.error(e)
