@@ -36,14 +36,20 @@
                         <a href="../../index.html#characters">Personajes</a>
                     </div>
                 </li>
-                <li><a href="index.html">Multijugador</a></li>
+                <li class="dropdown">
+                    <a href="index.html">Multijugador</a>
+                    <div class="dropdown-content">
+                        <a href="#career">Carrera</a>
+                        <a href="#board">Top 10</a>
+                    </div>
+                </li>
                 <li><a href="../store/index.html">tienda</a></li>
                 <li><a href="#links">Acerca de</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <div class="container">
+        <div class="container" id="career">
             <h2>Carrera spartan</h2>
             <input type="text" id="gamertagInput" placeholder="Ingresa tu gamertag" />
             <div class="btn-primary">
@@ -72,12 +78,15 @@
             </div>
         </div>
         <div class="container" id="board">
-            <h2>Mejores jugadores</h2>
+            <h2>top 10</h2>
             <select type="text" id="gameType" placeholder="Modo de juego"></select>
             <div class="btn-primary">
                 <button id="leaderBoard">Buscar</button>
             </div>
             <div id="cardContainer" class="player-card-container"></div>
+        </div>
+        <div class="toast" id="toast">
+            <span class="toast-message" id="toastMessage">Toast</span>
         </div>
     </main>
     <footer class="footer">

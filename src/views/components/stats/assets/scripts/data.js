@@ -57,12 +57,12 @@ let seasons = [
 
 let playlist = [
     {
-        value: 'dcb2e24e-05fb-4390-8076-32a0cdb4326e',
-        text: 'Slayer'
-    },
-    {
         value: 'edfef3ac-9cbe-4fa2-b949-8f29deafd483',
         text: 'Arena'
+    },
+    {
+        value: 'dcb2e24e-05fb-4390-8076-32a0cdb4326e',
+        text: 'Slayer'
     }
 ]
 
@@ -78,22 +78,31 @@ playlist.forEach(type => {
 
 const leaderBoard = document.getElementById('leaderBoard');
 
-select.addEventListener('change', () => {
-    cardContainer.innerHTML = ''
-})
+
+
+let currentValue = playlist[0].value;
 
 leaderBoard.addEventListener('click', async () => {
     const option = document.getElementById('gameType');
-    const players = await playerService.getTopLeaderBoards(option.value)
-    chargeLeaderBoard(players)
+    if (currentValue === option.value) return
+    cardContainer.innerHTML = ''
+    currentValue = option.value
+    chargeLeaderBoard(await getPlayers())
 })
+
+async function getPlayers() {
+    return (await playerService.getTopLeaderBoards(currentValue)).slice(0, 10)
+}
+
+window.onload = async () => {
+    chargeLeaderBoard(await getPlayers())
+}
 
 /**
  * 
  * @param {LeaderBoardPlayer[]} players 
  */
 function chargeLeaderBoard(players) {
-
     if (players.length > 0) {
         players.map(player => {
             const playerCard = document.createElement('div');
@@ -147,7 +156,6 @@ search.addEventListener('click', async () => {
     chargePlayerCareer(player)
 })
 
-// TODO: implementar caso de prueba para este método
 /**
  * 
  * @param {Player} player 

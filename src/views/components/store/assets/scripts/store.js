@@ -351,6 +351,7 @@ function setCardBottom(product) {
     cardBottom.classList.add('cart-card-tail')
     cardTextPriceContainer.classList.add('cart-card-price-container')
     cardTextPrice.classList.add('cart-card-price')
+    cardTextPrice.id = product.id + 'price'
     cardTextPrice.innerHTML = '$' + (product.total).toFixed(2)
     cardBottom.appendChild(cardTextPrice)
     let subtotal = ((product.total - ((product.total * (product.discount + discountCode) / 100)))).toFixed(2)
@@ -433,6 +434,7 @@ function updateCart(product, value, suffix) {
 function setCard(product) {
     const card = document.createElement('div')
     card.classList.add('cart-card')
+    card.id = product.id + 'cart'
     const cardImage = setCardImage(product)
     const cardSection = setCardBody(product)
     const cardBottom = setCardBottom(product)

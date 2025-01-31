@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha ./*.spec.js --no-timeouts"
+    "test": "mocha ./test/*.spec.js --no-timeouts"
   },
   "repository": {
     "type": "git",
