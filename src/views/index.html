@@ -187,17 +187,20 @@
         <audio controls class="auto-play">
             <source src="assets/multimedia/audio/Halo Theme Song Original.mp3" type="audio/mp3">
         </audio>
+        <div class="toast" id="toast">
+            <span class="toast-message" id="toastMessage">Toast</span>
+        </div>
     </main>
     <footer class="footer">
         <div id="contact" class="footer-form">
             <h2>Contacto</h2>
             <cite>Envíanos un mensaje!</cite><br><br>
-            <form action="response.html" method="POST">
+            <form id="contact-form">
                 <div>
                     <fieldset>
                         <legend>Datos generales</legend>
-                        <label for="name">Nombre</label>
-                        <input type="text" id="contact-name" maxlength="25" required placeholder="Tu nombre" />
+                        <label for="contact-name">Nombre</label>
+                        <input name="name" type="text" id="contact-name" maxlength="25" required placeholder="Tu nombre" />
                         <label for="email">E-mail</label>
                         <input name="email" id="contact-email" required placeholder="tuemail@email.com" />
                     </fieldset>
@@ -362,6 +365,15 @@
         </div>
     </footer>
     <script type="module" src="assets/scripts/data.js"></script>
+    <script type="module" src="assets/scripts/feedback.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "O_BOb8ccWY-Us5ebg",
+            });
+        })();
+    </script>
 </body>
 
 </html>

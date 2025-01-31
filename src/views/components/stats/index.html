@@ -93,12 +93,12 @@
         <div id="contact" class="footer-form">
             <h2>Contacto</h2>
             <cite>Envíanos un mensaje!</cite><br><br>
-            <form action="response.html" method="POST">
+            <form id="contact-form">
                 <div>
                     <fieldset>
                         <legend>Datos generales</legend>
-                        <label for="name">Nombre</label>
-                        <input type="text" id="contact-name" maxlength="25" required placeholder="Tu nombre" />
+                        <label for="contact-name">Nombre</label>
+                        <input name="name" type="text" id="contact-name" maxlength="25" required placeholder="Tu nombre" />
                         <label for="email">E-mail</label>
                         <input name="email" id="contact-email" required placeholder="tuemail@email.com" />
                     </fieldset>

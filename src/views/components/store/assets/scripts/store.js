@@ -3,6 +3,7 @@ import { quickSort } from './utils.js'
 import { Cart } from '../../../../../model/cart.js'
 import { Product } from '../../../../../model/product.js'
 import { CartService } from '../../../../../services/cart-service.js'
+import { toastMessage } from '../../../../assets/scripts/feedback.js'
 
 const productService = new ProductService()
 
@@ -22,8 +23,6 @@ function addToolTip(element, message) {
 const productsContainer = document.getElementById('products')
 let products = await productService.getProducts();
 const topBar = document.getElementById('topBar')
-
-// TODO: implementar caso de prueba para este método
 
 function addOrderBar() {
     let productOrder;
@@ -160,6 +159,7 @@ async function chargeProductCards() {
             const card = setProductCard(product)
             productsContainer.appendChild(card)
         })
+        toastMessage('Productos cargados correctamente', 'primary')
     }
 }
 
@@ -244,6 +244,7 @@ function addCartProduct() {
     selectedProduct = null
     selectedProductQuantity = 0
     chargeCart()
+    toastMessage('Producto añadido al carrito', 'success')
 }
 
 /**
@@ -374,6 +375,7 @@ function setCardBottom(product) {
     return cardBottom
 }
 
+//? refactorizar
 function setQuantityButtons(product, suffix) {
     const cardDivButton = document.createElement('div')
     cardDivButton.classList.add('quantity-input')
@@ -472,7 +474,79 @@ function chargeCart() {
 function removeCartProduct(id) {
     cart.removeFromCart(id)
     chargeCart()
+    toastMessage('Producto eliminado del carrito', 'success')
 }
+
+
+//#region coupon
+function Coupon(name, discount, startDate, endDate) {
+    return {
+        name,
+        discount,
+        startDate,
+        endDate
+    }
+}
+
+/**
+ * @constant {Coupon[]}
+ */
+const coupons = [
+    Coupon("VERANO", 15, "2025-06-01", "2025-06-30"),
+    Coupon("BLACKFRIDAY", 30, "2025-11-20", "2025-11-27"),
+    Coupon("REBANUEVO10", 10, "2025-01-01", "2025-01-30"),
+    Coupon("REBANUEVO25", 25, "2025-01-16", "2025-01-31"),
+    Coupon("SEMANASANTA", 20, "2025-04-01", "2025-04-07"),
+    Coupon("ELECTRONICA", 25, "2025-05-01", "2025-05-15")
+]
+
+/**
+ * @const {Coupon[]}
+ */
+const appliedCoupons = []
+
+const btnCoupon = document.getElementById('btnCoupon')
+
+function couponChipGroup() {
+    const couponChipG = document.getElementById('applied');
+    if (appliedCoupons.length > 0) {
+        let spanCoupons = couponChipG.getElementsByTagName('span')
+        if (spanCoupons.length > 0 ) {
+            for (let index = 0; index < spanCoupons.length; index++) {
+                couponChipG.removeChild(index)
+            }
+        }
+        appliedCoupons.forEach(coupon => {
+            const chipCoupon = document.createElement('span')
+            chipCoupon.classList.add('chip')
+            chipCoupon.innerHTML = coupon.name + ' ' + coupon.discount + '%'
+            couponChipG.appendChild(chipCoupon)
+        })
+    }
+}
+
+/**
+ * 
+btnCoupon.addEventListener('click', () => {
+    const input = document.getElementById('coupon').value
+    const isValidCoupon = Object.values(coupons).find((value) => {
+        const sameName = value.name === input
+        const today = (new Date()).getTime()
+        const betweenDates = today < new Date(value.endDate).getTime() && today > new Date(value.startDate)
+        return sameName && betweenDates
+    })
+    if (isValidCoupon) {
+        desc = parseFloat(isValidCoupon.discount)
+        appliedCoupons.push(isValidCoupon)
+        couponChipGroup()
+        createProductTable()
+        toastMessage('Cupón aplicado correctamente', 'success')
+    } else {
+        toastMessage('Cupón no válido', 'error')
+    }
+});
+ */
+//#endregion
 
 chargeCart()
 chargeProductCards()

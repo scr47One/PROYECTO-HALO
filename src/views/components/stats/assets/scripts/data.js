@@ -1,5 +1,6 @@
 import { LeaderBoardPlayer, Player } from "../../../../../model/player.js";
 import { PlayerService } from "../../../../../services/player-service.js";
+import { toastMessage } from "../../../../assets/scripts/feedback.js";
 
 const playerService = new PlayerService()
 
@@ -96,6 +97,7 @@ async function getPlayers() {
 
 window.onload = async () => {
     chargeLeaderBoard(await getPlayers())
+    toastMessage('Jugadores cargados', 'success')
 }
 
 /**
@@ -200,6 +202,8 @@ function chargePlayerCareer(player) {
 
     const xpNextLevel = document.getElementById("xpNextLevel");
     xpNextLevel.innerText = 'XP para el siguiente nivel: ' + player.remainingXpToNextLevel;
+
+    toastMessage('Jugador cargado', 'success')
 }
 
 function resetPlayerCareer() {

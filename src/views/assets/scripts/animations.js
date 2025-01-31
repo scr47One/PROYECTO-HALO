@@ -33,5 +33,3 @@ document.addEventListener("DOMContentLoaded", function(){
         runAutoPlay()
     }, 500)
 });
-
-

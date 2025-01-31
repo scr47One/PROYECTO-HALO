@@ -155,13 +155,13 @@ td {
     transition: all .2s ease;
 }
 
+.toast-message {
+    color: white;
+    font: 300;
+}
+
 label {
     font-size: small;
     font-weight: 400;
     text-transform: uppercase;
-}
-
-.toast-message {
-    color: white;
-    font: 300;
 }

@@ -5,6 +5,9 @@ html {
 }
 
 :root {
+    --success-color: rgb(57, 167, 84);
+    --primary-color: rgb(40, 80, 211);
+    --error-color: rgb(252, 43, 43);
     --darkest-bg-color: rgb(16, 14, 24);
     --highlight-bg-color: rgb(45, 40, 61);
     --highlight-bg-color-translucent: rgba(45, 40, 61, 0.719);
@@ -13,7 +16,6 @@ html {
     --highlight-secondary-bg-color-translucent: rgba(255, 255, 255, 0.4);
     --highlight-secondary-bg-color: rgba(255, 255, 255, 0.8);
     --highlight-input-color: rgb(70, 63, 95);
-    --error-color: rgb(252, 43, 43);
     --highlight-error-color: rgb(255, 72, 72);
     --accent-color: rgb(37, 32, 56);
     --text-primary-color: rgb(255, 255, 255);
@@ -1480,6 +1482,31 @@ span {
     color: black;
     transition: 0.3s;
     background-color: var(--highlight-primary-bg-color);
+}
+
+.toast {
+    position: fixed;
+    display: flex;
+    width: 0;
+    padding: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+    height: var(--min-element-height);
+    background-color: var(--primary-color);
+    transition: all 0.2s ease-in-out;
+    z-index: 1000;
+
+    .toast-message {
+        text-transform: uppercase;
+        color: white;
+        font-weight: 500;
+        font-size: large;
+    }
 }
 
 @media (max-width: 1920px) {
