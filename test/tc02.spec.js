@@ -27,8 +27,10 @@ describe('Añadir productos al carrito', () => {
         const btnCart = await driver.findElement(By.css('.btn-cart'));
         await btnCart.click();
 
+        await driver.sleep(200);
         const productPrice = await driver.findElement(By.id('1price'));
         const text = await productPrice.getText();
+
         assert.strictEqual(text, '$35.99', 'El precio del producto no es correcto');
         assert.notEqual(text, '$0.00', 'El precio del producto no es correcto')
         assert.notEqual(text, '', 'El precio del producto no es correcto')
@@ -36,6 +38,7 @@ describe('Añadir productos al carrito', () => {
     });
 
     it('Verificar el precio total del carrito', async () => {
+        await driver.sleep(200);
         const total = await driver.findElement(By.id('total'));
         const text = await total.getText()
 
@@ -50,6 +53,7 @@ describe('Añadir productos al carrito', () => {
         const btnAdd = await driver.findElement(By.id('1qttycartAdd'));
         await btnAdd.click();
 
+        await driver.sleep(200);
         const productPrice = await driver.findElement(By.id('1price'));
         const text = await productPrice.getText();
         assert.strictEqual(text, '$71.98', 'El precio del producto no es correcto');

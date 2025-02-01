@@ -55,14 +55,14 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
     } else {
         event.preventDefault();
         toastMessage('Mensaje enviado', 'success')
-        /*
+
         emailjs.sendForm('service_x9r3r47', 'template_ji9acld', this)
             .then(() => {
                 toastMessage('Mensaje enviado', 'success')
             }, (error) => {
                 console.error(error)
                 toastMessage('Error al enviar el mensaje', 'error')
-            });*/
+            });
     }
 });
 

@@ -18,6 +18,7 @@ describe('Vista previa del producto', () => {
         const id = '1btn'
         const button = await driver.findElement(By.id(id));
         await button.click();
+        await driver.sleep(100);
         const preview = await driver.findElement(By.id('windowProduct'));
         const isVisible = await preview.isDisplayed();
         assert.ok(isVisible, 'La vista previa del producto no se muestra');
