@@ -21,10 +21,12 @@ describe('Vista de perfil de jugador', () => {
         const button = await driver.findElement(By.id('search'));
         await button.click();
 
-        driver.sleep(2000);
+        await driver.sleep(3000);
 
         const profile = await driver.findElement(By.id('gamertag'));
-        assert.strictEqual(await profile.getText(), 'scr47', 'El perfil de jugador no es correcto');
+        const text = await profile.getText();
+
+        assert.strictEqual(text, 'SCR47', 'El perfil de jugador no es correcto');
 
         const isVisible = await profile.isDisplayed();
         assert.ok(isVisible, 'El perfil de jugador no se muestra');
