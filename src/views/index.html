@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="assets/multimedia/image/icon-halo.ico">
-    <script src="assets/scripts/animations.js" defer></script>
+    <script src="assets/scripts/animations.js" type="module"></script>
     <title>Halo</title>
 </head>
 
@@ -52,7 +52,7 @@
     <main>
         <section id="intro">
             <video onclick="this.paused ? this.play() : this.pause();" preload="auto" muted
-                poster="assets/multimedia/image/halo-intro.webp" loop id="introVideo">
+                poster="assets/multimedia/image/halo-intro.webp" loop id="introVideo" class="auto-play">
                 <source src="assets/multimedia/video/intro.mp4">
             </video>
             <cite>Pulsa sobre el fondo para reproducir o pausar</cite>

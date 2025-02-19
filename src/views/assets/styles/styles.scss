@@ -104,7 +104,7 @@ span {
         justify-content: space-between;
         align-items: center;
         align-content: center;
-        transition: all 0.5s;
+        transition: all 0.2s;
         text-transform: uppercase;
         background-color: var(--highlight-bg-color-translucent);
         backdrop-filter: blur(10px);
@@ -780,8 +780,13 @@ span {
                 padding: 10px;
                 background-color: var(--highlight-input-color);
                 color: white;
-                width: calc(100% - 20px);
-                margin: 10px 0 10px 0;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .form-input {
+                margin-top: 10px;
+                margin-bottom: 15px;
             }
 
             .form-actions {
@@ -800,11 +805,12 @@ span {
             }
 
             textarea {
+                border: 0px;
                 color: white;
                 resize: none;
                 padding: 10px;
                 background-color: var(--highlight-input-color);
-                margin: 10px 0 10px 0;
+                margin-top: 10px;
                 width: calc(100% - 20px);
             }
 
@@ -845,7 +851,6 @@ span {
 }
 
 .btn-primary {
-
     border-color: var(--highlight-primary-bg-color);
 
     input,
@@ -971,7 +976,7 @@ span {
         padding: 20px;
         height: 50vh;
         min-height: 400px;
-        transition: height 0.5s ease-in-out, border 0.5s ease-in-out;
+        transition: height 0.2s ease-in-out, border 0.2s ease-in-out;
 
         .product-card-image {
             object-fit: contain;
@@ -1095,7 +1100,7 @@ span {
     padding: 100px;
     background-color: var(--highlight-bg-color-translucent);
     align-content: center;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
     height: calc(100% - 200px);
     width: calc(100% - 200px);
 

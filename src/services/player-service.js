@@ -118,7 +118,7 @@ export class PlayerService {
         const rankNames = ['bronze', 'silver', 'gold', 'platinum', 'diamond', 'onyx']
         const maxLevelRank = 6
         const maxPointsPerLevel = 50
-        const index = 0
+        let index = 0
         const level = (points) => {
             let level = 0;
             while (points >= limit) {

@@ -169,7 +169,7 @@ async function getPlayerCareerRank(gamertag) {
     let player = null
     try {
         player = await playerService.getPlayerCareerRank(gamertag)
-        if (player === null) throw new Error('Jugador no encontrado')
+        if (player === null || player.adornmentIcon === null) throw new Error('Jugador no encontrado')
         return player
     } catch (error) {
         toastMessage( error, 'error')
@@ -264,3 +264,21 @@ function resetPlayerCareer() {
     background.style.opacity = '0'
     background.style.transition = 'opacity 0.5s'
 }
+
+/*
+const gamertagValidation = () =>
+    [
+        gamertag => gamertag.length >= 3 || 'Ingresa al menos 3 caracteres',
+        gamertag => /^[a-zA-Z0-9]*$/.test(gamertag) || 'Sólo se admiten letras y números'
+    ]
+,
+        document.getElementById('gamertagError')
+        ,
+        document.getElementById('gamertagInput')
+
+        gamertag.addEventListener('input', () => {
+        gamertagError.innerHTML = ''
+        const errorsGamertag = gamertagValidation().filter(validation => typeof validation(gamertag.value) === 'string').map(validation => validation(gamertag.value))
+        gamertagError.innerHTML = errorsGamertag[0] || ''
+    })
+*/
