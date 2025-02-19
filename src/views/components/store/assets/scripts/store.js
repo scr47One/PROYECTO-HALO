@@ -88,7 +88,7 @@ function setProductBottom(product) {
     const cardDivButton = document.createElement('div')
     const cardAddCartButton = document.createElement('button')
 
-    cardAddCartButton.id = product.id + 'btn'
+    cardAddCartButton.id = 'AddBtn' + product.id
     cardAddCartButton.innerHTML = 'añadir'
 
     cardTextPrice.classList.add('product-card-price')
@@ -189,8 +189,8 @@ function fillProductView(product) {
     const viewChipType = document.createElement('p')
     viewChipType.innerHTML = product.type
     viewChipGroup.appendChild(viewChipType)
-    const viewBtnReturn = document.getElementById('viewBtnReturn');
-    const viewBtnAdd = document.getElementById('viewBtnAdd');
+    const viewReturnBtn = document.getElementById('viewReturnBtn');
+    const viewAddBtn = document.getElementById('viewAddBtn');
     const viewDescription = document.getElementById('viewDescription');
 
     viewDescription.innerHTML = product.description
@@ -211,8 +211,8 @@ function fillProductView(product) {
         viewChipGroup.appendChild(viewOffer)
     }
 
-    viewBtnReturn.addEventListener('click', removeProductView)
-    viewBtnAdd.addEventListener('click', addCartProduct)
+    viewReturnBtn.addEventListener('click', removeProductView)
+    viewAddBtn.addEventListener('click', addCartProduct)
     selectedProduct = product.id
 }
 
@@ -227,8 +227,8 @@ function resetProductView() {
     const viewDiscount = document.getElementById('viewDiscount');
     const viewPriceDiscount = document.getElementById('viewPriceDiscount');
     const viewPrice = document.getElementById('viewPrice');
-    const viewBtnAdd = document.getElementById('viewBtnAdd');
-    viewBtnAdd.removeEventListener('click', addCartProduct)
+    const viewAddBtn = document.getElementById('viewAddBtn');
+    viewAddBtn.removeEventListener('click', addCartProduct)
     viewPrice.style.textDecoration = 'none'
     viewDiscount.innerHTML = ''
     viewPriceDiscount.innerHTML = ''
